@@ -18,22 +18,104 @@
             color: #222;
         }
 
-        .header {
-            background: #e3e6eb;
-            padding: 40px 10px;
-        }
-
-        .logo-placeholder {
-            width: 120px;
-            height: 120px;
-            background: #d8d8d8;
+        /* مكان الشعار */
+        .logo {
+            width: 160px;
+            height: 160px;
+            background: #ddd;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 40px auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #555;
-            font-size: 16px;
+            font-size: 20px;
+            color: #666;
+        }
+
+        /* مكان الغلاف */
+        .cover {
+            width: 100%;
+            height: 230px;
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* الأزرار */
+        .btn, .button {
+            display: block;
+            width: 260px;
+            margin: 12px auto;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: 0.2s;
+        }
+
+        .btn:hover, .button:hover {
+            background: #005fcc;
+        }
+
+        h1, h2 {
+            color: #005fcc;
+        }
+
+        hr {
+            margin: 30px auto;
+            width: 80%;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الشعار -->
+    <div class="logo">مكان الشعار</div>
+
+    <!-- الغلاف -->
+    <div class="cover">مكان صورة الغلاف</div>
+
+    <h1>Casa The Untamed</h1>
+    <h2>THE UNTAMED</h2>
+
+    <!-- رابط المتجر -->
+    <a href="https://theuntamed.com/?referral=wFpNEb" class="btn">رابط المتجر</a>
+
+    <hr>
+
+    <!-- نبذة عن الشركة -->
+    <h2>نبذة عن الشركة</h2>
+    <p>
+        Casa The Untamed هي منصة متخصصة في التجارة الإلكترونية،
+        التدريب على العمل عبر الإنترنت، وتقديم فرص عمل حقيقية
+        مع نظام احترافي مبني على الجودة والشفافية.
+    </p>
+
+    <hr>
+
+    <!-- التعريف القانوني -->
+    <h2>التعريف القانوني للشركة</h2>
+    <a href="legal-about.html" class="btn">عرض التعريف القانوني</a>
+
+    <hr>
+
+    <!-- الوثائق القانونية -->
+    <h2>الوثائق القانونية</h2>
+    <a class="button" href="index.html">سياسة الخصوصية</a>
+    <a class="button" href="terms.html">شروط الخدمة</a>
+    <a class="button" href="data-deletion.html">سياسة حذف البيانات</a>
+
+</body>
+</html>
         }
 
         .cover-placeholder {
