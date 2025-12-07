@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Casa The Untamed</title>
 
-    <!-- خط تاجوال -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -18,24 +17,39 @@
             color: #222;
         }
 
+        /* 1. تعديل منطقة الشعار لوضع الشعار الدائري في الزاوية */
         .logo-area {
             height: 200px;
-            background: #dfe3e8;
+            background: #dfe3e8; /* يمكنك تغيير لون الخلفية أو إزالته إذا كانت شفافة */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-size: 20px;
+            justify-content: flex-end; /* دفع المحتوى لليمين */
+            align-items: flex-end; /* دفع المحتوى للأسفل */
+            padding: 10px; /* مسافة داخلية صغيرة */
+            position: relative; /* لتحديد موقع الشعار بداخله */
+            overflow: hidden; /* لمنع أي محتوى زائد من الظهور */
         }
 
+        /* تنسيق عنصر الشعار نفسه ليصبح دائريًا وموضعه في الأسفل يمينًا */
+        .logo-area img {
+            width: 150px; /* حجم الشعار */
+            height: 150px;
+            border-radius: 50%; /* جعل الصورة دائرية */
+            object-fit: cover; /* التأكد من أن الصورة تملأ الدائرة بشكل صحيح */
+            border: 5px solid white; /* إطار أبيض حول الشعار لإبرازه */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل بسيط */
+        }
+        
+        /* 2. منطقة صورة الغلاف */
         .cover-area {
             height: 250px;
-            background: #cfd3d8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #555;
-            font-size: 22px;
+            overflow: hidden; /* لمنع الصورة من تجاوز حجم المنطقة */
+        }
+
+        /* تنسيق صورة الغلاف لملء المنطقة بالكامل */
+        .cover-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* جعل الصورة تغطي المساحة بالكامل دون تشوه */
         }
 
         h1 {
@@ -51,15 +65,17 @@
         }
 
         p {
-            width: 80%;
+            width: 90%;
+            max-width: 800px;
             margin: 10px auto;
             line-height: 1.8;
             font-size: 18px;
         }
 
-        .button, .btn {
+        .button {
             display: block;
-            width: 260px;
+            width: 90%;
+            max-width: 260px;
             margin: 15px auto;
             padding: 14px 0;
             background: #007bff;
@@ -70,7 +86,7 @@
             transition: 0.3s;
         }
 
-        .button:hover, .btn:hover {
+        .button:hover {
             background: #0056c9;
         }
 
@@ -84,14 +100,12 @@
 </head>
 <body>
 
-    <!-- مكان الشعار -->
     <div class="logo-area">
-        مكان الشعار
+        <img src="رابط-صورة-الشعار-هنا.png" alt="شعار Casa The Untamed">
     </div>
 
-    <!-- مكان صورة الغلاف -->
     <div class="cover-area">
-        مكان صورة الغلاف
+        <img src="رابط-صورة-الغلاف-هنا.jpg" alt="صورة غلاف ترويجية للشركة">
     </div>
 
     <h1>Casa The Untamed</h1>
@@ -110,13 +124,13 @@
     <hr>
 
     <h2>التعريف القانوني للشركة</h2>
-    <a href="legal-about.html" class="btn">عرض التعريف القانوني</a>
+    <a href="legal-about.html" class="button">عرض التعريف القانوني</a>
 
     <hr>
 
     <h2>الوثائق القانونية</h2>
-
-    <a class="button" href="index.html">سياسة الخصوصية</a>
+    
+    <a class="button" href="privacy-policy.html">سياسة الخصوصية</a>
     <a class="button" href="terms.html">شروط الخدمة</a>
     <a class="button" href="data-deletion.html">سياسة حذف البيانات</a>
 
