@@ -53,6 +53,19 @@
     </style>
 </head>
 <body>
+<header class="site-header">
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <div id="menu" class="menu">
+    <a href="home.html">🏠 الصفحة الرئيسية</a>
+    <a href="legal-about.html">📄 التعريف القانوني</a>
+    <a href="terms.html">📜 شروط الخدمة</a>
+    <a href="about.html">🔒 سياسة الخصوصية</a>
+    <a href="data-deletion.html">🗑️ حذف البيانات</a>
+    <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">🛒 المتجر</a>
+    <a href="https://linktr.ee/casatheuntamed" target="_blank">🔗 كل الروابط</a>
+  </div>
+</header>
 
 <div class="container">
     <h1>سياسة الخصوصية</h1>
@@ -112,6 +125,13 @@
         أو قنوات التواصل الرسمية الموضحة في الموقع أو التطبيق.
     </p>
 </div>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display =
+    (menu.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
