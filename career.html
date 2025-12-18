@@ -1,203 +1,180 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>فرصة عمل مع شركة The Untamed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>فرصة عمل مع شركة The Untamed</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f1b398;
-      color: #1a1a1a;
-      line-height: 1.9;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f1b398;
+  color:#1a1a1a;
+  line-height:1.9;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: #f1b398;
-      border-bottom: 1px solid #e0c2ad;
-    }
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:#f1b398;
+}
 
-    header a {
-      text-decoration: none;
-      color: #7a4b2e;
-      font-weight: bold;
-    }
+header a{
+  color:#7a4b2e;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 40px;
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+.wrapper{
+  max-width:1100px;
+  margin:40px auto;
+  background:#fff;
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 50px;
-    }
+/* === القسم النصي مقسوم على جوج === */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
 
-    .hero h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #000;
-    }
+.hero h1{
+  grid-column:1 / -1;
+  text-align:center;
+  margin-bottom:20px;
+  font-size:32px;
+}
 
-    .hero p {
-      font-size: 18px;
-    }
+.hero-left p{
+  font-size:18px;
+}
 
-    .hero-final {
-      margin-top: 20px;
-      font-size: 19px;
-      font-weight: bold;
-      color: #7a4b2e;
-    }
+.hero-right ul{
+  padding-right:20px;
+}
 
-    /* VIDEOS */
-    .video-main video {
-      width: 100%;
-      border-radius: 12px;
-      background: #000;
-    }
+.hero-right li{
+  margin-bottom:10px;
+}
 
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
+/* === الفيديوهات تحت النصوص === */
+.videos{
+  margin-top:50px;
+}
 
-    .video-grid video {
-      width: 100%;
-      border-radius: 12px;
-      background: #000;
-    }
+.videos-main video{
+  width:100%;
+  border-radius:14px;
+  background:#000;
+  margin-bottom:25px;
+}
 
-    h2 {
-      margin-top: 40px;
-      color: #7a4b2e;
-    }
+.videos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
 
-    ul {
-      padding-right: 20px;
-    }
+.videos-grid video{
+  width:100%;
+  border-radius:14px;
+  background:#000;
+}
 
-    ul li {
-      margin-bottom: 10px;
-    }
+.buttons{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
+.btn{
+  background:#a1694f;
+  color:#fff;
+  padding:14px 30px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .btn {
-      background: #a1694f;
-      color: #ffffff;
-      padding: 14px 30px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-    }
+.btn.secondary{
+  background:transparent;
+  color:#a1694f;
+  border:2px solid #a1694f;
+}
 
-    .btn.secondary {
-      background: transparent;
-      color: #a1694f;
-      border: 2px solid #a1694f;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #5a3a28;
-      margin-top: 40px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:20px;
+  color:#5a3a28;
+  margin-top:30px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <strong>The Untamed</strong>
   <a href="index.html">← الرجوع إلى الصفحة الرئيسية</a>
+  <strong>The Untamed</strong>
 </header>
 
-<div class="container">
+<div class="wrapper">
 
-  <!-- HERO -->
+  <!-- ===== النص مقسوم على جوج ===== -->
   <div class="hero">
-    <div>
-      <h1>فرصة عمل مع شركة The Untamed</h1>
+    <h1>فرصة عمل مع شركة The Untamed</h1>
+
+    <div class="hero-left">
       <p>
         <strong>فرصة عمل في التجارة الإلكترونية مع The Untamed!</strong><br><br>
         كتبحث على فرصة عمل واضحة فمجال التجارة الإلكترونية؟<br>
         باغي تخدم من الدار أو من أي بلاصة بلا قيود؟<br>
-        الفرصة عندك دابا مع شركة <strong>The Untamed</strong>.
+        الفرصة عندك دابا مع شركة <strong>The Untamed</strong>.<br><br>
+        خدم بطريقة قانونية، بدعم شركة حقيقية، وبدون خبرة مسبقة.
       </p>
-
-      <div class="hero-final">
-        خدم بطريقة قانونية، بدعم شركة حقيقية، وبدون رأس مال أو خبرة مسبقة.
-      </div>
     </div>
 
-    <div class="video-main">
+    <div class="hero-right">
+      <h3>شنو نقدّمو ليك؟</h3>
+      <ul>
+        <li>عمل رسمي فمجال التجارة الإلكترونية</li>
+        <li>متجر إلكتروني جاهز بالكامل</li>
+        <li>التغليف والشحن (المغرب + أوروبا)</li>
+        <li>تدريب مجاني ومرافقة خطوة بخطوة</li>
+        <li>أرباح تبدأ من 15% وتزيد حسب النتائج</li>
+        <li>الخدمة غير بالهاتف ومن أي مكان</li>
+        <li>ما تحتاج حتى خبرة… غير الطموح</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== الفيديوهات تحت النص ===== -->
+  <div class="videos">
+    <div class="videos-main">
       <video controls preload="none">
         <source src="videos/vidio01.mp4" type="video/mp4">
       </video>
     </div>
+
+    <div class="videos-grid">
+      <video controls preload="none">
+        <source src="videos/vidio02.mp4" type="video/mp4">
+      </video>
+
+      <video controls preload="none">
+        <source src="videos/vidio03.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
-
-  <!-- VIDEOS -->
-  <div class="video-grid">
-    <video controls preload="none">
-      <source src="videos/vidio02.mp4" type="video/mp4">
-    </video>
-
-    <video controls preload="none">
-      <source src="videos/vidio03.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <h2>شنو نقدّمو ليك؟</h2>
-  <ul>
-    <li>عمل رسمي فمجال التجارة الإلكترونية</li>
-    <li>متجر إلكتروني جاهز بالكامل</li>
-    <li>الشركة كتتكفّل بالتغليف والشحن (المغرب + أوروبا)</li>
-    <li>تدريب مجاني + مرافقة خطوة بخطوة</li>
-    <li>أرباح تبدأ من 15% وتزيد حسب النتائج</li>
-    <li>خدم غير بهاتفك ومن أي مكان</li>
-    <li>ما تحتاج حتى خبرة… غير الطموح</li>
-  </ul>
-
-  <h2>لمَن هذا العمل؟</h2>
-  <p>
-    للناس اللي باغين يخدمو فـ التجارة الإلكترونية ويحققو دخل إضافي أو رئيسي
-    بطريقة قانونية وواضحة.
-  </p>
 
   <div class="buttons">
     <a class="btn" href="https://wa.link/4emaaz">تواصل معنا على واتساب</a>
