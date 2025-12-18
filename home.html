@@ -1,138 +1,176 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>Casa The Untamed</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرصة عمل في التجارة الإلكترونية | The Untamed</title>
+  <style>
+    :root{
+      --bg:#ecb69e;
+      --cta:#a1694f;
+      --white:#ffffff;
+      --text:#3b2a20;
+      --wa:#25D366;
+    }
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+    }
 
-    <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-            direction: rtl;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background: #f7f9fc;
-            color: #222;
-        }
+    body{
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+    }
 
-        /* 1. تعديل منطقة الشعار لوضع الشعار الدائري في الزاوية */
-        .logo-area {
-            height: 200px;
-            background: #dfe3e8; /* يمكنك تغيير لون الخلفية أو إزالته إذا كانت شفافة */
-            display: flex;
-            justify-content: flex-end; /* دفع المحتوى لليمين */
-            align-items: flex-end; /* دفع المحتوى للأسفل */
-            padding: 10px; /* مسافة داخلية صغيرة */
-            position: relative; /* لتحديد موقع الشعار بداخله */
-            overflow: hidden; /* لمنع أي محتوى زائد من الظهور */
-        }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      padding:40px 20px 60px;
+    }
 
-        /* تنسيق عنصر الشعار نفسه ليصبح دائريًا وموضعه في الأسفل يمينًا */
-        .logo-area img {
-            width: 150px; /* حجم الشعار */
-            height: 150px;
-            border-radius: 50%; /* جعل الصورة دائرية */
-            object-fit: cover; /* التأكد من أن الصورة تملأ الدائرة بشكل صحيح */
-            border: 5px solid white; /* إطار أبيض حول الشعار لإبرازه */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل بسيط */
-        }
-        
-        /* 2. منطقة صورة الغلاف */
-        .cover-area {
-            height: 250px;
-            overflow: hidden; /* لمنع الصورة من تجاوز حجم المنطقة */
-        }
+    .card{
+      background:rgba(255,255,255,.35);
+      border-radius:18px;
+      padding:40px 30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
 
-        /* تنسيق صورة الغلاف لملء المنطقة بالكامل */
-        .cover-area img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* جعل الصورة تغطي المساحة بالكامل دون تشوه */
-        }
+    h1{
+      text-align:center;
+      font-size:32px;
+      margin-bottom:20px;
+      color:#2b1d16;
+    }
 
-        h1 {
-            margin-top: 30px;
-            color: #005be0;
-            font-size: 32px;
-        }
+    .subtitle{
+      text-align:center;
+      font-size:18px;
+      margin-bottom:30px;
+    }
 
-        h2 {
-            margin-top: 35px;
-            color: #003f9e;
-            font-size: 24px;
-        }
+    .section-title{
+      font-size:22px;
+      margin:30px 0 15px;
+      color:#2b1d16;
+    }
 
-        p {
-            width: 90%;
-            max-width: 800px;
-            margin: 10px auto;
-            line-height: 1.8;
-            font-size: 18px;
-        }
+    .text-block{
+      margin-bottom:20px;
+      font-size:17px;
+    }
 
-        .button {
-            display: block;
-            width: 90%;
-            max-width: 260px;
-            margin: 15px auto;
-            padding: 14px 0;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+    ul{list-style:none}
+    ul li{
+      margin-bottom:12px;
+      padding-right:28px;
+      position:relative;
+    }
+    ul li::before{
+      content:"✔";
+      position:absolute;
+      right:0;
+      color:var(--cta);
+      font-weight:bold;
+    }
 
-        .button:hover {
-            background: #0056c9;
-        }
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      justify-content:center;
+      margin-top:40px;
+    }
 
-        hr {
-            margin: 40px auto;
-            width: 75%;
-            border: none;
-            border-top: 1px solid #cccccc;
-        }
-    </style>
+    .btn{
+      background:var(--cta);
+      color:var(--white);
+      text-decoration:none;
+      padding:14px 28px;
+      border-radius:30px;
+      font-size:16px;
+      font-weight:600;
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      box-shadow:0 6px 18px rgba(0,0,0,.15);
+      display:inline-block;
+    }
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+      opacity:.95;
+    }
+
+    .btn-whatsapp{
+      background:var(--wa);
+      box-shadow:0 6px 18px rgba(0,0,0,.2);
+    }
+
+    .footer-note{
+      text-align:center;
+      margin-top:35px;
+      font-size:16px;
+      font-weight:600;
+    }
+
+    @media(max-width:600px){
+      h1{font-size:26px}
+      .section-title{font-size:20px}
+      .card{padding:30px 20px}
+    }
+  </style>
 </head>
 <body>
 
-    <div class="logo-area">
-        <img src="رابط-صورة-الشعار-هنا.png" alt="شعار Casa The Untamed">
+  <div class="container">
+    <div class="card">
+
+      <h1>فرصة عمل في التجارة الإلكترونية مع The Untamed</h1>
+      <p class="subtitle">خدم من أي مكان وبدون قيود – الفرصة بين يديك دابا</p>
+
+      <div class="text-block">
+        كتشوف راسك فمشروع حقيقي ومربح؟ كتبحث على فرصة عمل واضحة وقانونية فمجال التجارة الإلكترونية؟
+        مع <strong>The Untamed</strong> تقدر تبدا اليوم بلا خبرة وبإمكانيات بسيطة.
+      </div>
+
+      <h2 class="section-title">شنو نقدّمو ليك؟</h2>
+      <ul>
+        <li>عمل رسمي فمجال التجارة الإلكترونية</li>
+        <li>متجر إلكتروني جاهز بالكامل</li>
+        <li>التغليف والشحن على حساب الشركة (المغرب + أوروبا)</li>
+        <li>تدريب مجاني ومرافقة خطوة بخطوة</li>
+        <li>أرباح تبدأ من 15% وتزيد حسب النتائج</li>
+        <li>الخدمة غير بهاتفك ومن أي مكان</li>
+        <li>ما تحتاج حتى خبرة… غير الطموح والرغبة فالنجاح</li>
+      </ul>
+
+      <h2 class="section-title">لمن هذه الفرصة؟</h2>
+      <p class="text-block">
+        هاد العمل موجه لكل شخص باغي يحقق دخل إضافي أو رئيسي فالتجارة الإلكترونية،
+        بطريقة قانونية، واضحة، ومع شركة حقيقية كتدعمك حتى تنجح.
+      </p>
+
+      <p class="text-block">
+        بدا رحلتك دابا مع <strong>The Untamed</strong> واكتشف عالم التجارة الإلكترونية بثقة.
+      </p>
+
+      <div class="buttons">
+        <a class="btn" href="https://theuntamed.com/?referral=wFpNEb" target="_blank">🛒 منتجات The Untamed | عناية طبيعية، نتائج حقيقية</a>
+        <a class="btn btn-whatsapp" href="https://wa.link/4emaaz" target="_blank">💬 تواصل معنا عبر واتساب</a>
+        <a class="btn" href="https://dahbicasa36-collab.github.io/privacy-policy/legal-about.html">التعريف القانوني</a>
+        <a class="btn" href="https://dahbicasa36-collab.github.io/privacy-policy/terms.html">سياسة الخصوصية</a>
+        <a class="btn" href="https://dahbicasa36-collab.github.io/privacy-policy/about.html">شروط الخدمة</a>
+        <a class="btn" href="https://dahbicasa36-collab.github.io/privacy-policy/data-deletion.html">حذف البيانات</a>
+      </div>
+
+      <div class="footer-note">
+        تواصل معنا على واتساب وخد التفاصيل كاملة
+      </div>
+
     </div>
-
-    <div class="cover-area">
-        <img src="رابط-صورة-الغلاف-هنا.jpg" alt="صورة غلاف ترويجية للشركة">
-    </div>
-
-    <h1>Casa The Untamed</h1>
-    <h2>THE UNTAMED</h2>
-
-    <a class="button" href="https://theuntamed.com/?referral=wFpNEb">رابط المتجر</a>
-
-    <hr>
-
-    <h2>نبذة عن الشركة</h2>
-    <p>
-        Casa The Untamed هي منصة متخصصة في التجارة الإلكترونية، التدريب على العمل عبر الإنترنت،
-        وتقديم فرص عمل حقيقية مع نظام احترافي مبني على الجودة والشفافية.
-    </p>
-
-    <hr>
-
-    <h2>التعريف القانوني للشركة</h2>
-    <a href="legal-about.html" class="button">عرض التعريف القانوني</a>
-
-    <hr>
-
-    <h2>الوثائق القانونية</h2>
-    
-   <a class="button" href="index.html">سياسة الخصوصية</a>
-   <a class="button" href="terms.html">شروط الخدمة</a>
-    <a class="button" href="data-deletion.html">سياسة حذف البيانات</a>
+  </div>
 
 </body>
 </html>
