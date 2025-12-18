@@ -12,18 +12,64 @@
       --white:#ffffff;
       --text:#3b2a20;
     }
-    *{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif}
-    body{background:var(--bg);color:var(--text);line-height:1.9}
-    .container{max-width:900px;margin:0 auto;padding:40px 20px 60px}
-    .card{background:rgba(255,255,255,.4);border-radius:20px;padding:40px 30px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-    h1{text-align:center;font-size:30px;margin-bottom:25px;color:#2b1d16}
-    h2{font-size:22px;margin:30px 0 15px;color:#2b1d16}
-    p{font-size:16px;margin-bottom:14px}
-    ul{list-style:none}
-    li{margin-bottom:10px;padding-right:26px;position:relative}
-    li::before{content:"✔";position:absolute;right:0;color:var(--cta);font-weight:bold}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+    }
+    body{
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.9;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      padding:40px 20px 60px;
+    }
+    .card{
+      background:rgba(255,255,255,.45);
+      border-radius:20px;
+      padding:40px 30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    h1{
+      text-align:center;
+      font-size:30px;
+      margin-bottom:25px;
+      color:#2b1d16;
+    }
+    h2{
+      font-size:22px;
+      margin:30px 0 15px;
+      color:#2b1d16;
+    }
+    p{
+      font-size:16px;
+      margin-bottom:14px;
+    }
+    ul{
+      list-style:none;
+      margin-top:10px;
+    }
+    li{
+      margin-bottom:10px;
+      padding-right:26px;
+      position:relative;
+    }
+    li::before{
+      content:"✔";
+      position:absolute;
+      right:0;
+      color:var(--cta);
+      font-weight:bold;
+    }
 
-    .btn-box{text-align:center;margin-top:40px}
+    .btn-box{
+      text-align:center;
+      margin-top:40px;
+    }
     .btn{
       background:var(--cta);
       color:var(--white);
@@ -33,94 +79,65 @@
       font-weight:600;
       display:inline-block;
     }
-    .btn:hover{opacity:.9}
+    .btn:hover{
+      opacity:.9;
+    }
   </style>
 </head>
 
 <body>
-<div class="container">
-<div class="card">
+  <div class="container">
+    <div class="card">
 
-<h1>سياسة الخصوصية – The Untamed (Sweden)</h1>
-<p><strong>آخر تحديث:</strong> 18 ديسمبر 2024</p>
+      <h1>سياسة الخصوصية – The Untamed (Sweden)</h1>
+      <p><strong>آخر تحديث:</strong> 18 ديسمبر 2024</p>
 
-<h2>1. مقدمة</h2>
-<p>
-مرحباً بكم في <strong>The Untamed</strong>.
-نحن نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية وفقاً
-للنظام الأوروبي العام لحماية البيانات (GDPR) والقوانين السويدية.
-</p>
+      <h2>1. مقدمة</h2>
+      <p>
+        مرحباً بكم في <strong>The Untamed</strong>. نحن نحترم خصوصيتكم
+        ونلتزم بحماية بياناتكم الشخصية وفقاً للنظام الأوروبي العام
+        لحماية البيانات (GDPR) والقوانين السويدية المحلية.
+      </p>
 
-<h2>2. البيانات التي نجمعها</h2>
-<ul>
-  <li>بيانات الهوية: الاسم، اسم المستخدم.</li>
-  <li>بيانات التواصل: البريد الإلكتروني، رقم الهاتف.</li>
-  <li>البيانات التقنية: عنوان IP، نوع الجهاز، ملفات تعريف الارتباط (Cookies).</li>
-  <li>بيانات الاستخدام: كيفية استخدام الموقع أو التطبيق.</li>
-</ul>
+      <h2>2. البيانات التي نجمعها</h2>
+      <ul>
+        <li>بيانات الهوية: الاسم، اسم المستخدم.</li>
+        <li>بيانات التواصل: البريد الإلكتروني، رقم الهاتف.</li>
+        <li>البيانات التقنية: عنوان IP، نوع الجهاز، ملفات تعريف الارتباط (Cookies).</li>
+        <li>بيانات الاستخدام: كيفية استخدام الموقع أو التطبيق.</li>
+      </ul>
 
-<h2>3. كيف نستخدم بياناتكم؟</h2>
-<ul>
-  <li>إنشاء وإدارة الحسابات.</li>
-  <li>تقديم الدعم الفني.</li>
-  <li>إرسال التحديثات والعروض (بموافقتك).</li>
-  <li>الامتثال للقوانين السويدية.</li>
-</ul>
+      <h2>3. كيف نستخدم بياناتكم؟</h2>
+      <ul>
+        <li>إنشاء وإدارة الحسابات.</li>
+        <li>تقديم الدعم الفني وخدمة العملاء.</li>
+        <li>إرسال التحديثات أو العروض (بعد موافقتك).</li>
+        <li>الامتثال للالتزامات القانونية السويدية.</li>
+      </ul>
 
-<h2>4. الأساس القانوني للمعالجة</h2>
-<ul>
-  <li>الموافقة.</li>
-  <li>تنفيذ العقد.</li>
-  <li>الالتزام القانوني.</li>
-  <li>المصلحة المشروعة.</li>
-</ul>
+      <h2>4. الأساس القانوني للمعالجة</h2>
+      <ul>
+        <li>الموافقة الصريحة من المستخدم.</li>
+        <li>تنفيذ عقد أو خدمة مطلوبة.</li>
+        <li>الالتزام القانوني.</li>
+        <li>المصلحة المشروعة لتحسين الخدمات والأمن.</li>
+      </ul>
 
-<h2>5. مشاركة البيانات</h2>
-<p>
-لا نبيع بياناتك. قد نشاركها فقط مع مزودي الخدمات
-(مثل AWS أو Google Analytics) أو السلطات القانونية عند الطلب.
-</p>
+      <h2>5. مشاركة البيانات</h2>
+      <p>
+        لا نقوم ببيع بياناتكم. قد نشاركها فقط مع مزودي الخدمات
+        (مثل الاستضافة أو أدوات التحليل) أو الجهات القانونية
+        عند الطلب وفقاً للقانون السويدي.
+      </p>
 
-<h2>6. حقوقك القانونية (GDPR)</h2>
-<ul>
-  <li>حق الوصول.</li>
-  <li>حق التصحيح.</li>
-  <li>حق الحذف (الحق في النسيان).</li>
-  <li>حق الاعتراض على التسويق.</li>
-</ul>
+      <!-- زر الرجوع -->
+      <div class="btn-box">
+        <a class="btn" href="https://dahbicasa36-collab.github.io/privacy-policy/home.html">
+          ⬅️ الرجوع إلى الصفحة الرئيسية
+        </a>
+      </div>
 
-<h2>7. تخزين البيانات</h2>
-<p>
-نحتفظ بالبيانات فقط للمدة اللازمة.
-ملاحظة: تُلزم القوانين السويدية بالاحتفاظ ببيانات الفواتير لمدة 7 سنوات
-وفقاً لقانون المحاسبة السويدي (Bokföringslag).
-</p>
-
-<h2>8. أمن البيانات</h2>
-<p>
-نطبق إجراءات أمنية متقدمة مثل تشفير SSL
-لحماية بياناتك من الوصول غير المصرح به.
-</p>
-
-<h2>9. التعديلات</h2>
-<p>
-قد نقوم بتحديث هذه السياسة من وقت لآخر.
-سيتم إشعار المستخدمين بأي تغيير مهم.
-</p>
-
-<h2>10. التواصل معنا</h2>
-<p>
-البريد الإلكتروني: <strong>privacy@theuntamed.se</strong><br>
-العنوان: (ستوكهولم – السويد)
-</p>
-
-<div class="btn-box">
-  <a class="btn" href="home.html">
-    ⬅️ الرجوع إلى الصفحة الرئيسية
-  </a>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </body>
 </html>
