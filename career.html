@@ -6,48 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-   body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f1b398;
-  color: #1a1a1a;
-  line-height: 1.9;
-}
-
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1b398;
+      color: #1a1a1a;
+      line-height: 1.9;
+    }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #e0c2ad;
+      background: #f1b398;
+    }
+
+    header strong {
+      font-size: 18px;
     }
 
     header a {
       text-decoration: none;
-      color: #a1694f;
+      color: #7a4b2e;
       font-weight: bold;
     }
 
     .container {
       max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+      margin: 40px auto;
+      padding: 40px 25px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
     h1 {
       text-align: center;
       margin-bottom: 30px;
+      color: #000000;
+      font-weight: bold;
     }
 
     h2 {
       margin-top: 40px;
-      color: #a1694f;
+      color: #7a4b2e;
     }
 
     .intro {
       font-size: 18px;
       margin-bottom: 30px;
+      color: #000000;
     }
 
     ul {
@@ -61,8 +71,9 @@
     .video-main video {
       width: 100%;
       max-height: 500px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin: 30px 0;
+      background: #000;
     }
 
     .video-grid {
@@ -74,7 +85,8 @@
 
     .video-grid video {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
+      background: #000;
     }
 
     .buttons {
@@ -87,11 +99,12 @@
 
     .btn {
       background: #a1694f;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 8px;
+      color: #ffffff;
+      padding: 14px 30px;
+      border-radius: 10px;
       text-decoration: none;
       font-size: 16px;
+      font-weight: bold;
     }
 
     .btn.secondary {
@@ -104,8 +117,8 @@
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      border-top: 1px solid #eee;
-      margin-top: 60px;
+      color: #5a3a28;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -170,7 +183,6 @@
     </strong>
   </p>
 
-  <!-- الأزرار -->
   <div class="buttons">
     <a class="btn" href="https://wa.link/4emaaz">تواصل معنا على واتساب</a>
     <a class="btn secondary" href="index.html">الصفحة الرئيسية</a>
