@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>فرصة عمل في التجارة الإلكترونية | The Untamed</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية | The Untamed</title>
+
   <style>
     :root{
       --bg:#ecb69e;
@@ -11,161 +12,115 @@
       --white:#ffffff;
       --text:#3b2a20;
     }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif}
+    body{background:var(--bg);color:var(--text);line-height:1.9}
+    .container{max-width:900px;margin:0 auto;padding:40px 20px 60px}
+    .card{background:rgba(255,255,255,.4);border-radius:20px;padding:40px 30px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    h1{text-align:center;font-size:30px;margin-bottom:25px;color:#2b1d16}
+    h2{font-size:22px;margin:30px 0 15px;color:#2b1d16}
+    p{font-size:16px;margin-bottom:14px}
+    ul{list-style:none}
+    li{margin-bottom:10px;padding-right:26px;position:relative}
+    li::before{content:"✔";position:absolute;right:0;color:var(--cta);font-weight:bold}
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    }
-
-    body{
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.8;
-    }
-
-    .container{
-      max-width:900px;
-      margin:0 auto;
-      padding:40px 20px 60px;
-    }
-
-    .card{
-      background:rgba(255,255,255,0.35);
-      border-radius:18px;
-      padding:40px 30px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    h1{
-      text-align:center;
-      font-size:32px;
-      margin-bottom:20px;
-      color:#2b1d16;
-    }
-
-    .subtitle{
-      text-align:center;
-      font-size:18px;
-      margin-bottom:30px;
-    }
-
-    .section-title{
-      font-size:22px;
-      margin:30px 0 15px;
-      color:#2b1d16;
-    }
-
-    ul{
-      list-style:none;
-      padding-right:0;
-    }
-
-    ul li{
-      margin-bottom:12px;
-      padding-right:28px;
-      position:relative;
-    }
-
-    ul li::before{
-      content:"✔";
-      position:absolute;
-      right:0;
-      color:var(--cta);
-      font-weight:bold;
-    }
-
-    .text-block{
-      margin-bottom:20px;
-      font-size:17px;
-    }
-
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:15px;
-      justify-content:center;
-      margin-top:40px;
-    }
-
+    .btn-box{text-align:center;margin-top:40px}
     .btn{
       background:var(--cta);
       color:var(--white);
-      text-decoration:none;
-      padding:14px 28px;
+      padding:14px 30px;
       border-radius:30px;
-      font-size:16px;
+      text-decoration:none;
       font-weight:600;
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+      display:inline-block;
     }
-
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 10px 24px rgba(0,0,0,0.18);
-    }
-
-    .footer-note{
-      text-align:center;
-      margin-top:35px;
-      font-size:16px;
-      font-weight:600;
-    }
-
-    @media(max-width:600px){
-      h1{font-size:26px;}
-      .section-title{font-size:20px;}
-      .card{padding:30px 20px;}
-    }
+    .btn:hover{opacity:.9}
   </style>
 </head>
+
 <body>
+<div class="container">
+<div class="card">
 
-  <div class="container">
-    <div class="card">
+<h1>سياسة الخصوصية – The Untamed (Sweden)</h1>
+<p><strong>آخر تحديث:</strong> 18 ديسمبر 2024</p>
 
-      <h1>فرصة عمل في التجارة الإلكترونية مع The Untamed</h1>
-      <p class="subtitle">خدم من أي مكان وبدون قيود – الفرصة بين يديك دابا</p>
+<h2>1. مقدمة</h2>
+<p>
+مرحباً بكم في <strong>The Untamed</strong>.
+نحن نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية وفقاً
+للنظام الأوروبي العام لحماية البيانات (GDPR) والقوانين السويدية.
+</p>
 
-      <div class="text-block">
-        كتشوف راسك فمشروع حقيقي ومربح؟
-        كتبحث على فرصة عمل واضحة وقانونية فمجال التجارة الإلكترونية؟
-        مع <strong>The Untamed</strong>، تقدر تبدا اليوم بلا خبرة وبإمكانيات بسيطة.
-      </div>
+<h2>2. البيانات التي نجمعها</h2>
+<ul>
+  <li>بيانات الهوية: الاسم، اسم المستخدم.</li>
+  <li>بيانات التواصل: البريد الإلكتروني، رقم الهاتف.</li>
+  <li>البيانات التقنية: عنوان IP، نوع الجهاز، ملفات تعريف الارتباط (Cookies).</li>
+  <li>بيانات الاستخدام: كيفية استخدام الموقع أو التطبيق.</li>
+</ul>
 
-      <h2 class="section-title">شنو نقدّمو ليك؟</h2>
-      <ul>
-        <li>عمل رسمي فمجال التجارة الإلكترونية</li>
-        <li>متجر إلكتروني جاهز بالكامل</li>
-        <li>التغليف والشحن على حساب الشركة (المغرب + أوروبا)</li>
-        <li>تدريب مجاني ومرافقة خطوة بخطوة</li>
-        <li>أرباح تبدأ من 15% وتزيد حسب النتائج</li>
-        <li>الخدمة غير بهاتفك ومن أي مكان</li>
-        <li>ما تحتاج حتى خبرة… غير الطموح والرغبة فالنجاح</li>
-      </ul>
+<h2>3. كيف نستخدم بياناتكم؟</h2>
+<ul>
+  <li>إنشاء وإدارة الحسابات.</li>
+  <li>تقديم الدعم الفني.</li>
+  <li>إرسال التحديثات والعروض (بموافقتك).</li>
+  <li>الامتثال للقوانين السويدية.</li>
+</ul>
 
-      <h2 class="section-title">لمن هذه الفرصة؟</h2>
-      <p class="text-block">
-        هاد العمل موجه لكل شخص باغي يحقق دخل إضافي أو رئيسي فـ التجارة الإلكترونية،
-        بطريقة قانونية، واضحة، ومع شركة حقيقية كتدعمك حتى تنجح.
-      </p>
+<h2>4. الأساس القانوني للمعالجة</h2>
+<ul>
+  <li>الموافقة.</li>
+  <li>تنفيذ العقد.</li>
+  <li>الالتزام القانوني.</li>
+  <li>المصلحة المشروعة.</li>
+</ul>
 
-      <p class="text-block">
-        بدا رحلتك دابا مع <strong>The Untamed</strong> واكتشف عالم التجارة الإلكترونية بثقة.
-      </p>
+<h2>5. مشاركة البيانات</h2>
+<p>
+لا نبيع بياناتك. قد نشاركها فقط مع مزودي الخدمات
+(مثل AWS أو Google Analytics) أو السلطات القانونية عند الطلب.
+</p>
 
-      <div class="buttons">
-        <a class="btn" href="https://dahbicasa36-collab.github.io/" target="_blank">الرجوع إلى الصفحة الرئيسية</a>
-        <a class="btn" href="https://linktr.ee/casatheuntamed" target="_blank">اتصل بنا</a>
-      </div>
+<h2>6. حقوقك القانونية (GDPR)</h2>
+<ul>
+  <li>حق الوصول.</li>
+  <li>حق التصحيح.</li>
+  <li>حق الحذف (الحق في النسيان).</li>
+  <li>حق الاعتراض على التسويق.</li>
+</ul>
 
-      <div class="footer-note">
-        تواصل معنا على واتساب وخد التفاصيل كاملة
-      </div>
+<h2>7. تخزين البيانات</h2>
+<p>
+نحتفظ بالبيانات فقط للمدة اللازمة.
+ملاحظة: تُلزم القوانين السويدية بالاحتفاظ ببيانات الفواتير لمدة 7 سنوات
+وفقاً لقانون المحاسبة السويدي (Bokföringslag).
+</p>
 
-    </div>
-  </div>
+<h2>8. أمن البيانات</h2>
+<p>
+نطبق إجراءات أمنية متقدمة مثل تشفير SSL
+لحماية بياناتك من الوصول غير المصرح به.
+</p>
 
+<h2>9. التعديلات</h2>
+<p>
+قد نقوم بتحديث هذه السياسة من وقت لآخر.
+سيتم إشعار المستخدمين بأي تغيير مهم.
+</p>
+
+<h2>10. التواصل معنا</h2>
+<p>
+البريد الإلكتروني: <strong>privacy@theuntamed.se</strong><br>
+العنوان: (ستوكهولم – السويد)
+</p>
+
+<div class="btn-box">
+  <a class="btn" href="home.html">
+    ⬅️ الرجوع إلى الصفحة الرئيسية
+  </a>
+</div>
+
+</div>
+</div>
 </body>
 </html>
