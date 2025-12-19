@@ -2,10 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>The Untamed | جمال نقي مستوحى من الطبيعة الشمالية</title>
+<title>The Untamed | الصفحة الرئيسية</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- خط احترافي -->
+<!-- خط -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -13,7 +13,6 @@
 *{
   box-sizing:border-box;
 }
-
 body{
   margin:0;
   font-family:"Cairo", sans-serif;
@@ -23,116 +22,99 @@ body{
 /* ===== الخلفية الرئيسية ===== */
 .hero{
   min-height:100vh;
-  background:url("rosa.jpg") center/cover no-repeat;
+  background:url("rosa.jpg") no-repeat center center/cover;
   position:relative;
-  display:flex;
-  flex-direction:column;
 }
 
-/* طبقة تغميق خفيفة */
+/* طبقة خفيفة باش النص يبان */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.35);
 }
 
-/* ===== الهيدر ===== */
-header{
+/* ===== المحتوى ===== */
+.hero-content{
   position:relative;
   z-index:2;
-  padding:20px;
+  min-height:100vh;
   display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:30px;
 }
 
-/* أزرار العناوين (لون واحد) */
-.nav-btn{
-  background:rgba(255,255,255,0.15);
-  color:#ffffff;
+/* ===== القائمة ===== */
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+
+nav a{
+  text-decoration:none;
   padding:10px 18px;
   border-radius:30px;
-  text-decoration:none;
-  font-size:15px;
-  backdrop-filter: blur(4px);
-  transition:0.3s;
+  background:rgba(255,255,255,0.2); /* لون واحد لكل الأزرار */
+  color:#ffffff;
+  font-size:14px;
+  font-weight:600;
+  backdrop-filter: blur(6px);
 }
 
-.nav-btn:hover{
-  background:rgba(255,255,255,0.3);
+nav a:hover{
+  background:rgba(255,255,255,0.35);
 }
 
-/* ===== المحتوى الوسطي ===== */
-.content{
-  position:relative;
-  z-index:2;
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* ===== النص الرئيسي ===== */
+.center-text{
   text-align:center;
-  padding:20px;
-}
-
-.content-inner{
   max-width:900px;
+  margin:0 auto;
 }
 
-/* العناوين */
-h1{
-  font-size:40px;
-  margin-bottom:20px;
+.center-text h1{
+  font-size:36px;
+  margin-bottom:15px;
 }
 
-.tagline{
+.center-text h2{
   font-size:20px;
+  font-weight:400;
   margin-bottom:30px;
-  line-height:1.8;
 }
 
-/* أقسام نصية */
-.features{
-  margin:40px 0;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+.center-text p{
+  font-size:18px;
+  margin:10px 0;
 }
 
-.feature{
-  background:rgba(255,255,255,0.12);
-  padding:18px;
-  border-radius:16px;
-}
-
-/* أزرار CTA */
-.cta{
-  margin-top:35px;
+/* ===== أزرار أسفل النص ===== */
+.main-actions{
+  margin-top:30px;
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:15px;
   flex-wrap:wrap;
 }
 
-.cta a{
-  background:#a1694f;
-  color:#ffffff;
-  padding:14px 32px;
+.main-actions a{
+  padding:14px 30px;
   border-radius:30px;
+  background:#ffffff;
+  color:#000000;
   text-decoration:none;
-  font-size:16px;
-  font-weight:bold;
+  font-weight:700;
 }
 
 /* ===== الفوتر ===== */
 footer{
-  position:relative;
-  z-index:2;
   text-align:center;
-  padding:15px;
   font-size:14px;
-  opacity:0.85;
+  opacity:0.9;
+  margin-top:20px;
 }
 </style>
 </head>
@@ -140,47 +122,39 @@ footer{
 <body>
 
 <section class="hero">
+  <div class="hero-content">
 
-  <!-- الهيدر / العناوين -->
-  <header>
-    <a class="nav-btn" href="career.html">فرصة عمل</a>
-    <a class="nav-btn" href="about.html">تعريف بالشركة</a>
-    <a class="nav-btn" href="privacy-policy.html">السياسة الخصوصية</a>
-    <a class="nav-btn" href="terms.html">شروط الخدمة</a>
-    <a class="nav-btn" href="data-deletion.html">سياسة حذف البيانات</a>
-    <a class="nav-btn" href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
-    <a class="nav-btn" href="contact.html">اتصل بنا</a>
-  </header>
+    <!-- القائمة -->
+    <nav>
+      <a href="career.html">فرصة عمل</a>
+      <a href="about.html">تعريف بالشركة</a>
+      <a href="privacy-policy.html">السياسة الخصوصية</a>
+      <a href="terms.html">شروط الخدمة</a>
+      <a href="data-deletion.html">سياسة حذف البيانات</a>
+      <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
+      <a href="contact.htm">اتصل بنا</a>
+    </nav>
 
-  <!-- المحتوى -->
-  <div class="content">
-    <div class="content-inner">
-
+    <!-- المحتوى -->
+    <div class="center-text">
       <h1>جمال نقي مستوحى من الطبيعة الشمالية</h1>
+      <h2>جودة سويدية، ثقة عالمية</h2>
 
-      <p class="tagline">
-        قصتنا مع الطبيعة · جمال صادق بدون مبالغة<br>
-        جودة سويدية، ثقة عالمية
-      </p>
+      <p>قصتنا مع الطبيعة</p>
+      <p>جمال صادق بدون مبالغة</p>
+      <p>منتجات طبيعية 100% وعطور مستوحاة من السويد</p>
 
-      <div class="features">
-        <div class="feature">🌿 مكونات طبيعية 100%</div>
-        <div class="feature">🌸 منتجات طبيعية وعطور مستوحاة من السويد</div>
-        <div class="feature">🌍 حضور عالمي في أوروبا والمغرب</div>
-      </div>
-
-      <div class="cta">
+      <div class="main-actions">
         <a href="career.html">انضم إلينا</a>
-        <a href="https://theuntamed.com/?referral=wFpNEb">تسوق المنتجات</a>
+        <a href="https://theuntamed.com/?referral=wFpNEb">تسوّق الآن</a>
       </div>
-
     </div>
+
+    <footer>
+      © 2025 The Untamed
+    </footer>
+
   </div>
-
-  <footer>
-    © 2025 The Untamed
-  </footer>
-
 </section>
 
 </body>
