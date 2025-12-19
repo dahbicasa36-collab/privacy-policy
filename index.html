@@ -5,7 +5,6 @@
 <title>The Untamed | جمال نقي مستوحى من الطبيعة الشمالية</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- خط احترافي -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -29,12 +28,27 @@ body{
   flex-direction:column;
 }
 
-/* طبقة تغميق خفيفة */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
   background:rgba(0,0,0,0.45);
+}
+
+/* ===== Nav Links (موحّد) ===== */
+.nav-link{
+  background:rgba(255,255,255,0.2);
+  color:#ffffff;
+  padding:10px 18px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:15px;
+  transition:0.3s;
+  display:inline-block;
+}
+
+.nav-link:hover{
+  background:#a1694f;
 }
 
 /* ===== الهيدر ===== */
@@ -48,23 +62,7 @@ header{
   gap:12px;
 }
 
-/* أزرار العناوين (لون واحد) */
-.nav-btn{
-  background:rgba(255,255,255,0.15);
-  color:#ffffff;
-  padding:10px 18px;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:15px;
-  backdrop-filter: blur(4px);
-  transition:0.3s;
-}
-
-.nav-btn:hover{
-  background:rgba(255,255,255,0.3);
-}
-
-/* ===== المحتوى الوسطي ===== */
+/* ===== المحتوى ===== */
 .content{
   position:relative;
   z-index:2;
@@ -80,7 +78,6 @@ header{
   max-width:900px;
 }
 
-/* العناوين */
 h1{
   font-size:40px;
   margin-bottom:20px;
@@ -92,7 +89,6 @@ h1{
   line-height:1.8;
 }
 
-/* أقسام نصية */
 .features{
   margin:40px 0;
   display:grid;
@@ -106,7 +102,7 @@ h1{
   border-radius:16px;
 }
 
-/* أزرار CTA */
+/* CTA */
 .cta{
   margin-top:35px;
   display:flex;
@@ -115,17 +111,7 @@ h1{
   flex-wrap:wrap;
 }
 
-.cta a{
-  background:#969696;
-  color:#ffffff;
-  padding:14px 32px;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:16px;
-  font-weight:bold;
-}
-
-/* ===== الفوتر ===== */
+/* ===== Footer ===== */
 footer{
   position:relative;
   z-index:2;
@@ -141,48 +127,43 @@ footer{
 
 <section class="hero">
 
-  <!-- الهيدر / العناوين -->
-  <header>
-    <a class="nav-btn" href="career.html">فرصة عمل</a>
-    <a class="nav-btn" href="about.html">تعريف بالشركة</a>
-    <a class="nav-btn" href="privacy-policy.html">السياسة الخصوصية</a>
-    <a class="nav-btn" href="terms.html">شروط الخدمة</a>
-    <a class="nav-btn" href="data-deletion.html">سياسة حذف البيانات</a>
-    <a class="nav-btn" href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
-   <a href="https://wa.link/4emaaz" target="_blank" class="nav-btn">
-  اتصل بنا
-</a>
+<header>
+  <a class="nav-link" href="career.html">فرصة عمل</a>
+  <a class="nav-link" href="about.html">تعريف بالشركة</a>
+  <a class="nav-link" href="privacy-policy.html">السياسة الخصوصية</a>
+  <a class="nav-link" href="terms.html">شروط الخدمة</a>
+  <a class="nav-link" href="data-deletion.html">سياسة حذف البيانات</a>
+  <a class="nav-link" href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
+  <a class="nav-link" href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
+</header>
 
-  </header>
+<div class="content">
+  <div class="content-inner">
 
-  <!-- المحتوى -->
-  <div class="content">
-    <div class="content-inner">
+    <h1>جمال نقي مستوحى من الطبيعة الشمالية</h1>
 
-      <h1>جمال نقي مستوحى من الطبيعة الشمالية</h1>
+    <p class="tagline">
+      قصتنا مع الطبيعة · جمال صادق بدون مبالغة<br>
+      جودة سويدية، ثقة عالمية
+    </p>
 
-      <p class="tagline">
-        قصتنا مع الطبيعة · جمال صادق بدون مبالغة<br>
-        جودة سويدية، ثقة عالمية
-      </p>
-
-      <div class="features">
-        <div class="feature">🌿 مكونات طبيعية 100%</div>
-        <div class="feature">🌸 منتجات طبيعية وعطور مستوحاة من السويد</div>
-        <div class="feature">🌍 حضور عالمي في أوروبا والمغرب</div>
-      </div>
-
-      <div class="cta">
-        <a href="career.html">انضم إلينا</a>
-        <a href="https://theuntamed.com/?referral=wFpNEb">تسوق المنتجات</a>
-      </div>
-
+    <div class="features">
+      <div class="feature">🌿 مكونات طبيعية 100%</div>
+      <div class="feature">🌸 منتجات طبيعية وعطور مستوحاة من السويد</div>
+      <div class="feature">🌍 حضور عالمي في أوروبا والمغرب</div>
     </div>
-  </div>
 
-  <footer>
-    © 2025 The Untamed
-  </footer>
+    <div class="cta">
+      <a class="nav-link" href="career.html">انضم إلينا</a>
+      <a class="nav-link" href="https://theuntamed.com/?referral=wFpNEb">تسوق المنتجات</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 The Untamed
+</footer>
 
 </section>
 
