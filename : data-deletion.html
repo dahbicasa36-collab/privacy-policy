@@ -5,7 +5,6 @@
 <title>سياسة حذف البيانات | The Untamed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- خط Cairo -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -30,7 +29,6 @@ header{
 
 header a{
   text-decoration:none;
-  color:#1a1a1a;
   font-weight:700;
 }
 
@@ -64,22 +62,28 @@ ul li{
   margin-bottom:8px;
 }
 
-/* ===== Buttons ===== */
+/* ===== Nav Links (Buttons unified) ===== */
+.nav-link{
+  background-color: rgba(255,255,255,0.2);
+  color:#ffffff;
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition:background-color 0.3s ease;
+}
+
+.nav-link:hover{
+  background-color:#a1694f;
+}
+
+/* ===== Actions ===== */
 .actions{
   display:flex;
   justify-content:center;
   gap:18px;
   margin-top:40px;
   flex-wrap:wrap;
-}
-
-.btn{
-  padding:14px 28px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  background:#a1694f;
-  color:#ffffff;
 }
 
 /* ===== Footer ===== */
@@ -95,7 +99,7 @@ footer{
 <body>
 
 <header>
-  <a href="index.html">← الرجوع إلى الصفحة الرئيسية</a>
+  <a href="index.html" class="nav-link">← الرجوع إلى الصفحة الرئيسية</a>
   <strong>The Untamed</strong>
 </header>
 
@@ -107,58 +111,42 @@ footer{
 <h2>1. المقدمة</h2>
 <p>
 تلتزم شركة <strong>The Untamed</strong> بحماية خصوصية المستخدمين وفقاً للوائح حماية البيانات
-الأوروبية والسويدية (GDPR). تهدف هذه السياسة إلى توضيح كيفية ممارسة المستخدم لحقه
-في حذف بياناته الشخصية ("الحق في النسيان").
+الأوروبية والسويدية (GDPR).
 </p>
 
-<h2>2. البيانات التي نجمعها ولماذا نؤرشفها</h2>
+<h2>2. البيانات التي نجمعها</h2>
 <p>
-نحتفظ بالبيانات فقط طالما كانت ضرورية لتقديم خدماتنا.
-بعد انتهاء الغرض، يتم حذف البيانات تلقائياً ما لم يفرض
-القانون السويدي الاحتفاظ بها (مثل قانون المحاسبة السويدي Bokföringslag).
+نحتفظ بالبيانات فقط طالما كانت ضرورية لتقديم خدماتنا وفق القانون السويدي.
 </p>
 
 <h2>3. كيفية طلب حذف البيانات</h2>
 <ul>
-  <li>من خلال الموقع أو التطبيق: إعدادات الحساب ← حذف الحساب.</li>
-  <li>عبر البريد الإلكتروني: <strong>privacy@theuntamed.se</strong></li>
+  <li>إعدادات الحساب ← حذف الحساب</li>
+  <li>البريد الإلكتروني: <strong>privacy@theuntamed.se</strong></li>
 </ul>
 
-<h2>4. الإجراءات والمدة الزمنية</h2>
+<h2>4. المدة الزمنية</h2>
 <ul>
-  <li>التحقق من الهوية: خلال 48 ساعة.</li>
-  <li>حذف البيانات النشطة: خلال 30 يوماً.</li>
-  <li>النسخ الاحتياطية: قد تصل إلى 60 يوماً للحذف الكامل.</li>
-</ul>
-
-<h2>5. الاستثناءات القانونية</h2>
-<ul>
-  <li>الالتزامات الضريبية والمالية (الاحتفاظ لمدة 7 سنوات).</li>
-  <li>النزاعات القانونية الجارية.</li>
+  <li>التحقق خلال 48 ساعة</li>
+  <li>الحذف خلال 30 يوماً</li>
 </ul>
 
 <hr>
 
 <h2>Data Deletion Policy – The Untamed (Sweden)</h2>
-
 <p>
-In accordance with the General Data Protection Regulation (GDPR) and
-the Swedish Data Protection Act, users have the right to request the deletion
-of their personal data.
+Users may request deletion of their personal data in accordance with GDPR.
 </p>
 
 <ul>
-  <li>Request via Account Settings → Delete Account.</li>
   <li>Email: <strong>privacy@theuntamed.se</strong></li>
-  <li>Full deletion within 30 days after verification.</li>
-  <li>Financial records retained for 7 years (Bokföringslag).</li>
+  <li>Deletion within 30 days</li>
 </ul>
 
 <div class="actions">
- <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="btn">
-  ⬅ الرجوع إلى الصفحة الرئيسية
-</a>
-
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="nav-link">
+    ⬅ الرجوع إلى الصفحة الرئيسية
+  </a>
 </div>
 
 </div>
