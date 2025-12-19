@@ -22,16 +22,16 @@ body{
 /* ===== الخلفية الرئيسية ===== */
 .hero{
   min-height:100vh;
-  background-image: url("hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image:url("hero.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+  display:flex;
+  flex-direction:column;
 }
 
-
-
-
-
+/* طبقة التعتيم */
 .hero::before{
   content:"";
   position:absolute;
@@ -39,7 +39,7 @@ body{
   background:rgba(0,0,0,0.45);
 }
 
-/* ===== Nav Links (موحّد) ===== */
+/* ===== Nav Links موحّد ===== */
 .nav-link{
   background:rgba(255,255,255,0.2);
   color:#ffffff;
@@ -93,6 +93,7 @@ h1{
   line-height:1.8;
 }
 
+/* ===== Features ===== */
 .features{
   margin:40px 0;
   display:grid;
@@ -106,7 +107,7 @@ h1{
   border-radius:16px;
 }
 
-/* CTA */
+/* ===== CTA ===== */
 .cta{
   margin-top:35px;
   display:flex;
@@ -123,6 +124,45 @@ footer{
   padding:15px;
   font-size:14px;
   opacity:0.85;
+}
+
+/* ===== Responsive Mobile ===== */
+@media (max-width:768px){
+
+  header{
+    gap:8px;
+    padding:12px 10px;
+  }
+
+  .nav-link{
+    font-size:13px;
+    padding:8px 14px;
+    border-radius:20px;
+  }
+
+  h1{
+    font-size:26px;
+    line-height:1.4;
+  }
+
+  .tagline{
+    font-size:15px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .feature{
+    font-size:14px;
+    padding:14px;
+  }
+
+  .cta{
+    flex-direction:column;
+    gap:12px;
+  }
 }
 </style>
 </head>
