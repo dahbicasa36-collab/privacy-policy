@@ -11,40 +11,45 @@
       padding: 0;
       font-family: Tahoma, Arial, sans-serif;
       background-color: #f4b8a6;
+      color: rgba(255,255,255,0.9);
+      font-size: 17px;
+      line-height: 2;
     }
 
     .wrapper {
       max-width: 900px;
-      margin: 60px auto;
-      background: rgba(255,255,255,0.15);
-      padding: 50px 40px;
-      border-radius: 14px;
+      margin: 70px auto;
+      padding: 55px 45px;
+      background: rgba(255,255,255,0.22);
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
     }
 
     h1 {
       font-size: 32px;
-      color: #FFFFFF;
-      text-align: center;
-      margin-bottom: 40px;
       font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 35px;
+      letter-spacing: 0.6px;
     }
 
     h2 {
       font-size: 22px;
-      color: #FFFFFF;
-      margin-top: 45px;
-      margin-bottom: 20px;
       font-weight: bold;
+      color: #ffffff;
+      margin-top: 45px;
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
     }
 
-    p, li {
-      font-size: 17.5px;
-      line-height: 2.1;
-      color: #F5F5F5;
+    p {
+      margin-bottom: 22px;
     }
 
     ul {
-      padding-right: 25px;
+      padding-right: 26px;
+      margin-bottom: 30px;
     }
 
     li {
@@ -57,25 +62,32 @@
     }
 
     .btn {
+      display: inline-block;
       background-color: #f59579;
-      color: #FFFFFF;
-      padding: 16px 34px;
+      color: #ffffff;
+      padding: 16px 36px;
+      border-radius: 12px;
       text-decoration: none;
-      border-radius: 10px;
       font-size: 17px;
       font-weight: bold;
       margin: 10px;
-      display: inline-block;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: all 0.25s ease;
     }
 
     .btn:hover {
-      opacity: 0.9;
+      transform: translateY(-2px);
+      opacity: 0.95;
     }
 
     @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
       .wrapper {
-        margin: 30px 15px;
-        padding: 35px 20px;
+        margin: 35px 15px;
+        padding: 40px 22px;
       }
 
       h1 {
@@ -84,10 +96,6 @@
 
       h2 {
         font-size: 20px;
-      }
-
-      p, li {
-        font-size: 17px;
       }
     }
   </style>
