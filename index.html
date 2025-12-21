@@ -1,213 +1,217 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>The Untamed | الصفحة الرئيسية</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="فرص عمل في التجارة الإلكترونية مع The Untamed، تدريب مجاني وأرباح تبدأ من 15%">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>The Untamed | الصفحة الرئيسية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="فرصة عمل في التجارة الإلكترونية مع The Untamed">
 
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:"Cairo",sans-serif;
-      background:#f5f5f5;
-      color:#111;
-      line-height:1.9;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-    /* ===== HEADER ===== */
-    header{
-      background:#fff;
-      padding:15px 30px; /* هوامش جانبية أكبر */
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:40px; /* تباعد بين اللوجو والأزرار */
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,.08);
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Cairo",sans-serif;
+  background:#f5f5f5;
+  color:#111;
+  line-height:1.9;
+}
 
-    .logo img{
-      height:55px;
-    }
+/* ===== TOP BAR ===== */
+.topbar{
+  background:#fff;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-    nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      flex-grow:1;
-    }
+.logo img{
+  height:50px;
+}
 
-    nav a{
-      text-decoration:none;
-      background:#eee;
-      padding:8px 14px;
-      border-radius:20px;
-      color:#111;
-      font-size:14px;
-      transition:.3s;
-    }
-    nav a:hover{
-      background:#a1694f;
-      color:#fff;
-    }
+.menu-btn{
+  font-size:32px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
 
-    /* ===== SECTION ===== */
-    .section{
-      max-width:1200px;
-      margin:40px auto;
-      padding:0 20px;
-    }
+/* ===== MOBILE MENU ===== */
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:#fff;
+  box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
 
-    /* ===== VIDEO CARD ===== */
-    .video-card{
-      background:#000;
-      border-radius:22px;
-      overflow:hidden;
-      position:relative;
-      margin-bottom:50px;
-    }
+.mobile-menu a{
+  padding:15px;
+  text-decoration:none;
+  color:#111;
+  border-bottom:1px solid #eee;
+  font-weight:700;
+}
 
-    .video-card img{
-      width:100%;
-      display:block;
-    }
+.mobile-menu a:hover{
+  background:#a1694f;
+  color:#fff;
+}
 
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2));
-      color:#fff;
-      padding:30px;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-    }
+/* ===== CONTENT ===== */
+.section{
+  max-width:1200px;
+  margin:30px auto;
+  padding:0 15px;
+}
 
-    .overlay p{
-      font-size:16px;
-      margin-bottom:15px;
-    }
+/* ===== VIDEO CARD ===== */
+.video-card{
+  position:relative;
+  border-radius:22px;
+  overflow:hidden;
+  margin-bottom:50px;
+  background:#000;
+}
 
-    .video-btns{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+.video-card img{
+  width:100%;
+  display:block;
+}
 
-    .btn{
-      background:#fff;
-      color:#000;
-      padding:10px 20px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      transition:.3s;
-    }
-    .btn:hover{
-      background:#a1694f;
-      color:#fff;
-    }
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2));
+  color:#fff;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
 
-    .btn.whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
-    .btn.whatsapp:hover{
-      background:#128C7E;
-    }
+.overlay p{
+  font-size:15px;
+  margin-bottom:15px;
+}
 
-    /* ===== FOOTER ===== */
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#fff;
-      margin-top:60px;
-      color:#555;
-      font-size:14px;
-    }
+.video-btns{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
-    /* ===== MOBILE ===== */
-    @media(max-width:768px){
-      .overlay p{font-size:14px}
-      nav{justify-content:center}
-      header{
-        flex-direction:column;
-        align-items:center;
-        gap:20px; /* تباعد رأسي مريح في الهاتف */
-      }
-    }
-  </style>
+.btn{
+  background:#fff;
+  color:#000;
+  padding:10px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.btn:hover{
+  background:#a1694f;
+  color:#fff;
+}
+
+.btn.whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+.btn.whatsapp:hover{
+  background:#128C7E;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#fff;
+  color:#666;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<header class="topbar">
   <a href="index.html" class="logo">
-    <img src="dana.jpg" alt="The Untamed Logo">
+    <img src="dana.jpg" alt="The Untamed">
   </a>
-
-  <nav>
-    <a href="career.html">فرصة العمل</a>
-    <a href="about.html">تعريف بالشركة</a>
-    <a href="privacy-policy.html">السياسة الخصوصية</a>
-    <a href="terms.html">شروط الخدمة</a>
-    <a href="data-deletion.html">سياسة حذف البيانات</a>
-    <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
-    <a href="https://wa.link/4emaaz">اتصل بنا</a>
-  </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </header>
+
+<!-- MENU -->
+<nav id="mobileMenu" class="mobile-menu">
+  <a href="career.html">فرصة العمل</a>
+  <a href="about.html">تعريف بالشركة</a>
+  <a href="privacy-policy.html">السياسة الخصوصية</a>
+  <a href="terms.html">شروط الخدمة</a>
+  <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
+  <a href="https://wa.link/4emaaz">اتصل بنا</a>
+</nav>
 
 <div class="section">
 
-  <!-- VIDEO 03 -->
-  <div class="video-card">
-    <img src="video03-cover.jpg" alt="Video 03">
-    <div class="overlay">
-      <p>
+<!-- VIDEO 03 -->
+<div class="video-card">
+  <img src="video03-cover.jpg" alt="فرصة عمل The Untamed">
+  <div class="overlay">
+    <p>
 🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed!<br>
 📱 متجر إلكتروني جاهز بالكامل<br>
 🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
-📦 الشركة تتكفّل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)<br>
-💰 أرباح تبدأ من 15% وتزيد حسب النتائج<br>
+📦 التغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)<br>
+💰 أرباح تبدأ من 15%<br>
 🌍 خدم غير بهاتفك ومن أي مكان<br>
 🌱 ما تحتاج حتى خبرة… غير الطموح<br>
-👉 الفرصة بين يديك… بدا رحلتك دابا مع The Untamed!<br>
-📩 تواصل معنا على واتساب وخد التفاصيل كاملة
-      </p>
-      <div class="video-btns">
-        <a class="btn" href="video03.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-        <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-      </div>
+👉 بدا رحلتك دابا!
+    </p>
+    <div class="video-btns">
+      <a class="btn" href="vidio03.mp4" target="_blank">▶ مشاهدة الفيديو</a>
+      <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
     </div>
   </div>
+</div>
 
-  <!-- VIDEO 02 -->
-  <div class="video-card">
-    <img src="video02-cover.jpg" alt="Video 02">
-    <div class="overlay">
-      <p>
-كلمة البرلمانية عزيزة بوحريدة في مؤتمر مراكش مع تتويج فريق العمل بمناصبهم الجديدة 🏆<br>
-انتِ 🫵 في المكان المناسب ‼️<br>
-كأي امرأة باغة تخدم من دارها وتبني مستقبلها بثقة
-      </p>
-      <div class="video-btns">
-        <a class="btn" href="video02.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-        <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-      </div>
+<!-- VIDEO 02 -->
+<div class="video-card">
+  <img src="video02-cover.jpg" alt="مؤتمر مراكش">
+  <div class="overlay">
+    <p>
+كلمة البرلمانية عزيزة بوحريدة في مؤتمر مراكش 🏆<br>
+تتويج فريق العمل بمناصبهم الجديدة<br>
+انتِ 🫵 في المكان المناسب لبناء مستقبلك
+    </p>
+    <div class="video-btns">
+      <a class="btn" href="vidio02.mp4" target="_blank">▶ مشاهدة الفيديو</a>
+      <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
     </div>
   </div>
+</div>
 
 </div>
 
 <footer>
 © 2025 The Untamed — جميع الحقوق محفوظة
 </footer>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>
