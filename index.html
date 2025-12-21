@@ -30,7 +30,7 @@
 
     header{
       background: rgba(255,255,255,0.9);
-      height:60px;
+      height:70px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -41,7 +41,11 @@
       box-shadow:0 2px 10px rgba(0,0,0,.08);
     }
 
-    .logo img{height:48px}
+    .logo img{
+      height:60px;
+      object-fit:contain;
+      background:transparent;
+    }
 
     .menu-btn{
       font-size:28px;
@@ -92,7 +96,7 @@
     }
 
     .container{
-      max-width:420px;
+      max-width:480px;
       margin:40px auto;
       padding:0 14px;
     }
@@ -108,7 +112,10 @@
 
     .wa-card img{
       width:100%;
+      height:320px;
+      object-fit:cover;
       display:block;
+      border-bottom:4px solid #25D366;
     }
 
     .wa-body{
@@ -168,6 +175,7 @@
       .wa-title{font-size:18px}
       .wa-text{font-size:14px}
       .wa-actions{flex-direction:column}
+      .wa-card img{height:240px}
     }
   </style>
 </head>
@@ -176,7 +184,7 @@
 
 <header>
   <div class="logo">
-    <img src="dana.jpg" alt="The Untamed">
+    <img src="dana.png" alt="The Untamed Logo">
   </div>
   <button class="menu-btn" onclick="openMenu()">☰</button>
 </header>
