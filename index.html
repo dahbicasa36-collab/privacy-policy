@@ -5,7 +5,7 @@
   <title>The Untamed | الصفحة الرئيسية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -29,10 +29,10 @@
     /* ===== HEADER ===== */
     header{
       background:rgba(255,255,255,.95);
-      height:70px;
+      height:64px;
       display:flex;
       align-items:center;
-      padding:0 16px;
+      padding:0 20px;
       position:sticky;
       top:0;
       z-index:1000;
@@ -54,10 +54,14 @@
     }
 
     .logo img{
-      height:42px;
+      height:38px;
+      max-width:160px;
       object-fit:contain;
       cursor:pointer;
+      transition:.2s;
     }
+
+    .logo img:hover{opacity:.85}
 
     /* ===== SIDE MENU ===== */
     .side-menu{
@@ -139,7 +143,7 @@
 
     .wa-actions{
       display:flex;
-      gap:10px;
+      gap:8px;
       margin-top:18px;
       flex-wrap:wrap;
     }
