@@ -7,151 +7,139 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:"Cairo",sans-serif;
-  background:#f5f5f5;
+  background:#f2f2f2;
   color:#111;
 }
 
 /* ===== HEADER ===== */
 header{
   background:#fff;
-  padding:12px 20px;
+  height:60px;
   display:flex;
   align-items:center;
+  justify-content:space-between;
+  padding:0 16px;
   position:sticky;
   top:0;
   z-index:1000;
   box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-/* زر ☰ */
+.logo img{height:42px}
+
+/* ===== MENU BUTTON ===== */
 .menu-btn{
   font-size:28px;
   background:none;
   border:none;
   cursor:pointer;
-  margin-left:auto; /* يخليه فاليمين */
 }
 
-/* اللوجو */
-.logo img{
-  height:45px;
-}
-
-/* ===== MENU ===== */
-.menu{
+/* ===== SIDE MENU ===== */
+.side-menu{
   position:fixed;
   top:0;
   right:-100%;
   width:260px;
-  height:100vh;
+  height:100%;
   background:#fff;
-  box-shadow:-5px 0 15px rgba(0,0,0,.15);
-  padding:30px 20px;
+  box-shadow:-5px 0 20px rgba(0,0,0,.2);
+  padding:20px;
   transition:.3s;
   z-index:2000;
 }
 
-.menu.active{
-  right:0;
-}
+.side-menu.active{right:0}
 
-.menu a{
+.side-menu a{
   display:block;
-  text-decoration:none;
-  background:#eee;
-  color:#111;
   padding:12px;
-  margin-bottom:10px;
-  border-radius:25px;
+  margin-bottom:8px;
+  background:#f3f3f3;
+  border-radius:20px;
+  text-decoration:none;
+  color:#111;
   text-align:center;
-  font-weight:700;
 }
 
-.menu a:hover{
+.side-menu a:hover{
   background:#a1694f;
   color:#fff;
 }
 
-/* زر الإغلاق */
 .close-btn{
-  background:none;
-  border:none;
   font-size:22px;
+  border:none;
+  background:none;
   margin-bottom:20px;
   cursor:pointer;
 }
 
 /* ===== CONTENT ===== */
-.section{
-  max-width:1200px;
-  margin:40px auto;
-  padding:0 20px;
+.container{
+  max-width:420px;
+  margin:30px auto;
+  padding:0 14px;
 }
 
-.video-card{
-  background:#000;
-  border-radius:22px;
+/* ===== WHATSAPP STYLE CARD ===== */
+.wa-card{
+  background:#1f2c33;
+  border-radius:18px;
   overflow:hidden;
-  position:relative;
-  margin-bottom:40px;
+  margin-bottom:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  color:#fff;
 }
 
-.video-card img{
+.wa-card img{
   width:100%;
   display:block;
 }
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2));
-  color:#fff;
-  padding:25px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
+.wa-body{
+  padding:16px;
 }
 
-.overlay p{
+.wa-title{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.wa-text{
   font-size:15px;
-  margin-bottom:15px;
+  line-height:1.8;
+  color:#e4e6eb;
 }
 
-.video-btns{
+.wa-actions{
   display:flex;
   gap:10px;
-  flex-wrap:wrap;
+  margin-top:14px;
 }
 
-.btn{
-  background:#fff;
-  color:#000;
-  padding:10px 18px;
-  border-radius:30px;
+.wa-btn{
+  flex:1;
+  text-align:center;
+  padding:10px;
+  border-radius:25px;
   text-decoration:none;
   font-weight:700;
   font-size:14px;
 }
 
-.btn:hover{
-  background:#a1694f;
-  color:#fff;
+.wa-btn.video{
+  background:#fff;
+  color:#000;
 }
 
-.btn.whatsapp{
+.wa-btn.whatsapp{
   background:#25D366;
   color:#fff;
-}
-
-footer{
-  text-align:center;
-  padding:25px;
-  background:#fff;
-  margin-top:50px;
-  font-size:14px;
 }
 </style>
 </head>
@@ -159,16 +147,17 @@ footer{
 <body>
 
 <header>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <a href="index.html" class="logo">
+  <div class="logo">
     <img src="dana.jpg" alt="The Untamed">
-  </a>
+  </div>
+
+  <button class="menu-btn" onclick="openMenu()">☰</button>
 </header>
 
-<!-- MENU -->
-<div class="menu" id="menu">
-  <button class="close-btn" onclick="toggleMenu()">✕</button>
-  <a href="job.html">فرصة العمل</a>
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <button class="close-btn" onclick="closeMenu()">✕</button>
+  <a href="career.html">فرصة العمل</a>
   <a href="about.html">تعريف بالشركة</a>
   <a href="privacy-policy.html">السياسة الخصوصية</a>
   <a href="terms.html">شروط الخدمة</a>
@@ -177,51 +166,52 @@ footer{
   <a href="https://wa.link/4emaaz">اتصل بنا</a>
 </div>
 
-<div class="section">
+<div class="container">
 
-<!-- VIDEO 03 -->
-<div class="video-card">
-  <img src="video03-cover.jpg" alt="">
-  <div class="overlay">
-    <p>
-🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed!<br>
-📱 متجر إلكتروني جاهز بالكامل<br>
-🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
-📦 التوزيع: المغرب + أوروبا + البرازيل + النيجر<br>
-💰 أرباح تبدأ من 15%<br>
-🌍 خدم غير بهاتفك ومن أي مكان
-    </p>
-    <div class="video-btns">
-      <a class="btn" href="vidio03.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-      <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+  <!-- VIDEO 03 -->
+  <div class="wa-card">
+    <img src="video03-cover.jpg">
+    <div class="wa-body">
+      <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
+      <div class="wa-text">
+📱 متجر إلكتروني جاهز<br>
+🎓 تدريب مجاني ومرافقة<br>
+📦 التوزيع الدولي<br>
+💰 أرباح من 15%<br>
+🌍 خدمة من أي مكان
+      </div>
+      <div class="wa-actions">
+        <a class="wa-btn video" href="vidio03.mp4" target="_blank">▶ مشاهدة الفيديو</a>
+        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- VIDEO 02 -->
-<div class="video-card">
-  <img src="video02-cover.jpg" alt="">
-  <div class="overlay">
-    <p>
-كلمة البرلمانية عزيزة بوحريدة في مؤتمر مراكش 🏆<br>
-فرصة حقيقية لأي امرأة باغة تخدم من دارها
-    </p>
-    <div class="video-btns">
-      <a class="btn" href="vidio02.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-      <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+  <!-- VIDEO 02 -->
+  <div class="wa-card">
+    <img src="video02-cover.jpg">
+    <div class="wa-body">
+      <div class="wa-title">🏆 مؤتمر مراكش – فريق The Untamed</div>
+      <div class="wa-text">
+كلمة البرلمانية عزيزة بوحريدة<br>
+تتويج فريق العمل<br>
+فرص حقيقية للنساء
+      </div>
+      <div class="wa-actions">
+        <a class="wa-btn video" href="vidio02.mp4" target="_blank">▶ مشاهدة الفيديو</a>
+        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      </div>
     </div>
   </div>
-</div>
 
 </div>
-
-<footer>
-© 2025 The Untamed — جميع الحقوق محفوظة
-</footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+function openMenu(){
+  document.getElementById("menu").classList.add("active");
+}
+function closeMenu(){
+  document.getElementById("menu").classList.remove("active");
 }
 </script>
 
