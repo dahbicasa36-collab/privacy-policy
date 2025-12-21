@@ -2,140 +2,255 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>🌿 سياسة حذف البيانات | The Untamed</title>
+  <title>سياسة حذف البيانات | CASV The Untamed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background-color: #f4f4f4;
-      color: #1f1f1f;
-      line-height: 1.9;
-      font-size: 16px;
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:"Cairo",sans-serif;
+      background:#f4f4f4;
+      color:#1f1f1f;
+      line-height:1.9;
+      font-size:16px;
     }
-    h1, h2 {
-      color: #111;
-      font-weight: 700;
-      margin-bottom: 12px;
+
+    /* ===== HEADER ===== */
+    header{
+      background:#fff;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);
     }
-    p, li {
-      color: #2b2b2b;
-      font-size: 16px;
-      line-height: 1.9;
+
+    .header-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
+
+    .menu-btn,
+    .back-btn{
+      background:none;
+      border:none;
+      font-size:22px;
+      cursor:pointer;
+      color:#111;
     }
-    .section {
-      background: #ffffff;
-      padding: 24px;
-      margin-bottom: 24px;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+    .logo img{
+      height:36px;
+      max-width:160px;
+      object-fit:contain;
     }
-    .logo {
-      text-align: center;
-      margin-bottom: 80px; /* نزل العنوان لتحت */
+
+    /* ===== SIDE MENU ===== */
+    .side-menu{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:260px;
+      height:100%;
+      background:#fff;
+      box-shadow:-5px 0 20px rgba(0,0,0,.25);
+      padding:20px;
+      transition:.3s;
+      z-index:2000;
     }
-    .logo img {
-      max-width: 160px;
+
+    .side-menu.active{right:0}
+
+    .side-menu a{
+      display:block;
+      padding:12px;
+      margin-bottom:10px;
+      background:#f3f3f3;
+      border-radius:20px;
+      text-decoration:none;
+      color:#111;
+      text-align:center;
+      font-weight:700;
     }
-    .buttons {
-      text-align: center;
-      margin-top: 30px;
+
+    .side-menu a:hover{
+      background:#a1694f;
+      color:#fff;
     }
-    .btn {
-      background: rgba(0,0,0,0.05);
-      color: #111;
-      padding: 12px 26px;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s;
-      margin: 8px;
-      display: inline-block;
-      font-weight: 700;
+
+    /* ===== CONTENT ===== */
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
     }
-    .btn:hover {
-      background: #a1694f;
-      color: #fff;
+
+    .top-logo{
+      text-align:center;
+      margin-bottom:30px;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #5a3a28;
-      font-size: 14px;
-      border-top: 1px solid #e6d8cf;
-      margin-top: 40px;
+
+    .top-logo img{
+      max-width:150px;
+    }
+
+    .section{
+      background:#fff;
+      padding:24px;
+      margin-bottom:24px;
+      border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,.06);
+    }
+
+    h1,h2{
+      color:#111;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    p,li{
+      color:#2b2b2b;
+      font-size:16px;
+    }
+
+    ul{padding-right:20px}
+
+    .buttons{
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .btn{
+      background:rgba(0,0,0,0.05);
+      color:#111;
+      padding:12px 26px;
+      border-radius:30px;
+      text-decoration:none;
+      margin:8px;
+      display:inline-block;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#a1694f;
+      color:#fff;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      color:#5a3a28;
+      font-size:14px;
+      border-top:1px solid #e6d8cf;
+      margin-top:40px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="logo">
-      <img src="cal.png" alt="شعار Casa The Untamed">
-    </div>
+<header>
+  <div class="header-left">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <a href="index.html" class="logo">
+      <img src="cal.png" alt="CASV The Untamed Logo">
+    </a>
+  </div>
+  <button class="back-btn" onclick="history.back()">⬅</button>
+</header>
 
-    <div class="section">
-      <h1>🌿 سياسة حذف البيانات – The Untamed (السويد)</h1>
-      <p><strong>آخر تحديث:</strong> 18 ديسمبر 2025</p>
-    </div>
+<div class="side-menu" id="menu">
+  <a href="index.html">الرئيسية</a>
+  <a href="about.html">تعريف بالشركة</a>
+  <a href="privacy-policy.html">سياسة الخصوصية</a>
+  <a href="terms.html">شروط الخدمة</a>
+  <a href="data-deletion.html">حذف البيانات</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
+  <a href="https://wa.link/4emaaz">اتصل بنا</a>
+</div>
 
-    <div class="section">
-      <h2>1. المقدمة</h2>
-      <p>
-        تلتزم شركة <strong>The Untamed</strong> بحماية خصوصية المستخدمين وفقاً للوائح حماية البيانات الأوروبية والسويدية (GDPR). تهدف هذه السياسة إلى توضيح كيفية ممارسة المستخدم لحقه في حذف بياناته ("الحق في النسيان").
-      </p>
-    </div>
+<div class="container">
 
-    <div class="section">
-      <h2>2. البيانات التي نجمعها ولماذا نحتفظ بها</h2>
-      <ul>
-        <li>نحتفظ بالبيانات فقط طالما كانت ضرورية لتقديم خدماتنا.</li>
-        <li>بمجرد انتهاء الغرض من معالجة البيانات، يتم جدولتها للحذف التلقائي.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>3. كيفية طلب حذف البيانات</h2>
-      <ul>
-        <li>إعدادات الحساب ← حذف الحساب</li>
-        <li>البريد الإلكتروني: <strong>privacy@theuntamed.se</strong></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>4. المدة الزمنية</h2>
-      <ul>
-        <li>التحقق خلال 48 ساعة</li>
-        <li>الحذف خلال 30 يوماً</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Data Deletion Policy – The Untamed (Sweden)</h2>
-      <p>
-        Users may request deletion of their personal data in accordance with GDPR.
-      </p>
-      <ul>
-        <li>Email: <strong>privacy@theuntamed.se</strong></li>
-        <li>Deletion within 30 days</li>
-      </ul>
-    </div>
-
-    <div class="buttons">
-      <a href="index.html" class="btn">⬅️ الصفحة الرئيسية</a>
-      <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="btn">📄 سياسة الخصوصية</a>
-    </div>
+  <div class="top-logo">
+    <img src="cal.png" alt="CASV The Untamed">
   </div>
 
-  <footer>
-    © The Untamed 2025
-  </footer>
+  <div class="section">
+    <h1>🌿 سياسة حذف البيانات – CASV The Untamed (السويد)</h1>
+    <p><strong>آخر تحديث:</strong> 18 ديسمبر 2025</p>
+  </div>
+
+  <div class="section">
+    <h2>1. المقدمة</h2>
+    <p>
+      تلتزم شركة <strong>CASV The Untamed</strong> بحماية خصوصية المستخدمين
+      وفقاً للائحة حماية البيانات الأوروبية (GDPR)، وتمنح المستخدمين
+      حق طلب حذف بياناتهم الشخصية.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>2. البيانات التي نحتفظ بها</h2>
+    <ul>
+      <li>بيانات التواصل (الاسم، البريد الإلكتروني)</li>
+      <li>بيانات الاستخدام عند التواصل معنا</li>
+      <li>لا يتم الاحتفاظ بأي بيانات غير ضرورية</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. كيفية طلب حذف البيانات</h2>
+    <ul>
+      <li>إرسال طلب عبر البريد الإلكتروني</li>
+      <li><strong>privacy@theuntamed.se</strong></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. المدة الزمنية</h2>
+    <ul>
+      <li>التحقق من الطلب: خلال 48 ساعة</li>
+      <li>الحذف النهائي: خلال 30 يوماً</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Data Deletion Policy – English</h2>
+    <p>
+      Users may request deletion of their personal data in accordance with GDPR.
+    </p>
+    <ul>
+      <li>Email: <strong>privacy@theuntamed.se</strong></li>
+      <li>Deletion within 30 days</li>
+    </ul>
+  </div>
+
+  <div class="buttons">
+    <a href="index.html" class="btn">⬅ الصفحة الرئيسية</a>
+    <a href="privacy-policy.html" class="btn">📄 سياسة الخصوصية</a>
+  </div>
+
+</div>
+
+<footer>
+  © CASV The Untamed 2025 – This page is provided for compliance with Meta & GDPR policies.
+</footer>
+
+<script>
+function openMenu(){
+  document.getElementById("menu").classList.add("active");
+}
+</script>
 
 </body>
 </html>
