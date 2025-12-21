@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <title>The Untamed | الصفحة الرئيسية</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
 body{
   margin:0;
   font-family:"Cairo",sans-serif;
@@ -16,173 +14,128 @@ body{
   color:#111;
 }
 
-/* ===== MENU ===== */
+/* MENU */
 header{
   background:#fff;
-  padding:12px;
+  padding:15px;
   display:flex;
   gap:10px;
-  justify-content:center;
   flex-wrap:wrap;
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  justify-content:center;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
+
 header a{
   text-decoration:none;
   padding:10px 18px;
   border-radius:25px;
   background:#eee;
-  color:#111;
+  color:#000;
   font-size:14px;
 }
+
 header a:hover{
   background:#a1694f;
   color:#fff;
 }
 
-/* ===== VIDEO SECTION ===== */
-.section{
-  padding:40px 20px;
-}
-.video-card{
+/* CONTENT */
+.container{
   max-width:1100px;
-  margin:40px auto;
-  position:relative;
-  border-radius:20px;
-  overflow:hidden;
-  background:#000;
+  margin:auto;
+  padding:30px 15px;
 }
-.video-card img.cover{
+
+.video-box{
+  background:#fff;
+  border-radius:16px;
+  margin-bottom:40px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+
+.video-box img{
   width:100%;
   display:block;
 }
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  padding:30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.overlay h2{
-  font-size:26px;
-  margin-bottom:15px;
-}
-.overlay p{
-  font-size:16px;
+
+.video-text{
+  padding:20px;
   line-height:1.9;
+  font-size:16px;
 }
-.btn-video{
-  margin-top:20px;
-  width:fit-content;
+
+.video-actions{
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  margin:8px;
+  padding:12px 26px;
+  border-radius:30px;
+  background:#eee;
+  color:#000;
+  text-decoration:none;
+}
+
+.btn:hover{
   background:#a1694f;
   color:#fff;
-  padding:12px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.btn-video:hover{
-  background:#8d563b;
-}
-
-/* ===== LOGO ===== */
-.logo{
-  position:absolute;
-  top:15px;
-  right:15px;
-  z-index:5;
-}
-.logo img{
-  height:45px;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .overlay h2{font-size:20px}
-  .overlay p{font-size:14px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== MENU ===== -->
 <header>
   <a href="career.html">فرصة العمل</a>
   <a href="about.html">تعريف بالشركة</a>
-  <a href="index.html">السياسة الخصوصية</a>
+  <a href="privacy-policy.html">السياسة الخصوصية</a>
   <a href="terms.html">شروط الخدمة</a>
   <a href="data-deletion.html">سياسة حذف البيانات</a>
-  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
-  <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
+  <a href="https://wa.link/4emaaz">اتصل بنا</a>
 </header>
 
-<!-- ===== VIDEO 03 ===== -->
-<section class="section">
+<div class="container">
 
-<div class="video-card">
-
-  <!-- LOGO -->
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="logo">
-    <img src="https://dahbicasa36-collab.github.io/privacy-policy/dana.jpg" alt="logo">
-  </a>
-
-  <!-- IMAGE -->
-  <img src="video03-cover.jpg" class="cover" alt="video 03">
-
-  <!-- TEXT -->
-  <div class="overlay">
-    <h2>🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed</h2>
-    <p>
+<!-- VIDEO 03 -->
+<div class="video-box">
+  <img src="video03-cover.jpg" alt="Video 03">
+  <div class="video-text">
+🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed!<br>
 📱 متجر إلكتروني جاهز بالكامل<br>
 🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
 📦 الشركة تتكفّل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)<br>
 💰 أرباح تبدأ من 15% وتزيد حسب النتائج<br>
 🌍 خدم غير بهاتفك ومن أي مكان<br>
-🌱 ما تحتاج حتى خبرة… غير الطموح
-    </p>
-
-    <a class="btn-video"
-       href="https://dahbicasa36-collab.github.io/privacy-policy/vidio03.mp4"
-       target="_blank">
-       ▶️ مشاهدة الفيديو
-    </a>
+🌱 ما تحتاج حتى خبرة… غير الطموح<br>
+👉 الفرصة بين يديك… بدا رحلتك دابا مع The Untamed!
   </div>
-
+  <div class="video-actions">
+    <a class="btn" href="vidio03.mp4" target="_blank">▶️ مشاهدة الفيديو</a>
+    <a class="btn" href="https://wa.link/4emaaz">📩 واتساب</a>
+  </div>
 </div>
 
-</section>
-
-<!-- ===== VIDEO 02 ===== -->
-<section class="section">
-
-<div class="video-card">
-
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="logo">
-    <img src="https://dahbicasa36-collab.github.io/privacy-policy/dana.jpg" alt="logo">
-  </a>
-
-  <img src="video02-cover.jpg" class="cover" alt="video 02">
-
-  <div class="overlay">
-    <h2>🏆 كلمة البرلمانية عزيزة بوحريدة – مراكش</h2>
-    <p>
-كلمة ملهمة خلال المؤتمر مع تتويج فريق العمل بمناصبهم الجديدة.<br>
-أنتِ 🫵 فالمكان المناسب إذا باغية تخدمي من دارك وتبني مستقبلك.
-    </p>
-
-    <a class="btn-video"
-       href="https://dahbicasa36-collab.github.io/privacy-policy/vidio02.mp4"
-       target="_blank">
-       ▶️ مشاهدة الفيديو
-    </a>
+<!-- VIDEO 02 -->
+<div class="video-box">
+  <img src="video02-cover.jpg" alt="Video 02">
+  <div class="video-text">
+كلمة البرلمانية عزيزة بوحريدة في مؤتمر مراكش مع تتويج فريق العمل 🏆<br>
+انتِ 🫵 فالمكان المناسب إذا باغية تخدمي من دارك وتبني مستقبلك.
   </div>
-
+  <div class="video-actions">
+    <a class="btn" href="vidio02.mp4" target="_blank">▶️ مشاهدة الفيديو</a>
+    <a class="btn" href="https://wa.link/4emaaz">📩 واتساب</a>
+  </div>
 </div>
 
-</section>
+</div>
 
 </body>
 </html>
