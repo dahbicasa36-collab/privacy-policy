@@ -8,90 +8,108 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:"Cairo", sans-serif;
-  background:#f3e7df;
-  color:#1a1a1a;
-  line-height:1.9;
-  font-size:16px;
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: #f3e7df;
+  color: #1a1a1a;
+  line-height: 1.9;
+  font-size: 16px;
 }
 
 /* ===== Header ===== */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 28px;
-  background:#f3e7df;
-  border-bottom:1px solid #e6d8cf;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  background: #f3e7df;
+  border-bottom: 1px solid #e6d8cf;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header a{
-  text-decoration:none;
-  font-weight:700;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 50px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.nav-link {
+  background-color: #a1694f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #7a4b2e;
 }
 
 /* ===== Content ===== */
-.wrap{
-  max-width:1000px;
-  margin:40px auto;
-  padding:40px 30px;
-  background:#ffffff;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+.wrap {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-h1{
-  text-align:center;
-  margin-bottom:30px;
-  font-size:28px;
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #a1694f;
 }
 
-h2{
-  margin-top:36px;
-  color:#7a4b2e;
-  font-size:20px;
+h2 {
+  margin-top: 36px;
+  color: #7a4b2e;
+  font-size: 20px;
 }
 
-ul{
-  padding-right:22px;
+ul {
+  padding-right: 22px;
 }
 
-ul li{
-  margin-bottom:8px;
-}
-
-/* ===== Nav Links (Buttons unified) ===== */
-.nav-link{
-  background-color: rgba(255,255,255,0.2);
-  color:#ffffff;
-  padding:14px 28px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  transition:background-color 0.3s ease;
-}
-
-.nav-link:hover{
-  background-color:#a1694f;
+ul li {
+  margin-bottom: 8px;
 }
 
 /* ===== Actions ===== */
-.actions{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  margin-top:40px;
-  flex-wrap:wrap;
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 /* ===== Footer ===== */
-footer{
-  text-align:center;
-  padding:20px;
-  color:#5a3a28;
-  font-size:14px;
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #5a3a28;
+  font-size: 14px;
+  border-top: 1px solid #e6d8cf;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:480px){
+  h1 { font-size:22px; }
+  h2 { font-size:18px; }
+  .wrap { padding:20px; }
 }
 </style>
 </head>
@@ -99,7 +117,12 @@ footer{
 <body>
 
 <header>
-  <a href="index.html" class="nav-link">← الرجوع إلى الصفحة الرئيسية</a>
+  <div class="header-left">
+    <a href="index.html" class="logo">
+      <img src="cal.png" alt="شعار CASV The Untamed">
+    </a>
+    <a href="index.html" class="nav-link">← الصفحة الرئيسية</a>
+  </div>
   <strong>The Untamed</strong>
 </header>
 
