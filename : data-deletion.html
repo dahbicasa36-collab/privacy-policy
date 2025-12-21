@@ -19,6 +19,14 @@
       font-size:16px;
     }
 
+    /* ===== LOGO (موحّد في كل الموقع) ===== */
+    .site-logo{
+      height:38px;
+      max-width:160px;
+      object-fit:contain;
+      display:block;
+    }
+
     /* ===== HEADER ===== */
     header{
       background:#fff;
@@ -46,12 +54,6 @@
       font-size:22px;
       cursor:pointer;
       color:#111;
-    }
-
-    .logo img{
-      height:36px;
-      max-width:160px;
-      object-fit:contain;
     }
 
     /* ===== SIDE MENU ===== */
@@ -97,10 +99,6 @@
     .top-logo{
       text-align:center;
       margin-bottom:30px;
-    }
-
-    .top-logo img{
-      max-width:150px;
     }
 
     .section{
@@ -162,8 +160,8 @@
 <header>
   <div class="header-left">
     <button class="menu-btn" onclick="openMenu()">☰</button>
-    <a href="index.html" class="logo">
-      <img src="cal.png" alt="CASV The Untamed Logo">
+    <a href="index.html">
+      <img src="cal.png" alt="CASV The Untamed Logo" class="site-logo">
     </a>
   </div>
   <button class="back-btn" onclick="history.back()">⬅</button>
@@ -181,8 +179,9 @@
 
 <div class="container">
 
+  <!-- لوغو أعلى المحتوى (نفس اللوغو ونفس الكلاس) -->
   <div class="top-logo">
-    <img src="cal.png" alt="CASV The Untamed">
+    <img src="cal.png" alt="CASV The Untamed" class="site-logo">
   </div>
 
   <div class="section">
