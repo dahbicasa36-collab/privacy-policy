@@ -5,232 +5,265 @@
 <title>The Untamed | الصفحة الرئيسية</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
+<meta name="theme-color" content="#25D366">
+<meta name="robots" content="index, follow">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
   font-family:"Cairo",sans-serif;
-  background:url("rosa.jpg") no-repeat center center fixed;
-  background-size:cover;
-  color:#111;
+  background:url('rosa.jpg') center/cover fixed no-repeat;
+  color:#fff;
 }
 
-/* overlay background */
-.page-overlay{
-  background:rgba(255,255,255,.92);
-  min-height:100vh;
+/* OVERLAY */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:-1;
 }
 
 /* ===== HEADER ===== */
 header{
   background:#fff;
-  padding:14px 18px;
+  height:64px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-.logo img{height:42px}
+.logo img{
+  height:38px;
+}
 
 .menu-btn{
   font-size:28px;
   background:none;
   border:none;
   cursor:pointer;
+  color:#111;
 }
 
 /* ===== SIDE MENU ===== */
-.menu-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.45);
-  display:none;
-  z-index:1500;
-}
-
 .side-menu{
   position:fixed;
   top:0;
-  right:-280px;
-  width:280px;
+  right:-100%;
+  width:260px;
   height:100%;
   background:#fff;
-  padding:25px 20px;
-  box-shadow:-4px 0 15px rgba(0,0,0,.2);
+  padding:20px;
   transition:.3s;
   z-index:2000;
+  box-shadow:-5px 0 20px rgba(0,0,0,.3);
 }
-
 .side-menu.active{right:0}
-.menu-overlay.active{display:block}
+
+.close-btn{
+  font-size:22px;
+  border:none;
+  background:none;
+  cursor:pointer;
+  margin-bottom:20px;
+}
 
 .side-menu a{
   display:block;
-  padding:12px 0;
+  padding:12px;
+  margin-bottom:10px;
+  background:#f3f3f3;
+  border-radius:25px;
   text-decoration:none;
   color:#111;
-  border-bottom:1px solid #eee;
-  font-size:16px;
+  text-align:center;
+  font-weight:700;
+  transition:.3s;
+}
+.side-menu a:hover{
+  background:#a1694f;
+  color:#fff;
 }
 
 /* ===== CONTENT ===== */
 .container{
-  max-width:420px;
-  margin:30px auto;
-  padding:0 15px;
+  max-width:620px;
+  margin:40px auto;
+  padding:0 14px;
 }
 
-/* ===== CARD (WhatsApp style) ===== */
-.card{
-  background:#0f1f26;
-  border-radius:18px;
+/* ===== CARD ===== */
+.wa-card{
+  background:#1f2c33;
+  border-radius:22px;
   overflow:hidden;
-  margin-bottom:25px;
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  margin-bottom:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+  animation:fadeUp .6s ease both;
 }
 
-.card img{
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.wa-card img{
   width:100%;
-  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-bottom:4px solid #25D366;
 }
 
-.card-body{
-  padding:18px;
-  color:#fff;
+.wa-body{padding:18px}
+
+.wa-title{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
 }
 
-.card-body h3{
-  margin-bottom:12px;
-  font-size:18px;
+.wa-text{
+  font-size:15.5px;
+  line-height:1.9;
+  color:#f1f1f1;
 }
 
-.card-body p{
-  font-size:15px;
-  line-height:1.8;
-  opacity:.95;
-}
-
-/* buttons */
-.btns{
+.wa-actions{
   display:flex;
   gap:10px;
-  margin-top:15px;
+  margin-top:18px;
 }
 
-.btn{
+.wa-btn{
   flex:1;
-  text-align:center;
-  padding:12px;
-  border-radius:30px;
+  padding:10px;
+  border-radius:25px;
   text-decoration:none;
+  text-align:center;
   font-weight:700;
-  font-size:14px;
+  transition:.3s;
 }
 
-.btn.video{
+.wa-btn.video{
   background:#fff;
   color:#000;
 }
-
-.btn.wa{
-  background:#25D366;
+.wa-btn.video:hover{
+  background:#a1694f;
   color:#fff;
 }
 
-/* footer */
-footer{
-  text-align:center;
-  padding:30px 10px;
-  color:#555;
-  font-size:14px;
+.wa-btn.whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+.wa-btn.whatsapp:hover{
+  background:#128C7E;
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.floating-wa{
+  position:fixed;
+  bottom:18px;
+  left:18px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+  z-index:3000;
+}
+.floating-wa:hover{
+  background:#128C7E;
+  transform:scale(1.05);
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:480px){
+  .wa-actions{flex-direction:column}
 }
 </style>
 </head>
 
 <body>
 
-<div class="page-overlay">
-
 <header>
   <button class="menu-btn" onclick="openMenu()">☰</button>
-  <a href="index.html" class="logo">
-    <img src="dana.jpg" alt="CASV The Untamed">
+  <a class="logo" href="index.html">
+    <img src="cal.png" alt="CASV The Untamed">
   </a>
 </header>
 
-<div class="menu-overlay" onclick="closeMenu()"></div>
-
-<nav class="side-menu">
-  <a href="index.html">🏠 الصفحة الرئيسية</a>
-  <a href="career.html">🚀 فرصة العمل</a>
-  <a href="about.html">🌿 تعريف بالشركة</a>
-  <a href="privacy-policy.html">🔒 السياسة الخصوصية</a>
-  <a href="terms.html">📜 شروط الخدمة</a>
-  <a href="data-deletion.html">🗑️ سياسة حذف البيانات</a>
-  <a href="https://theuntamed.com/?referral=wFpNEb">🛍️ المنتجات</a>
-  <a href="https://wa.link/4emaaz">📩 اتصل بنا</a>
-</nav>
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <button class="close-btn" onclick="closeMenu()">✕</button>
+  <a href="career.html">فرصة العمل</a>
+  <a href="about.html">تعريف بالشركة</a>
+  <a href="privacy-policy.html">سياسة الخصوصية</a>
+  <a href="terms.html">شروط الخدمة</a>
+  <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
+  <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
+</div>
 
 <div class="container">
 
-<!-- CARD 1 -->
-<div class="card">
-  <img src="video03-cover.jpg" alt="">
-  <div class="card-body">
-    <h3>🚀 فرصة عمل في التجارة الإلكترونية</h3>
-    <p>
-📱 متجر جاهز<br>
-🎓 تدريب ومرافقة<br>
-📦 توزيع دولي<br>
-💰 أرباح من 15%<br>
-🌍 خدم من أي مكان
-    </p>
-    <div class="btns">
-      <a href="vidio03.mp4" class="btn video">▶ مشاهدة</a>
-      <a href="https://wa.link/4emaaz" class="btn wa">📩 واتساب</a>
+  <div class="wa-card">
+    <img src="video03-cover.jpg" alt="">
+    <div class="wa-body">
+      <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
+      <div class="wa-text">
+        📱 متجر إلكتروني جاهز<br>
+        🎓 تدريب ومرافقة<br>
+        📦 توزيع دولي<br>
+        💰 أرباح من 15%<br>
+        🌍 خدم من أي مكان
+      </div>
+      <div class="wa-actions">
+        <a class="wa-btn video" href="video03.mp4" target="_blank">▶ مشاهدة</a>
+        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- CARD 2 -->
-<div class="card">
-  <img src="video02-cover.jpg" alt="">
-  <div class="card-body">
-    <h3>🏆 مؤتمر مراكش</h3>
-    <p>
-كلمة البرلمانية عزيزة بوحريدة  
-وتتويج فريق العمل  
-فرص حقيقية للنساء 💪
-    </p>
-    <div class="btns">
-      <a href="vidio02.mp4" class="btn video">▶ مشاهدة</a>
-      <a href="https://wa.link/4emaaz" class="btn wa">📩 واتساب</a>
+  <div class="wa-card">
+    <img src="video02-cover.jpg" alt="">
+    <div class="wa-body">
+      <div class="wa-title">🏆 مؤتمر مراكش</div>
+      <div class="wa-text">
+        تتويج فريق العمل<br>
+        قصص نجاح ملهمة
+      </div>
+      <div class="wa-actions">
+        <a class="wa-btn video" href="video02.mp4" target="_blank">▶ مشاهدة</a>
+        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      </div>
     </div>
   </div>
-</div>
 
 </div>
 
-<footer>
-© 2025 CASV The Untamed
-</footer>
-
-</div>
+<a href="https://wa.link/4emaaz" class="floating-wa" target="_blank">💬</a>
 
 <script>
-function openMenu(){
-  document.querySelector('.side-menu').classList.add('active');
-  document.querySelector('.menu-overlay').classList.add('active');
-}
-function closeMenu(){
-  document.querySelector('.side-menu').classList.remove('active');
-  document.querySelector('.menu-overlay').classList.remove('active');
-}
+function openMenu(){document.getElementById("menu").classList.add("active")}
+function closeMenu(){document.getElementById("menu").classList.remove("active")}
 </script>
 
 </body>
