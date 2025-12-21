@@ -9,33 +9,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:"Cairo",sans-serif;
-  background:#f5f5f5;
+  background:#f6f6f6;
   color:#111;
-  line-height:1.9;
+  line-height:1.8;
 }
 
-/* ===== TOP BAR ===== */
-.topbar{
+/* ===== HEADER ===== */
+header{
   background:#fff;
   padding:15px 20px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  justify-content:space-between;
+  direction:rtl;   
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:999;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.logo img{
-  height:50px;
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
+.logo img{height:45px}
+
+.brand{
+  font-weight:700;
+  font-size:14px;
+  line-height:1.2;
+}
+.brand span{font-size:12px;color:#777}
+
+/* ===== MENU BUTTON ===== */
 .menu-btn{
-  font-size:32px;
+  font-size:26px;
   background:none;
   border:none;
   cursor:pointer;
@@ -44,28 +58,40 @@ body{
 /* ===== MOBILE MENU ===== */
 .mobile-menu{
   display:none;
-  flex-direction:column;
-  background:#fff;
-  box-shadow:0 10px 20px rgba(0,0,0,.2);
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
 }
 
-.mobile-menu a{
-  padding:15px;
+.mobile-menu.active{display:block}
+
+.menu-box{
+  background:#fff;
+  width:85%;
+  max-width:320px;
+  height:100%;
+  padding:25px;
+}
+
+.menu-box a{
+  display:block;
+  margin-bottom:15px;
+  padding:12px;
+  background:#eee;
+  border-radius:20px;
   text-decoration:none;
   color:#111;
-  border-bottom:1px solid #eee;
-  font-weight:700;
+  font-weight:600;
 }
-
-.mobile-menu a:hover{
+.menu-box a:hover{
   background:#a1694f;
   color:#fff;
 }
 
-/* ===== CONTENT ===== */
+/* ===== SECTION ===== */
 .section{
   max-width:1200px;
-  margin:30px auto;
+  margin:40px auto;
   padding:0 15px;
 }
 
@@ -86,7 +112,7 @@ body{
 .overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2));
+  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.25));
   color:#fff;
   padding:25px;
   display:flex;
@@ -94,10 +120,7 @@ body{
   justify-content:flex-end;
 }
 
-.overlay p{
-  font-size:15px;
-  margin-bottom:15px;
-}
+.overlay p{font-size:15px;margin-bottom:15px}
 
 .video-btns{
   display:flex;
@@ -106,35 +129,36 @@ body{
 }
 
 .btn{
-  background:#fff;
-  color:#000;
-  padding:10px 22px;
+  padding:10px 20px;
   border-radius:30px;
   text-decoration:none;
   font-weight:700;
   font-size:14px;
+  background:#fff;
+  color:#000;
 }
-
-.btn:hover{
-  background:#a1694f;
-  color:#fff;
-}
+.btn:hover{background:#a1694f;color:#fff}
 
 .btn.whatsapp{
   background:#25D366;
   color:#fff;
 }
 
-.btn.whatsapp:hover{
-  background:#128C7E;
+/* ===== CAPTION ===== */
+.caption{
+  background:#fff;
+  padding:15px;
+  border-radius:0 0 22px 22px;
+  font-size:14px;
+  color:#444;
 }
 
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
-  padding:25px;
+  padding:30px;
   background:#fff;
-  color:#666;
+  color:#777;
   font-size:14px;
 }
 </style>
@@ -142,24 +166,29 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-<header class="topbar">
-  <a href="index.html" class="logo">
-    <img src="dana.jpg" alt="The Untamed">
-  </a>
+<header>
+  <div class="logo">
+    <img src="dana.jpg" alt="CASV The Untamed">
+    <div class="brand">
+      CASV The Untamed<br>
+      <span>Untamed by Sacha</span>
+    </div>
+  </div>
   <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </header>
 
-<!-- MENU -->
-<nav id="mobileMenu" class="mobile-menu">
-  <a href="career.html">فرصة العمل</a>
-  <a href="about.html">تعريف بالشركة</a>
-  <a href="privacy-policy.html">السياسة الخصوصية</a>
-  <a href="terms.html">شروط الخدمة</a>
-  <a href="data-deletion.html">سياسة حذف البيانات</a>
-  <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
-  <a href="https://wa.link/4emaaz">اتصل بنا</a>
-</nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="menu">
+  <div class="menu-box">
+    <a href="job.html">فرصة العمل</a>
+    <a href="about.html">تعريف بالشركة</a>
+    <a href="privacy-policy.html">السياسة الخصوصية</a>
+    <a href="terms.html">شروط الخدمة</a>
+    <a href="data-deletion.html">سياسة حذف البيانات</a>
+    <a href="https://theuntamed.com/?referral=wFpNEb">المنتجات</a>
+    <a href="https://wa.me/212600000000">اتصل بنا</a>
+  </div>
+</div>
 
 <div class="section">
 
@@ -168,48 +197,47 @@ footer{
   <img src="video03-cover.jpg" alt="فرصة عمل The Untamed">
   <div class="overlay">
     <p>
-🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed!<br>
-📱 متجر إلكتروني جاهز بالكامل<br>
-🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
-📦 التغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)<br>
+🚀 فرصة عمل في التجارة الإلكترونية<br>
 💰 أرباح تبدأ من 15%<br>
-🌍 خدم غير بهاتفك ومن أي مكان<br>
-🌱 ما تحتاج حتى خبرة… غير الطموح<br>
-👉 بدا رحلتك دابا!
+🌍 خدم من أي مكان
     </p>
     <div class="video-btns">
       <a class="btn" href="vidio03.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-      <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      <a class="btn whatsapp" href="https://wa.me/212600000000">📩 واتساب</a>
     </div>
   </div>
+</div>
+<div class="caption">
+شرح فرصة العمل مع The Untamed وكيفاش تبدا من هاتفك فقط.
 </div>
 
 <!-- VIDEO 02 -->
 <div class="video-card">
-  <img src="video02-cover.jpg" alt="مؤتمر مراكش">
+  <img src="video02-cover.jpg" alt="مؤتمر مراكش The Untamed">
   <div class="overlay">
     <p>
-كلمة البرلمانية عزيزة بوحريدة في مؤتمر مراكش 🏆<br>
-تتويج فريق العمل بمناصبهم الجديدة<br>
-انتِ 🫵 في المكان المناسب لبناء مستقبلك
+كلمة البرلمانية عزيزة بوحريدة<br>
+مؤتمر مراكش – The Untamed
     </p>
     <div class="video-btns">
       <a class="btn" href="vidio02.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-      <a class="btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      <a class="btn whatsapp" href="https://wa.me/212600000000">📩 واتساب</a>
     </div>
   </div>
+</div>
+<div class="caption">
+لحظات حقيقية من مؤتمر مراكش وتكريم فريق العمل.
 </div>
 
 </div>
 
 <footer>
-© 2025 The Untamed — جميع الحقوق محفوظة
+© 2025 CASV – The Untamed | جميع الحقوق محفوظة
 </footer>
 
 <script>
 function toggleMenu(){
-  const menu = document.getElementById("mobileMenu");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
