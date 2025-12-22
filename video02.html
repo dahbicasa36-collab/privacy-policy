@@ -1,157 +1,200 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>مؤتمر مراكش – The Untamed</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>CASV The Untamed | مؤتمر مراكش</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Arabic Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
 
-body{
-  font-family:"Cairo",sans-serif;
-  background:url("hero.jpg") center/cover no-repeat fixed;
-}
+    body{
+      font-family:"Cairo",sans-serif;
+      background:#f4f4f4;
+      color:#1f1f1f;
+      line-height:1.9;
+    }
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:rgba(255,255,255,.45);
-  z-index:-1;
-}
+    /* ===== HEADER ===== */
+    header{
+      background:#ffffff;
+      padding:16px;
+      text-align:center;
+      box-shadow:0 2px 8px rgba(0,0,0,.08);
+    }
 
-/* ===== HEADER ===== */
-header{
-  background:#fff;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 20px;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
+    header h1{
+      font-size:22px;
+      margin-bottom:4px;
+      color:#2c3e50;
+    }
 
-header img{height:36px}
+    header p{
+      font-size:14px;
+      color:#555;
+    }
 
-header a{
-  text-decoration:none;
-  font-weight:700;
-  color:#111;
-}
+    /* ===== NAV ===== */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px 16px;
+      background:#2c3e50;
+    }
 
-/* ===== VIDEO LAYOUT ===== */
-.wrapper{
-  max-width:1100px;
-  margin:50px auto;
-  padding:0 14px;
-}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
 
-.card{
-  background:#fff;
-  border-radius:20px;
-  padding:24px;
-  box-shadow:0 15px 35px rgba(0,0,0,.25);
-  text-align:center;
-}
+    nav a:hover{opacity:.85}
 
-h1{
-  margin-bottom:18px;
-  font-size:22px;
-}
+    /* ===== HERO ===== */
+    .hero{
+      background:url("hero.jpg") center/cover no-repeat;
+      padding:60px 16px;
+      text-align:center;
+      color:#fff;
+      position:relative;
+    }
 
-/* ===== SMART VIDEO ===== */
-.video-box{
-  position:relative;
-  width:100%;
-  aspect-ratio:16/9;
-  overflow:hidden;
-  border-radius:16px;
-  background:#000;
-}
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.45);
+    }
 
-/* blurred background */
-.video-box video.bg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:blur(25px) brightness(.7);
-  transform:scale(1.2);
-}
+    .hero-content{
+      position:relative;
+      max-width:800px;
+      margin:auto;
+    }
 
-/* main video */
-.video-box video.main{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  height:100%;
-  max-width:100%;
-  object-fit:contain;
-  z-index:2;
-}
+    .hero h2{
+      font-size:24px;
+      margin-bottom:10px;
+    }
 
-/* ===== BUTTONS ===== */
-.actions{
-  margin-top:22px;
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
+    .hero p{
+      font-size:16px;
+    }
 
-.btn{
-  padding:12px 26px;
-  border-radius:30px;
-  font-weight:700;
-  font-size:14px;
-  text-decoration:none;
-  transition:.3s;
-}
+    /* ===== CONTENT ===== */
+    .content{
+      max-width:900px;
+      margin:40px auto;
+      padding:0 16px;
+    }
 
-.home{background:#a1694f;color:#fff}
-.home:hover{background:#7d4f36}
+    .box{
+      background:#fff;
+      padding:24px;
+      border-radius:16px;
+      margin-bottom:24px;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+    }
 
-.wa{background:#25D366;color:#fff}
-.wa:hover{background:#128C7E}
+    h3{
+      margin-bottom:10px;
+      color:#2c3e50;
+    }
 
-@media(max-width:600px){
-  h1{font-size:18px}
-}
-</style>
+    ul{
+      padding-right:20px;
+    }
+
+    /* ===== CTA ===== */
+    .cta{
+      text-align:center;
+      margin:40px 0;
+    }
+
+    .cta a{
+      background:#25D366;
+      color:#fff;
+      padding:14px 32px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:16px;
+      display:inline-block;
+      transition:.3s;
+    }
+
+    .cta a:hover{
+      background:#128C7E;
+    }
+
+    /* ===== FOOTER ===== */
+    footer{
+      background:#2c3e50;
+      color:#fff;
+      text-align:center;
+      padding:16px;
+      font-size:13px;
+    }
+
+    @media(max-width:600px){
+      header h1{font-size:18px}
+      .hero h2{font-size:20px}
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <a href="index.html"><img src="cal.png" alt="CASV The Untamed"></a>
-  <a href="index.html">رجوع</a>
+  <h1>CASV The Untamed 🏆</h1>
+  <p>مؤتمر مراكش – فريق The Untamed</p>
 </header>
 
-<div class="wrapper">
-  <div class="card">
-    <h1>🏆 مؤتمر مراكش – فريق The Untamed</h1>
+<nav>
+  <a href="index.html">⬅ الصفحة الرئيسية</a>
+  <a href="https://wa.link/4emaaz">📩 واتساب</a>
+</nav>
 
-    <div class="video-box">
-      <video class="bg" autoplay muted loop playsinline>
-        <source src="video02.mp4" type="video/mp4">
-      </video>
-
-      <video class="main" autoplay muted controls playsinline>
-        <source src="video02.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="actions">
-      <a href="index.html" class="btn home">⬅ الصفحة الرئيسية</a>
-      <a href="https://wa.link/4emaaz" class="btn wa">📩 واتساب</a>
-    </div>
+<section class="hero">
+  <div class="hero-content">
+    <h2>مرحبا بكم في مؤتمر CASV</h2>
+    <p>احتفال بالنجاح، العمل الجماعي، وبناء المستقبل</p>
   </div>
+</section>
+
+<section class="content">
+
+  <div class="box">
+    <h3>عن المؤتمر</h3>
+    <p>
+      يُنظم مؤتمر <strong>CASV The Untamed</strong> بمدينة مراكش، ويجمع نخبة
+      من أعضاء الفريق للاحتفال بالإنجازات ومشاركة قصص النجاح.
+    </p>
+  </div>
+
+  <div class="box">
+    <h3>برنامج الفعالية</h3>
+    <ul>
+      <li>📅 التاريخ: ديسمبر 2025</li>
+      <li>📍 المكان: مدينة مراكش</li>
+      <li>🎤 المتحدثون: فريق The Untamed</li>
+    </ul>
+  </div>
+
+</section>
+
+<div class="cta">
+  <a href="https://wa.link/4emaaz">📩 تواصل معنا عبر واتساب</a>
 </div>
+
+<footer>
+  © 2025 CASV The Untamed – جميع الحقوق محفوظة
+</footer>
 
 </body>
 </html>
