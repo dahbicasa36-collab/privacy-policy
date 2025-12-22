@@ -2,22 +2,19 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>📸 مؤتمر The Untamed بالمراكش</title>
+  <title>🎥 مؤتمر The Untamed بالمراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: "Cairo", sans-serif;
-      color: #fff;
-      text-align: center;
       background: url("hero.jpg") no-repeat center center fixed;
       background-size: cover;
+      color: #fff;
+      text-align: center;
     }
-    /* طبقة شفافة فوق الخلفية */
     .overlay {
       background: rgba(0,0,0,0.6);
       min-height: 100vh;
@@ -27,11 +24,11 @@
       align-items: center;
       padding: 40px 20px;
     }
-    .logo {
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-width: 160px;
+    video {
+      max-width: 800px;
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: 32px;
@@ -73,17 +70,19 @@
 <body>
 
   <div class="overlay">
-    <div class="logo">
-      <img src="cal.png" alt="شعار Casa The Untamed">
-    </div>
+    <!-- الفيديو -->
+    <video src="video02.mp4" autoplay muted loop controls></video>
 
+    <!-- العنوان -->
     <h1>🎤 مؤتمر The Untamed بالمراكش</h1>
 
+    <!-- النص -->
     <p>
       البرلمانية <strong>عزيزة بوحريدة</strong> في مؤتمر بالمراكش مع تتويج فريق العمل بمناصبهم الجديدة.<br>
       أنتم هنا في المكان المناسب، كأي واحد أو وحدة بحالنا باغة تخدم من دار وتبني مستقبلها.
     </p>
 
+    <!-- الأزرار -->
     <div class="buttons">
       <a href="https://wa.link/4emaaz" class="btn">📱 تواصل عبر واتساب</a>
       <a href="index.html" class="btn">⬅️ الصفحة الرئيسية</a>
