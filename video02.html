@@ -2,10 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>The Untamed | مؤتمر مراكش</title>
+  <title>CASV The Untamed | مؤتمر مراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,130 +13,138 @@
     body{
       font-family:"Cairo",sans-serif;
       background:#f4f4f4;
-      color:#222;
+      color:#1f1f1f;
+      line-height:1.9;
     }
 
     /* ===== HEADER ===== */
     header{
       background:#fff;
-      padding:14px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
+      padding:16px;
+      text-align:center;
       box-shadow:0 2px 8px rgba(0,0,0,.08);
     }
 
-    header img{
-      height:34px;
+    header h1{
+      font-size:22px;
+      margin-bottom:4px;
     }
 
-    header a{
+    header p{
+      font-size:14px;
+      color:#555;
+    }
+
+    /* ===== NAV ===== */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      padding:10px 16px;
+      background:#2c3e50;
+    }
+
+    nav a{
+      color:#fff;
       text-decoration:none;
-      color:#333;
       font-weight:700;
+      font-size:14px;
     }
 
     /* ===== HERO ===== */
     .hero{
-      position:relative;
       background:url("hero.jpg") center/cover no-repeat;
-      padding:80px 20px;
-      color:#fff;
+      padding:60px 16px;
       text-align:center;
+      color:#fff;
+      position:relative;
     }
 
-    .hero::after{
+    .hero::before{
       content:"";
       position:absolute;
       inset:0;
-      background:rgba(0,0,0,.55);
+      background:rgba(0,0,0,.45);
     }
 
     .hero-content{
       position:relative;
-      max-width:900px;
+      max-width:800px;
       margin:auto;
     }
 
-    .hero h1{
-      font-size:34px;
-      margin-bottom:14px;
-    }
-
-    .hero p{
-      font-size:18px;
-      line-height:1.8;
-      opacity:.95;
+    .hero h2{
+      font-size:24px;
+      margin-bottom:10px;
     }
 
     /* ===== VIDEO ===== */
     .video-section{
       max-width:900px;
-      margin:-60px auto 40px;
-      padding:0 16px;
-    }
-
-    .video-box{
-      background:#fff;
-      border-radius:20px;
-      padding:14px;
-      box-shadow:0 10px 30px rgba(0,0,0,.15);
-    }
-
-    video{
-      width:100%;
-      border-radius:14px;
-      display:block;
-    }
-
-    /* ===== CONTENT ===== */
-    .content{
-      max-width:900px;
       margin:40px auto;
       padding:0 16px;
     }
 
-    .box{
+    .video-card{
       background:#fff;
+      border-radius:18px;
       padding:24px;
-      border-radius:16px;
-      margin-bottom:24px;
-      box-shadow:0 6px 20px rgba(0,0,0,.08);
-    }
-
-    .box h3{
-      margin-bottom:10px;
-      color:#2c3e50;
-    }
-
-    /* ===== CTA ===== */
-    .cta{
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
       text-align:center;
-      margin:40px 0;
     }
 
-    .cta a{
+    video{
+      width:100%;
+      max-height:500px;
+      border-radius:14px;
+      background:#000;
+      margin-bottom:20px;
+      object-fit:contain;
+    }
+
+    /* ===== BUTTONS ===== */
+    .actions{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:12px 26px;
+      border-radius:30px;
+      font-weight:700;
+      font-size:14px;
+      text-decoration:none;
+      transition:.3s;
+    }
+
+    .home{
+      background:#a1694f;
+      color:#fff;
+    }
+
+    .home:hover{background:#7d4f36}
+
+    .wa{
       background:#25D366;
       color:#fff;
-      padding:14px 36px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:16px;
     }
 
-    /* ===== FOOTER ===== */
+    .wa:hover{background:#128C7E}
+
     footer{
       background:#2c3e50;
       color:#fff;
       text-align:center;
       padding:16px;
       font-size:13px;
+      margin-top:40px;
     }
 
     @media(max-width:600px){
-      .hero h1{font-size:24px}
-      .hero p{font-size:15px}
+      header h1{font-size:18px}
+      .hero h2{font-size:20px}
+      video{max-height:320px}
     }
   </style>
 </head>
@@ -145,43 +152,35 @@
 <body>
 
 <header>
-  <a href="index.html">⬅ رجوع</a>
-  <img src="logo.png" alt="The Untamed">
+  <h1>CASV The Untamed 🏆</h1>
+  <p>مؤتمر مراكش – فريق The Untamed</p>
 </header>
+
+<nav>
+  <a href="index.html">⬅ الصفحة الرئيسية</a>
+  <a href="https://wa.link/4emaaz">📩 واتساب</a>
+</nav>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>🏆 مؤتمر The Untamed بمراكش</h1>
-    <p>
-      يُنظم مؤتمر <strong>The Untamed</strong> بمدينة مراكش، ويجمع نخبة من
-      أعضاء الفريق للاحتفال بالإنجازات، تبادل التجارب،
-      ومشاركة قصص النجاح في أجواء تحفيزية ومهنية.
-    </p>
+    <h2>مؤتمر مراكش – فريق The Untamed</h2>
+    <p>لحظات حقيقية من النجاح والعمل الجماعي</p>
   </div>
 </section>
 
 <section class="video-section">
-  <div class="video-box">
-    <video controls autoplay muted playsinline>
+  <div class="video-card">
+    <video autoplay muted controls playsinline>
       <source src="video02.mp4" type="video/mp4">
       متصفحك لا يدعم تشغيل الفيديو
     </video>
+
+    <div class="actions">
+      <a href="index.html" class="btn home">⬅ الصفحة الرئيسية</a>
+      <a href="https://wa.link/4emaaz" class="btn wa">📩 واتساب</a>
+    </div>
   </div>
 </section>
-
-<section class="content">
-  <div class="box">
-    <h3>عن المؤتمر</h3>
-    <p>
-      حدث مميز يجمع أعضاء الفريق لتعزيز روح العمل الجماعي،
-      الاحتفال بالنجاحات، وبناء مستقبل أفضل.
-    </p>
-  </div>
-</section>
-
-<div class="cta">
-  <a href="https://wa.link/4emaaz">📩 تواصل معنا عبر واتساب</a>
-</div>
 
 <footer>
   © 2025 CASV The Untamed – جميع الحقوق محفوظة
