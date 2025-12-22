@@ -14,15 +14,27 @@
       background-size: cover;
       color: #fff;
       text-align: center;
-    }
-    .overlay {
-      background: rgba(0,0,0,0.6);
+      position: relative;
       min-height: 100vh;
+    }
+
+    /* الطبقة الشفافة */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); /* درجة الشفافية */
+      z-index: -1; /* خلف المحتوى */
+    }
+
+    .container {
       padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .logo img {
       max-width: 180px;
       margin-bottom: 20px;
@@ -30,11 +42,13 @@
       border-radius: 50%;
       box-shadow: 0 0 12px #fff;
     }
+
     h1 {
       font-size: 30px;
       margin-bottom: 15px;
       font-weight: 700;
     }
+
     .offer {
       background: rgba(255,255,255,0.1);
       padding: 20px;
@@ -45,11 +59,13 @@
       font-size: 18px;
       line-height: 1.8;
     }
+
     .offer h2 {
       color: #ffd700;
       margin-bottom: 15px;
       text-align: center;
     }
+
     video {
       width: 100%;
       max-width: 900px;
@@ -57,9 +73,11 @@
       border-radius: 12px;
       margin-bottom: 25px;
     }
+
     .buttons {
       margin-top: 10px;
     }
+
     .btn {
       background: rgba(255,255,255,0.1);
       color: #fff;
@@ -71,10 +89,12 @@
       display: inline-block;
       font-weight: 700;
     }
+
     .btn:hover {
       background: #a1694f;
       color: #fff;
     }
+
     footer {
       margin-top: 30px;
       font-size: 14px;
@@ -84,7 +104,7 @@
 </head>
 <body>
 
-  <div class="overlay">
+  <div class="container">
     <!-- الشعار -->
     <div class="logo">
       <img src="cal.png" alt="شعار Casa The Untamed">
