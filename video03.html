@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>✨ فرصة عمل مع The Untamed</title>
+  <title>🎥 فرصة عمل مع The Untamed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
@@ -12,110 +12,115 @@
       font-family: "Cairo", sans-serif;
       background: url("hero.jpg") no-repeat center center fixed;
       background-size: cover;
-      position: relative;
-      min-height: 100vh;
       color: #fff;
       text-align: center;
     }
-
-    /* طبقة شفافة تغطي الخلفية بالكامل */
     .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-
-    /* محتوى الصفحة فوق الطبقة */
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .logo {
-      margin-bottom: 20px;
-    }
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
     .logo img {
-      width: 160px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      box-shadow: 0 0 10px #fff;
-    }
-
-    h1 {
-      font-size: 28px;
+      max-width: 180px;
       margin-bottom: 20px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #fff;
+    }
+    h1 {
+      font-size: 30px;
+      margin-bottom: 15px;
       font-weight: 700;
     }
-
     .offer {
       background: rgba(255,255,255,0.1);
       padding: 20px;
       border-radius: 12px;
+      max-width: 800px;
+      margin: 20px auto;
       text-align: right;
       font-size: 18px;
       line-height: 1.8;
     }
-
     .offer h2 {
       color: #ffd700;
-      text-align: center;
       margin-bottom: 15px;
+      text-align: center;
     }
-
+    video {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
     .btn {
       background: rgba(255,255,255,0.1);
       color: #fff;
       padding: 12px 26px;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: 700;
-      margin: 10px;
-      display: inline-block;
       transition: 0.3s;
+      margin: 8px;
+      display: inline-block;
+      font-weight: 700;
     }
-
     .btn:hover {
       background: #a1694f;
+      color: #fff;
     }
-
     footer {
       margin-top: 30px;
       font-size: 14px;
-      color: #ccc;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
 
-  <div class="overlay"></div>
-
-  <div class="content">
+  <div class="overlay">
+    <!-- الشعار -->
     <div class="logo">
       <img src="cal.png" alt="شعار Casa The Untamed">
     </div>
 
-    <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
+    <!-- العنوان -->
+    <h1>🎤 مؤتمر The Untamed بالمراكش</h1>
 
+    <!-- النص التعريفي -->
     <div class="offer">
-      <h2>🚀 انضم إلينا الآن!</h2>
-      <p>🛒 تدريب عملي في إدارة المتاجر الإلكترونية</p>
-      <p>🌍 فرصة في التسويق الرقمي والتوسع العالمي</p>
-      <p>💡 بيئة عمل إبداعية تشجع على الأفكار الجديدة</p>
-      <p>📦 الشركة تتكفل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + نيجيريا)</p>
-      <p>🎓 تدريبات محلية وعالمية لتطوير المهارات</p>
-      <p>📈 خطوات واضحة للنمو المهني</p>
+      <h2>🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed!</h2>
+      <p>📱 متجر إلكتروني جاهز بالكامل</p>
+      <p>🎓 تدريبات مجانية + مرافقة خطوة بخطوة</p>
+      <p>📦 الشركة تتكفّل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)</p>
+      <p>💰 أرباح تبدأ من 15% وتزيد حسب النتائج</p>
+      <p>🌍 خدم غير بهاتفك ومن أي مكان</p>
+      <p>🌱 ما تحتاج حتى خبرة… غير الطموح</p>
+      <p>👉 الفرصة بين يديك… بدا رحلتك دابا مع The Untamed!</p>
+      <p>📩 تواصل معنا على واتساب وخد التفاصيل كاملة</p>
     </div>
 
-    <a href="https://wa.link/4emaaz" class="btn">📱 تواصل عبر واتساب</a>
-    <a href="index.html" class="btn">⬅️ الصفحة الرئيسية</a>
+    <!-- الفيديو -->
+    <video src="video03.mp4" autoplay muted loop controls></video>
 
-    <footer>© The Untamed 2025</footer>
+    <!-- الأزرار -->
+    <div class="buttons">
+      <a href="https://wa.link/4emaaz" class="btn">📱 تواصل عبر واتساب</a>
+      <a href="index.html" class="btn">⬅️ الصفحة الرئيسية</a>
+    </div>
+
+    <footer>
+      © The Untamed 2025
+    </footer>
   </div>
 
 </body>
