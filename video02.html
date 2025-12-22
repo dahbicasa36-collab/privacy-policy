@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>📸 مؤتمر The Untamed بالمراكش</title>
+  <title>🎥 مؤتمر The Untamed بالمراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
@@ -14,10 +14,18 @@
       font-family: "Cairo", sans-serif;
       color: #fff;
       text-align: center;
-      background: url("hero.jpg") no-repeat center center fixed;
-      background-size: cover;
     }
-    /* طبقة شفافة فوق الخلفية */
+    /* الفيديو كخلفية */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    /* طبقة شفافة فوق الفيديو */
     .overlay {
       background: rgba(0,0,0,0.6);
       min-height: 100vh;
@@ -71,6 +79,9 @@
   </style>
 </head>
 <body>
+
+  <!-- الفيديو كخلفية -->
+  <video class="video-bg" src="video02.mp4" autoplay muted loop></video>
 
   <div class="overlay">
     <div class="logo">
