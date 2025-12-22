@@ -16,61 +16,70 @@
       color:#222;
     }
 
-    .logo{
-      text-align:center;
-      margin:40px 0 20px;
+    /* LOGO اللاصق */
+    .floating-logo{
+      position:absolute;
+      top:35px;
+      left:50%;
+      transform:translateX(-50%);
+      background:#ffffff;
+      padding:14px 34px;
+      border-radius:45px;
+      box-shadow:0 15px 40px rgba(0,0,0,.18);
+      z-index:10;
     }
 
-    .logo img{
-      max-width:180px;
+    .floating-logo img{
+      max-width:190px;
     }
 
+    /* الكارد */
     .card{
       max-width:900px;
-      margin:0 auto 50px;
+      margin:140px auto 50px;
       background:#ffffff;
-      border-radius:20px;
-      padding:45px 40px;
+      border-radius:22px;
+      padding:50px 45px;
       box-shadow:0 20px 50px rgba(0,0,0,.08);
       text-align:right;
     }
 
     h1{
       text-align:center;
-      font-size:30px;
-      margin-bottom:10px;
+      font-size:32px;
+      margin-bottom:12px;
       font-weight:700;
     }
 
     .subtitle{
       text-align:center;
       color:#555;
-      margin-bottom:30px;
+      margin-bottom:35px;
       font-size:17px;
     }
 
     ul{
-      line-height:2.1;
+      line-height:2.2;
       font-size:17px;
       padding-right:20px;
     }
 
     video{
       width:100%;
-      border-radius:15px;
-      margin:30px 0;
+      border-radius:18px;
+      margin:35px 0;
     }
 
     .buttons{
       text-align:center;
-      margin-top:25px;
+      margin-top:30px;
     }
 
     .btn{
       background:#a1694f;
       color:#fff;
-      padding:14px 30px;
-      border-radius:30px;
+      padding:15px 34px;
+      border-radius:35px;
       text-decoration:none;
       margin:10px;
       display:inline-block;
@@ -86,28 +95,40 @@
       text-align:center;
       font-size:14px;
       color:#777;
-      margin-bottom:30px;
+      margin-bottom:35px;
+    }
+
+    @media(max-width:768px){
+      .card{
+        margin:120px 15px 40px;
+        padding:35px 25px;
+      }
+      .floating-logo img{
+        max-width:150px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="logo">
-    <img src="cal.png" alt="The Untamed">
+  <!-- LOGO اللاصق -->
+  <div class="floating-logo">
+    <img src="cal.png" alt="CASA The Untamed">
   </div>
 
+  <!-- المحتوى -->
   <div class="card">
 
-    <h1>🎤 مؤتمر The Untamed بالمراكش</h1>
+    <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
     <p class="subtitle">
-      فرصة حقيقية للعمل في التجارة الإلكترونية مع فريق The Untamed
+      انضم إلى فريق The Untamed وابدأ مشروعك الخاص من هاتفك
     </p>
 
     <ul>
       <li>🛒 متجر إلكتروني جاهز بالكامل</li>
-      <li>🎓 تدريبات مجانية + مرافقة خطوة بخطوة</li>
-      <li>📦 الشركة تتكفّل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)</li>
+      <li>🎓 تدريبات مجانية ومرافقة خطوة بخطوة</li>
+      <li>📦 الشركة تتكفل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)</li>
       <li>💰 أرباح تبدأ من 15% وتزيد حسب النتائج</li>
       <li>📱 خدم غير بهاتفك ومن أي مكان</li>
       <li>🌱 ما تحتاج حتى خبرة… غير الطموح</li>
