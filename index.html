@@ -32,6 +32,69 @@
       padding:40px 20px;
     }
 
+    /* ===== HEADER ===== */
+    header{
+      background:rgba(255,255,255,.95);
+      height:64px;
+      display:flex;
+      align-items:center;
+      padding:0 20px;
+      position:sticky;
+      top:0;
+      z-index:2000;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    .header-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .menu-btn{
+      font-size:28px;
+      background:none;
+      border:none;
+      cursor:pointer;
+      color:#111;
+    }
+
+    /* القائمة الجانبية */
+    .side-menu{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:260px;
+      height:100%;
+      background:#fff;
+      box-shadow:-5px 0 20px rgba(0,0,0,.25);
+      padding:20px;
+      transition:.3s;
+      z-index:3000;
+    }
+    .side-menu.active{right:0}
+    .close-btn{
+      font-size:22px;
+      border:none;
+      background:none;
+      margin-bottom:20px;
+      cursor:pointer;
+    }
+    .side-menu a{
+      display:block;
+      padding:12px;
+      margin-bottom:10px;
+      background:#f3f3f3;
+      border-radius:20px;
+      text-decoration:none;
+      color:#111;
+      text-align:center;
+      font-size:15px;
+      transition:.3s;
+    }
+    .side-menu a:hover{
+      background:#a1694f;
+      color:#fff;
+    }
+
     /* شعار في الوسط */
     .logo-center img{
       max-width:180px;
@@ -118,77 +181,83 @@
 </head>
 <body>
 
-  <!-- الطبقة الشفافة -->
-  <div class="overlay"></div>
+<!-- الهيدر -->
+<header>
+  <div class="header-left">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <span style="color:#111;font-weight:700;">The Untamed</span>
+  </div>
+</header>
 
-  <!-- المحتوى فوق الطبقة -->
-  <div class="content">
+<!-- القائمة الجانبية -->
+<div class="side-menu" id="menu">
+  <button class="close-btn" onclick="closeMenu()">✕</button>
+  <a href="career.html">فرصة العمل</a>
+  <a href="about.html">تعريف بالشركة</a>
+  <a href="privacy-policy.html">سياسة الخصوصية</a>
+  <a href="terms.html">شروط الخدمة</a>
+  <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">🎥 فيديو المؤتمر</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">🎥 فيديو الفرصة</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
+  <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
+</div>
 
-    <!-- شعار -->
-    <div class="logo-center">
-      <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="Casa The Untamed Logo">
-    </div>
+<!-- الطبقة الشفافة -->
+<div class="overlay"></div>
 
-    <!-- Box أبيض -->
-    <div class="intro-box">
-      <h1>مرحبا بك في The Untamed</h1>
-      <p>
-        نحن نقدم فرص عمل في التجارة الإلكترونية، تدريب مجاني، ومرافقة خطوة بخطوة.  
-        هدفنا هو تمكين الشباب من بناء مشاريعهم الخاصة وتحقيق أرباح مستدامة.  
-        اكتشف قصص النجاح وانضم إلينا اليوم!
-      </p>
-    </div>
+<!-- المحتوى فوق الطبقة -->
+<div class="content">
 
-    <!-- كروت الفيديوهات -->
-    <div class="container">
-
-      <!-- VIDEO 03 -->
-      <div class="wa-card">
-        <a href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">
-          <video muted loop controls>
-            <source src="video03.mp4" type="video/mp4">
-          </video>
-        </a>
-        <div class="wa-body">
-          <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
-          <div class="wa-text">
-            📱 متجر إلكتروني جاهز بالكامل<br>
-            🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
-            📦 الشركة تتكفّل بالتغليف والتوزيع<br>
-            💰 أرباح تبدأ من 15%<br>
-            🌍 خدم غير بهاتفك ومن أي مكان
-          </div>
-          <div class="wa-actions">
-            <a class="wa-btn video" href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">▶ مشاهدة الفيديو</a>
-            <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIDEO 02 -->
-      <div class="wa-card">
-        <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">
-          <video muted loop controls>
-            <source src="video02.mp4" type="video/mp4">
-          </video>
-        </a>
-        <div class="wa-body">
-          <div class="wa-title">🏆 مؤتمر مراكش – فريق The Untamed</div>
-          <div class="wa-text">
-            تتويج فريق العمل<br>
-            قصص نجاح ملهمة<br>
-            فرصة لكل شخص طموح
-          </div>
-          <div class="wa-actions">
-            <a class="wa-btn video" href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">▶ مشاهدة الفيديو</a>
-            <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+  <!-- شعار -->
+  <div class="logo-center">
+    <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="Casa The Untamed Logo">
   </div>
 
-</body>
-</html>
+  <!-- Box أبيض -->
+  <div class="intro-box">
+    <h1>مرحبا بك في The Untamed</h1>
+    <p>
+      نحن نقدم فرص عمل في التجارة الإلكترونية، تدريب مجاني، ومرافقة خطوة بخطوة.  
+      هدفنا هو تمكين الشباب من بناء مشاريعهم الخاصة وتحقيق أرباح مستدامة.  
+      اكتشف قصص النجاح وانضم إلينا اليوم!
+    </p>
+  </div>
+
+  <!-- كروت الفيديوهات -->
+  <div class="container">
+
+    <!-- VIDEO 03 -->
+    <div class="wa-card">
+      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">
+        <video muted loop controls>
+          <source src="video03.mp4" type="video/mp4">
+        </video>
+      </a>
+      <div class="wa-body">
+        <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
+        <div class="wa-text">
+          📱 متجر إلكتروني جاهز بالكامل<br>
+          🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
+          📦 الشركة تتكفّل بالتغليف والتوزيع<br>
+          💰 أرباح تبدأ من 15%<br>
+          🌍 خدم غير بهاتفك ومن أي مكان
+        </div>
+        <div class="wa-actions">
+          <a class="wa-btn video" href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">▶ مشاهدة الفيديو</a>
+          <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 02 -->
+    <div class="wa-card">
+      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">
+        <video muted loop controls>
+          <source src="video02.mp4" type="video/mp4">
+        </video>
+      </a>
+      <div class="wa-body">
+        <div class="wa-title">🏆 مؤتمر مراكش – فريق The Untamed</div>
+        <div class="wa-text">
+          تتويج فريق العمل
