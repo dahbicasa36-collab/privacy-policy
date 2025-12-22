@@ -4,121 +4,123 @@
   <meta charset="UTF-8">
   <title>مؤتمر The Untamed – مراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *{margin:0;padding:0;box-sizing:border-box}
 
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f4f4f4;
-      direction: rtl;
-      color: #222;
+    body{
+      font-family:"Cairo",sans-serif;
+      background:#f4f4f4;
+      color:#222;
     }
 
-    header {
-      background: #fff;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* ===== HEADER ===== */
+    header{
+      background:#fff;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 20px;
+      box-shadow:0 2px 8px rgba(0,0,0,.08);
     }
 
-    .logo img {
-      height: 34px;
+    .logo img{
+      height:34px;
     }
 
-    .back a {
-      text-decoration: none;
-      font-weight: 700;
-      color: #a1694f;
+    .back a{
+      text-decoration:none;
+      font-weight:700;
+      color:#a1694f;
     }
 
-    .hero {
-      background: url("hero.jpg") center/cover no-repeat;
-      position: relative;
-      padding: 80px 20px;
-      text-align: center;
+    /* ===== HERO ===== */
+    .hero{
+      background:url("hero.jpg") center/cover no-repeat;
+      position:relative;
+      padding:70px 20px;
+      text-align:center;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.55);
     }
 
-    .hero-content {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-      color: #fff;
+    .hero-content{
+      position:relative;
+      max-width:900px;
+      margin:auto;
+      color:#fff; /* ← النص الأبيض */
     }
 
-    .hero-content h1 {
-      font-size: 30px;
-      margin-bottom: 20px;
+    .hero h1{
+      font-size:28px;
+      margin-bottom:15px;
     }
 
-    .hero-content p {
-      font-size: 17px;
-      line-height: 1.8;
-      opacity: 0.95;
+    .hero p{
+      font-size:16px;
+      line-height:1.8;
+      opacity:.95;
     }
 
-    .video-wrapper {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    /* ===== VIDEO ===== */
+    .video-wrapper{
+      max-width:900px;
+      margin:40px auto;
+      background:#fff;
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.1);
     }
 
-    video {
-      width: 100%;
-      border-radius: 14px;
-      background: #000;
+    video{
+      width:100%;
+      border-radius:14px;
+      background:#000;
     }
 
-    .actions {
-      text-align: center;
-      margin: 30px 0 10px;
+    /* ===== BUTTONS ===== */
+    .actions{
+      text-align:center;
+      margin:25px 0 10px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 8px;
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:700;
+      margin:8px;
     }
 
-    .btn-home {
-      background: #a1694f;
-      color: #fff;
+    .btn-home{
+      background:#a1694f;
+      color:#fff;
     }
 
-    .btn-video {
-      background: #444;
-      color: #fff;
+    .btn-wa{
+      background:#25d366;
+      color:#fff;
     }
 
-    .btn-wa {
-      background: #25d366;
-      color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
+    footer{
+      text-align:center;
+      padding:20px;
+      font-size:14px;
+      color:#777;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -150,7 +152,6 @@
 
 <div class="actions">
   <a href="index.html" class="btn btn-home">⬅ الصفحة الرئيسية</a>
-  <a href="video.html" class="btn btn-video">🎬 صفحة الفيديو</a>
   <a href="https://wa.link/4emaaz" class="btn btn-wa">📩 واتساب</a>
 </div>
 
