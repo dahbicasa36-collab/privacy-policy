@@ -5,46 +5,47 @@
 <title>The Untamed | الصفحة الرئيسية</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
-<meta name="theme-color" content="#25D366">
-<meta name="robots" content="index, follow">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:"Cairo",sans-serif;
-  background:url('rosa.jpg') center/cover fixed no-repeat;
+  background:#000;
   color:#fff;
 }
 
-/* OVERLAY */
-body::before{
-  content:"";
+/* ===== BACKGROUND ===== */
+.page-bg{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.55);
+  background:url("hero.jpg") center/cover no-repeat;
+  z-index:-2;
+}
+.page-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
   z-index:-1;
 }
 
 /* ===== HEADER ===== */
 header{
-  background:#fff;
+  background:rgba(255,255,255,.95);
   height:64px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 18px;
+  padding:0 16px;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 .logo img{
-  height:38px;
+  height:40px;
 }
 
 .menu-btn{
@@ -66,28 +67,27 @@ header{
   padding:20px;
   transition:.3s;
   z-index:2000;
-  box-shadow:-5px 0 20px rgba(0,0,0,.3);
+  box-shadow:-5px 0 25px rgba(0,0,0,.3);
 }
 .side-menu.active{right:0}
 
-.close-btn{
-  font-size:22px;
-  border:none;
+.side-menu button{
   background:none;
-  cursor:pointer;
+  border:none;
+  font-size:22px;
   margin-bottom:20px;
+  cursor:pointer;
 }
 
 .side-menu a{
   display:block;
-  padding:12px;
   margin-bottom:10px;
-  background:#f3f3f3;
+  padding:12px;
+  background:#f2f2f2;
   border-radius:25px;
   text-decoration:none;
   color:#111;
   text-align:center;
-  font-weight:700;
   transition:.3s;
 }
 .side-menu a:hover{
@@ -97,111 +97,99 @@ header{
 
 /* ===== CONTENT ===== */
 .container{
-  max-width:620px;
+  max-width:420px;
   margin:40px auto;
-  padding:0 14px;
+  padding:0 12px;
 }
 
-/* ===== CARD ===== */
-.wa-card{
-  background:#1f2c33;
-  border-radius:22px;
+.card{
+  background:rgba(20,32,38,.95);
+  border-radius:20px;
   overflow:hidden;
   margin-bottom:30px;
-  box-shadow:0 12px 30px rgba(0,0,0,.35);
-  animation:fadeUp .6s ease both;
+  box-shadow:0 15px 30px rgba(0,0,0,.4);
 }
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.wa-card img{
+.card img{
   width:100%;
   aspect-ratio:16/9;
   object-fit:cover;
-  border-bottom:4px solid #25D366;
 }
 
-.wa-body{padding:18px}
+.card-body{
+  padding:18px;
+}
 
-.wa-title{
+.card-title{
   font-size:20px;
   font-weight:700;
   margin-bottom:10px;
 }
 
-.wa-text{
-  font-size:15.5px;
+.card-text{
+  font-size:15px;
   line-height:1.9;
-  color:#f1f1f1;
+  color:#e5e7eb;
 }
 
-.wa-actions{
+.card-actions{
   display:flex;
   gap:10px;
-  margin-top:18px;
+  margin-top:16px;
 }
 
-.wa-btn{
+.btn{
   flex:1;
+  text-align:center;
   padding:10px;
   border-radius:25px;
   text-decoration:none;
-  text-align:center;
   font-weight:700;
   transition:.3s;
 }
 
-.wa-btn.video{
+.btn.video{
   background:#fff;
   color:#000;
 }
-.wa-btn.video:hover{
+.btn.video:hover{
   background:#a1694f;
   color:#fff;
 }
 
-.wa-btn.whatsapp{
+.btn.wa{
   background:#25D366;
   color:#fff;
 }
-.wa-btn.whatsapp:hover{
+.btn.wa:hover{
   background:#128C7E;
 }
 
-/* ===== FLOATING WHATSAPP ===== */
-.floating-wa{
+/* ===== FLOAT WHATSAPP ===== */
+.float-wa{
   position:fixed;
-  bottom:18px;
-  left:18px;
+  bottom:20px;
+  left:20px;
+  background:#25D366;
   width:56px;
   height:56px;
-  background:#25D366;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:28px;
+  font-size:26px;
   color:#fff;
   text-decoration:none;
-  box-shadow:0 8px 20px rgba(0,0,0,.35);
-  z-index:3000;
-}
-.floating-wa:hover{
-  background:#128C7E;
-  transform:scale(1.05);
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:480px){
-  .wa-actions{flex-direction:column}
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  z-index:1500;
 }
 </style>
 </head>
 
 <body>
+
+<div class="page-bg"></div>
+<div class="page-overlay"></div>
 
 <header>
   <button class="menu-btn" onclick="openMenu()">☰</button>
@@ -212,7 +200,7 @@ header{
 
 <!-- SIDE MENU -->
 <div class="side-menu" id="menu">
-  <button class="close-btn" onclick="closeMenu()">✕</button>
+  <button onclick="closeMenu()">✕</button>
   <a href="career.html">فرصة العمل</a>
   <a href="about.html">تعريف بالشركة</a>
   <a href="privacy-policy.html">سياسة الخصوصية</a>
@@ -224,46 +212,53 @@ header{
 
 <div class="container">
 
-  <div class="wa-card">
+  <!-- CARD 1 -->
+  <div class="card">
     <img src="video03-cover.jpg" alt="">
-    <div class="wa-body">
-      <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
-      <div class="wa-text">
+    <div class="card-body">
+      <div class="card-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
+      <div class="card-text">
         📱 متجر إلكتروني جاهز<br>
         🎓 تدريب ومرافقة<br>
-        📦 توزيع دولي<br>
+        📦 التوزيع الدولي<br>
         💰 أرباح من 15%<br>
         🌍 خدم من أي مكان
       </div>
-      <div class="wa-actions">
-        <a class="wa-btn video" href="video03.mp4" target="_blank">▶ مشاهدة</a>
-        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      <div class="card-actions">
+        <a class="btn video" href="video03.mp4" target="_blank">▶ مشاهدة</a>
+        <a class="btn wa" href="https://wa.link/4emaaz">📩 واتساب</a>
       </div>
     </div>
   </div>
 
-  <div class="wa-card">
+  <!-- CARD 2 -->
+  <div class="card">
     <img src="video02-cover.jpg" alt="">
-    <div class="wa-body">
-      <div class="wa-title">🏆 مؤتمر مراكش</div>
-      <div class="wa-text">
+    <div class="card-body">
+      <div class="card-title">🏆 مؤتمر مراكش</div>
+      <div class="card-text">
         تتويج فريق العمل<br>
-        قصص نجاح ملهمة
+        قصص نجاح حقيقية<br>
+        فرصة لكل طموح
       </div>
-      <div class="wa-actions">
-        <a class="wa-btn video" href="video02.mp4" target="_blank">▶ مشاهدة</a>
-        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
+      <div class="card-actions">
+        <a class="btn video" href="video02.mp4" target="_blank">▶ مشاهدة</a>
+        <a class="btn wa" href="https://wa.link/4emaaz">📩 واتساب</a>
       </div>
     </div>
   </div>
 
 </div>
 
-<a href="https://wa.link/4emaaz" class="floating-wa" target="_blank">💬</a>
+<a class="float-wa" href="https://wa.link/4emaaz">💬</a>
 
 <script>
-function openMenu(){document.getElementById("menu").classList.add("active")}
-function closeMenu(){document.getElementById("menu").classList.remove("active")}
+function openMenu(){
+  document.getElementById("menu").classList.add("active");
+}
+function closeMenu(){
+  document.getElementById("menu").classList.remove("active");
+}
 </script>
 
 </body>
