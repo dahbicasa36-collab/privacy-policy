@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <title>The Untamed | الصفحة الرئيسية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -13,16 +11,78 @@
 
     body{
       font-family:"Cairo",sans-serif;
-      background:url('hero.jpg') center/cover fixed no-repeat;
+      background:url('hero.jpg') center/cover fixed no-repeat; /* الصورة الخلفية */
       position:relative;
-      color:#111;
     }
 
-    /* طبقة شفافة فوق الخلفية */
+    /* طبقة شفافة */
     .overlay{
       background:rgba(0,0,0,0.6);
       min-height:100vh;
       padding:40px 20px;
+    }
+
+    /* ===== HEADER ===== */
+    header{
+      background:rgba(255,255,255,.95);
+      height:64px;
+      display:flex;
+      align-items:center;
+      padding:0 20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    .header-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .menu-btn{
+      font-size:28px;
+      background:none;
+      border:none;
+      cursor:pointer;
+      color:#111;
+    }
+
+    /* القائمة الجانبية */
+    .side-menu{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:260px;
+      height:100%;
+      background:#fff;
+      box-shadow:-5px 0 20px rgba(0,0,0,.25);
+      padding:20px;
+      transition:.3s;
+      z-index:2000;
+    }
+    .side-menu.active{right:0}
+    .close-btn{
+      font-size:22px;
+      border:none;
+      background:none;
+      margin-bottom:20px;
+      cursor:pointer;
+    }
+    .side-menu a{
+      display:block;
+      padding:12px;
+      margin-bottom:10px;
+      background:#f3f3f3;
+      border-radius:20px;
+      text-decoration:none;
+      color:#111;
+      text-align:center;
+      font-size:15px;
+      transition:.3s;
+    }
+    .side-menu a:hover{
+      background:#a1694f;
+      color:#fff;
     }
 
     /* شعار في الوسط */
@@ -37,7 +97,7 @@
       box-shadow:0 0 20px #333;
     }
 
-    /* Box أبيض للنص */
+    /* Box أبيض */
     .intro-box{
       background:#fff;
       color:#111;
@@ -48,77 +108,32 @@
       box-shadow:0 6px 20px rgba(0,0,0,0.2);
       text-align:center;
     }
-    .intro-box h1{
-      font-size:26px;
-      margin-bottom:12px;
-    }
-    .intro-box p{
-      font-size:16px;
-      line-height:1.9;
-    }
-
-    /* كروت الفيديو */
-    .container{
-      max-width:700px;
-      margin:auto;
-      padding:0 14px;
-    }
-    .wa-card{
-      background:#fff;
-      border-radius:18px;
-      overflow:hidden;
-      margin-bottom:30px;
-      box-shadow:0 10px 25px rgba(0,0,0,.25);
-    }
-    .wa-card video{
-      width:100%;
-      border-bottom:4px solid #25D366;
-      border-radius:12px 12px 0 0;
-    }
-    .wa-body{padding:18px}
-    .wa-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:10px;
-    }
-    .wa-text{
-      font-size:16px;
-      line-height:1.9;
-      color:#333;
-    }
-    .wa-actions{
-      display:flex;
-      gap:8px;
-      margin-top:18px;
-      flex-wrap:wrap;
-    }
-    .wa-btn{
-      flex:1;
-      text-align:center;
-      padding:10px;
-      border-radius:25px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:15px;
-      transition:.3s;
-    }
-    .wa-btn.video{
-      background:#a1694f;
-      color:#fff;
-    }
-    .wa-btn.video:hover{
-      background:#333;
-    }
-    .wa-btn.whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
-    .wa-btn.whatsapp:hover{
-      background:#128C7E;
-    }
+    .intro-box h1{font-size:26px;margin-bottom:12px;}
+    .intro-box p{font-size:16px;line-height:1.9;}
   </style>
 </head>
 <body>
+
+<header>
+  <div class="header-left">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <span style="color:#111;font-weight:700;">The Untamed</span>
+  </div>
+</header>
+
+<!-- القائمة الجانبية -->
+<div class="side-menu" id="menu">
+  <button class="close-btn" onclick="closeMenu()">✕</button>
+  <a href="career.html">فرصة العمل</a>
+  <a href="about.html">تعريف بالشركة</a>
+  <a href="privacy-policy.html">سياسة الخصوصية</a>
+  <a href="terms.html">شروط الخدمة</a>
+  <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">🎥 فيديو المؤتمر</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">🎥 فيديو الفرصة</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
+  <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
+</div>
 
 <div class="overlay">
 
@@ -127,7 +142,7 @@
     <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="Casa The Untamed Logo">
   </div>
 
-  <!-- Box أبيض فيه النص -->
+  <!-- Box أبيض -->
   <div class="intro-box">
     <h1>مرحبا بك في The Untamed</h1>
     <p>
@@ -137,56 +152,16 @@
     </p>
   </div>
 
-  <!-- محتوى الفيديوهات -->
-  <div class="container">
-
-    <!-- VIDEO 03 -->
-    <div class="wa-card">
-      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">
-        <video muted loop controls>
-          <source src="video03.mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="wa-body">
-        <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية</div>
-        <div class="wa-text">
-          📱 متجر إلكتروني جاهز بالكامل<br>
-          🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
-          📦 الشركة تتكفّل بالتغليف والتوزيع<br>
-          💰 أرباح تبدأ من 15%<br>
-          🌍 خدم غير بهاتفك ومن أي مكان
-        </div>
-        <div class="wa-actions">
-          <a class="wa-btn video" href="https://dahbicasa36-collab.github.io/privacy-policy/video03.html">▶ مشاهدة الفيديو</a>
-          <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO 02 -->
-    <div class="wa-card">
-      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">
-        <video muted loop controls>
-          <source src="video02.mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="wa-body">
-        <div class="wa-title">🏆 مؤتمر مراكش – فريق The Untamed</div>
-        <div class="wa-text">
-          تتويج فريق العمل<br>
-          قصص نجاح ملهمة<br>
-          فرصة لكل شخص طموح
-        </div>
-        <div class="wa-actions">
-          <a class="wa-btn video" href="https://dahbicasa36-collab.github.io/privacy-policy/video02.html">▶ مشاهدة الفيديو</a>
-          <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
 </div>
+
+<script>
+function openMenu(){
+  document.getElementById("menu").classList.add("active");
+}
+function closeMenu(){
+  document.getElementById("menu").classList.remove("active");
+}
+</script>
 
 </body>
 </html>
