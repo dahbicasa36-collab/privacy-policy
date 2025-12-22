@@ -54,14 +54,17 @@
     }
 
     .logo img{
-      height:38px;
+      height:50px;
       max-width:160px;
       object-fit:contain;
       cursor:pointer;
       transition:.2s;
+      border:3px solid #fff;
+      border-radius:50%;
+      box-shadow:0 0 20px #333; /* شعار بارز */
     }
 
-    .logo img:hover{opacity:.85}
+    .logo img:hover{opacity:.85; transform:scale(1.05)}
 
     /* ===== SIDE MENU ===== */
     .side-menu{
@@ -107,7 +110,7 @@
 
     /* ===== CONTENT ===== */
     .container{
-      max-width:600px;
+      max-width:700px;
       margin:40px auto;
       padding:0 14px;
     }
@@ -120,11 +123,10 @@
       box-shadow:0 10px 25px rgba(0,0,0,.25);
     }
 
-    .wa-card img{
+    .wa-card video{
       width:100%;
-      aspect-ratio:16/9;
-      object-fit:cover;
       border-bottom:4px solid #25D366;
+      border-radius:12px 12px 0 0;
     }
 
     .wa-body{padding:18px}
@@ -182,7 +184,6 @@
       .wa-title{font-size:20px}
       .wa-text{font-size:14px}
       .wa-actions{flex-direction:column}
-      .wa-card img{aspect-ratio:4/3}
     }
   </style>
 </head>
@@ -193,7 +194,7 @@
   <div class="header-left">
     <button class="menu-btn" onclick="openMenu()">☰</button>
     <a href="index.html" class="logo">
-      <img src="cal.png" alt="CASV The Untamed Logo">
+      <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="Casa The Untamed Logo">
     </a>
   </div>
 </header>
@@ -206,6 +207,8 @@
   <a href="privacy-policy.html">سياسة الخصوصية</a>
   <a href="terms.html">شروط الخدمة</a>
   <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="video02.html">🎥 فيديو المؤتمر</a>
+  <a href="video03.html">🎥 فيديو الفرصة</a>
   <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
   <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
 </div>
@@ -214,7 +217,9 @@
 
   <!-- VIDEO 03 -->
   <div class="wa-card">
-    <img src="video03-cover.jpg" alt="">
+    <a href="video03.html">
+      <video src="video03.mp4" muted loop></video>
+    </a>
     <div class="wa-body">
       <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed</div>
       <div class="wa-text">
@@ -226,8 +231,7 @@
         👉 بدا رحلتك دابا
       </div>
       <div class="wa-actions">
-       <a class="wa-btn video" href="video03.html">▶ مشاهدة الفيديو</a>
-
+        <a class="wa-btn video" href="video03.html">▶ مشاهدة الفيديو</a>
         <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
       </div>
     </div>
@@ -235,7 +239,9 @@
 
   <!-- VIDEO 02 -->
   <div class="wa-card">
-    <img src="video02-cover.jpg" alt="">
+    <a href="video02.html">
+      <video src="video02.mp4" muted loop></video>
+    </a>
     <div class="wa-body">
       <div class="wa-title">🏆 مؤتمر مراكش – فريق The Untamed</div>
       <div class="wa-text">
@@ -245,7 +251,6 @@
       </div>
       <div class="wa-actions">
         <a class="wa-btn video" href="video02.html">▶ مشاهدة الفيديو</a>
-
         <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
       </div>
     </div>
