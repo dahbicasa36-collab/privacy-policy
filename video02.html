@@ -23,7 +23,6 @@
       text-align:center;
     }
 
-    /* طبقة تعتيم */
     .overlay{
       background: rgba(0,0,0,0.65);
       min-height:100vh;
@@ -44,7 +43,7 @@
     }
 
     .logo img{
-      max-width:220px; /* لوغو بارز */
+      max-width:220px;
       filter: drop-shadow(0 6px 20px rgba(0,0,0,0.7));
     }
 
@@ -61,14 +60,13 @@
       color:#f1f1f1;
     }
 
-    /* الفيديو */
     video{
       width:100%;
-      max-width:600px; /* تصغير الفيديو */
+      max-width:600px;
       border-radius:16px;
       box-shadow:0 20px 40px rgba(0,0,0,0.6);
       margin-bottom:30px;
-      background:#fff; /* إطار أبيض خفيف */
+      background:#fff;
       padding:6px;
     }
 
@@ -80,7 +78,6 @@
       color:#f1f1f1;
     }
 
-    /* الأزرار */
     .buttons{
       display:flex;
       flex-wrap:wrap;
@@ -101,18 +98,21 @@
       background:#25D366;
       color:#fff;
     }
-
-    .btn-whatsapp:hover{
-      background:#1ebe5d;
-    }
+    .btn-whatsapp:hover{background:#1ebe5d;}
 
     .btn-home{
       background:#ffffff;
       color:#000;
     }
+    .btn-home:hover{background:#e6e6e6;}
 
-    .btn-home:hover{
-      background:#e6e6e6;
+    /* زر الرابط البارز */
+    .btn-link{
+      background:#4A47A3; /* بنفسجي غامق */
+      color:#fff;
+    }
+    .btn-link:hover{
+      background:#3a3785;
     }
   </style>
 </head>
@@ -147,13 +147,9 @@
 
       <!-- الأزرار -->
       <div class="buttons">
-        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
-          📲 تواصل عبر واتساب
-        </a>
-
-        <a href="index.html" class="btn btn-home">
-          ⬅ الرجوع إلى الصفحة الرئيسية
-        </a>
+        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">📲 تواصل عبر واتساب</a>
+        <a href="index.html" class="btn btn-home">⬅ الرجوع إلى الصفحة الرئيسية</a>
+        <a href="https://linktr.ee/theuntamed" class="btn btn-link">🌐 رابطنا الرسمي</a>
       </div>
 
     </div>
