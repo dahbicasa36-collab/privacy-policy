@@ -1,162 +1,144 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>مؤتمر The Untamed – مراكش</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<title>The Untamed | مؤتمر مراكش</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f4f4f4;
-      direction: rtl;
-      color: #222;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-    header {
-      background: #fff;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    .logo img {
-      height: 34px;
-    }
+body{
+  font-family:"Cairo",sans-serif;
+  background:#000;
+}
 
-    .back a {
-      text-decoration: none;
-      font-weight: 700;
-      color: #a1694f;
-    }
+/* ===== HERO FULL ===== */
+.hero{
+  min-height:100vh;
+  background:url("hero.jpg") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
 
-    .hero {
-      background: url("hero.jpg") center/cover no-repeat;
-      position: relative;
-      padding: 80px 20px;
-      text-align: center;
-    }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
+.hero-content{
+  position:relative;
+  max-width:900px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+}
 
-    .hero-content {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-      color: #fff;
-    }
+/* LOGO */
+.hero-logo{
+  height:70px;
+  margin-bottom:20px;
+}
 
-    .hero-content h1 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
+/* TITLE */
+.hero-content h1{
+  font-size:32px;
+  margin-bottom:12px;
+}
 
-    .hero-content p {
-      font-size: 17px;
-      line-height: 1.8;
-      opacity: 0.95;
-    }
+.hero-content p{
+  font-size:18px;
+  margin-bottom:24px;
+  line-height:1.9;
+}
 
-    .video-wrapper {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+/* VIDEO */
+.video-box{
+  background:#000;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
 
-    video {
-      width: 100%;
-      border-radius: 14px;
-      background: #000;
-    }
+.video-box video{
+  width:100%;
+  display:block;
+}
 
-    .actions {
-      text-align: center;
-      margin: 30px 0 10px;
-    }
+/* BUTTONS */
+.actions{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 8px;
-    }
+.btn{
+  padding:12px 28px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:15px;
+}
 
-    .btn-home {
-      background: #a1694f;
-      color: #fff;
-    }
+.btn-home{
+  background:#a1694f;
+  color:#fff;
+}
 
-    .btn-video {
-      background: #444;
-      color: #fff;
-    }
+.btn-wa{
+  background:#25D366;
+  color:#fff;
+}
 
-    .btn-wa {
-      background: #25d366;
-      color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+@media(max-width:600px){
+  .hero-content h1{font-size:22px}
+  .hero-content p{font-size:16px}
+}
+</style>
 </head>
-<body>
 
-<header>
-  <div class="logo">
-    <img src="cal.png" alt="CASV The Untamed">
-  </div>
-  <div class="back">
-    <a href="index.html">رجوع</a>
-  </div>
-</header>
+<body>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>مؤتمر The Untamed – مدينة مراكش 🏆</h1>
+
+    <!-- LOGO -->
+    <img src="cal.png" class="hero-logo" alt="The Untamed Logo">
+
+    <!-- TITLE -->
+    <h1>مؤتمر The Untamed بمراكش</h1>
     <p>
-      ينظم مؤتمر <strong>The Untamed</strong> بمدينة مراكش، ويجمع نخبة من أعضاء الفريق
-      للاحتفال بالإنجازات، تبادل التجارب، ومشاركة قصص النجاح
+      يُنظم مؤتمر <strong>The Untamed</strong> بمدينة مراكش،
+      ويجمع نخبة من أعضاء الفريق للاحتفال بالإنجازات،
+      تبادل التجارب، ومشاركة قصص النجاح
       في أجواء تحفيزية ومهنية.
     </p>
+
+    <!-- VIDEO -->
+    <div class="video-box">
+      <video controls playsinline>
+        <source src="video02.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو
+      </video>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+      <a href="index.html" class="btn btn-home">⬅ الصفحة الرئيسية</a>
+      <a href="https://wa.link/4emaaz" class="btn btn-wa">💬 واتساب</a>
+    </div>
+
   </div>
 </section>
-
-<div class="video-wrapper">
-  <video controls autoplay muted playsinline>
-    <source src="video02.mp4" type="video/mp4">
-    متصفحك لا يدعم تشغيل الفيديو.
-  </video>
-</div>
-
-<div class="actions">
-  <a href="index.html" class="btn btn-home">⬅ الصفحة الرئيسية</a>
-  <a href="video.html" class="btn btn-video">🎬 صفحة الفيديو</a>
-  <a href="https://wa.link/4emaaz" class="btn btn-wa">📩 واتساب</a>
-</div>
-
-<footer>
-  © CASV The Untamed 2025 – Marrakech Conference
-</footer>
 
 </body>
 </html>
