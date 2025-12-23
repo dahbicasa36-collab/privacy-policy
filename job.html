@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>The Untamed | فرصة عمل في التجارة الإلكترونية</title>
+<title>فرصة عمل | The Untamed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
@@ -18,67 +18,57 @@ body{
 }
 
 /* ===== HEADER ===== */
-.site-header{
-  background:#ffffff;
-  padding:30px 20px;
+header{
+  background:#fff;
+  padding:25px;
   text-align:center;
-  position:relative;
-  z-index:900;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
-.site-logo{
-  max-width:220px;
-  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+header img{
+  max-width:200px;
 }
 
-/* ===== HAMBURGER BUTTON ===== */
-.menu-toggle{
+/* ===== MENU BUTTON ===== */
+.menu-btn{
   position:fixed;
-  top:22px;
-  right:22px;
+  top:20px;
+  right:20px;
   background:#a1694f;
   color:#fff;
   border:none;
   font-size:26px;
-  padding:10px 15px;
-  border-radius:12px;
+  padding:8px 14px;
+  border-radius:8px;
   cursor:pointer;
-  z-index:1100;
-}
-
-/* ===== MOBILE MENU ===== */
-.mobile-menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:280px;
-  height:100%;
-  background:#ffffff;
-  padding:90px 20px;
-  box-shadow:-4px 0 25px rgba(0,0,0,0.2);
-  transition:0.3s;
   z-index:1000;
 }
 
-.mobile-menu.active{right:0}
+/* ===== MENU ===== */
+.menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:260px;
+  height:100%;
+  background:#fff;
+  padding:80px 20px;
+  transition:0.3s;
+  box-shadow:-4px 0 20px rgba(0,0,0,0.2);
+}
 
-.mobile-menu a{
+.menu a{
   display:block;
-  margin-bottom:14px;
-  padding:12px 18px;
-  border-radius:25px;
-  text-decoration:none;
+  margin-bottom:15px;
+  padding:12px;
   background:rgba(0,0,0,0.05);
+  text-decoration:none;
   color:#333;
-  font-weight:600;
+  border-radius:20px;
   text-align:center;
 }
 
-.mobile-menu a.primary{
-  background:#a1694f;
-  color:#fff;
-}
+.menu.active{right:0}
 
 /* ===== HERO ===== */
 .hero{
@@ -86,199 +76,119 @@ body{
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
     url("https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg")
     center/cover no-repeat;
-  padding:90px 20px;
+  padding:80px 20px;
 }
 
-.hero-box{
-  background:#ffffff;
-  max-width:1050px;
+.box{
+  background:#fff;
+  max-width:900px;
   margin:auto;
-  padding:55px 35px;
-  border-radius:32px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.18);
+  padding:35px;
+  border-radius:20px;
   text-align:center;
-}
-
-.hero-box h1{
-  color:#a1694f;
-  font-size:34px;
-  margin-bottom:20px;
-}
-
-.hero-box p{
-  font-size:18px;
-  margin-bottom:25px;
-}
-
-/* ===== CTA ===== */
-.cta{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-  margin-bottom:40px;
-}
-
-.btn{
-  padding:15px 34px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:700;
-  background:#a1694f;
-  color:#fff;
-}
-
-.btn.secondary{
-  background:rgba(0,0,0,0.05);
-  color:#333;
 }
 
 /* ===== CONTENT ===== */
-.section{
-  margin-top:45px;
-  text-align:right;
-}
-
-.section h2{
+h1{
   color:#a1694f;
-  font-size:24px;
   margin-bottom:15px;
-  text-align:center;
 }
 
-.section ul li{
-  margin-bottom:10px;
-  font-size:16px;
+p{margin-bottom:15px}
+
+ul{
+  text-align:right;
+  margin:20px auto;
+  max-width:600px;
 }
 
-/* ===== TABLE ===== */
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
-}
+ul li{margin-bottom:8px}
 
-th,td{
-  border:1px solid #ddd;
-  padding:14px;
-  text-align:center;
-}
-
-th{
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  margin:20px auto;
+  padding:14px 30px;
   background:#a1694f;
   color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
 }
 
 /* ===== VIDEO ===== */
-.video-box{
-  margin-top:40px;
-  display:flex;
-  justify-content:center;
-}
-
-.video-box video{
+video{
   width:100%;
-  max-width:720px;
-  border-radius:20px;
-  box-shadow:0 12px 35px rgba(0,0,0,0.25);
+  max-width:600px;
+  margin-top:25px;
+  border-radius:15px;
 }
 
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
-  padding:25px;
+  padding:20px;
   font-size:14px;
   color:#777;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:600px){
-  .hero-box h1{font-size:26px}
-  .hero-box p{font-size:16px}
-  .site-logo{max-width:180px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ☰ زر المينو -->
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<!-- MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#job">فرصة العمل</a>
-  <a href="#about">تعريف بالشركة</a>
-  <a href="#privacy">السياسة الخصوصية</a>
-  <a href="#terms">شروط الخدمة</a>
-  <a href="#products">المنتجات</a>
-  <a href="#delete">سياسة حذف البيانات</a>
-  <a href="https://wa.link/4emaaz" class="primary">قدّم الآن</a>
+<div class="menu" id="menu">
+  <a href="#">فرصة العمل</a>
+  <a href="#">اتصل بنا</a>
 </div>
 
-<header class="site-header">
-  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
-       alt="CAS7 The Untamed" class="site-logo">
+<header>
+  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="The Untamed">
 </header>
 
-<section class="hero" id="job">
-  <div class="hero-box">
+<section class="hero">
+  <div class="box">
 
-    <h1>فرصة عمل حقيقية في التجارة الإلكترونية</h1>
+    <h1>فرصة عمل في التجارة الإلكترونية مع The Untamed</h1>
 
     <p>
-      كتبحث على فرصة عمل واضحة؟  
-      باغي تخدم من الدار أو من أي بلاصة؟  
-      الفرصة دابا مع <strong>The Untamed</strong>.
+      كتبحث على فرصة عمل واضحة فمجال التجارة الإلكترونية؟<br>
+      باغي تخدم من الدار أو من أي بلاصة بلا قيود؟<br>
+      الفرصة عندك دابا مع شركة The Untamed 🌍✨
     </p>
 
-    <div class="cta">
-      <a href="https://wa.link/4emaaz" class="btn">قدّم الآن</a>
-      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.mp4" class="btn secondary">
-        مشاهدة الفيديو
-      </a>
-    </div>
+    <ul>
+      <li>🛒 عمل رسمي فمجال التجارة الإلكترونية</li>
+      <li>🏬 متجر إلكتروني جاهز بالكامل</li>
+      <li>📦 التغليف والشحن (المغرب + أوروبا)</li>
+      <li>🎓 تدريب مجاني + مرافقة</li>
+      <li>💰 أرباح تبدأ من 15%</li>
+      <li>📱 الخدمة غير بالهاتف</li>
+      <li>🌱 بدون خبرة</li>
+    </ul>
 
-    <div class="section">
-      <h2>شنو نقدّمو ليك؟</h2>
-      <ul>
-        <li>🛒 عمل رسمي فمجال التجارة الإلكترونية</li>
-        <li>🏬 متجر إلكتروني جاهز بالكامل</li>
-        <li>📦 التغليف والتوصيل على حساب الشركة</li>
-        <li>🎓 تدريب مجاني ومرافقة</li>
-        <li>💰 أرباح تبدأ من 15%</li>
-        <li>📱 الخدمة غير بالهاتف</li>
-        <li>🌱 بدون خبرة مسبقة</li>
-      </ul>
-    </div>
+    <p>
+      لمن هذا العمل؟<br>
+      للناس اللي باغين دخل إضافي أو رئيسي بطريقة قانونية وواضحة.
+    </p>
 
-    <div class="section">
-      <h2>تفاصيل التدريب</h2>
-      <table>
-        <tr><th>العنصر</th><th>التفاصيل</th></tr>
-        <tr><td>المهارات</td><td>غير مطلوبة</td></tr>
-        <tr><td>مدة التدريب</td><td>7 – 14 يوم</td></tr>
-        <tr><td>الدعم</td><td>مرافقة مباشرة</td></tr>
-        <tr><td>النتائج</td><td>دخل إضافي أو أساسي</td></tr>
-      </table>
-    </div>
+    <a href="https://wa.link/4emaaz" class="btn">تواصل معنا على واتساب</a>
 
-    <div class="video-box">
-      <video controls poster="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg">
-        <source src="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4" type="video/mp4">
-      </video>
-    </div>
+    <video controls>
+      <source src="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4" type="video/mp4">
+    </video>
 
   </div>
 </section>
 
 <footer>
-© 2025 The Untamed – جميع الحقوق محفوظة
+© 2025 The Untamed
 </footer>
 
 <script>
 function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
+  document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
