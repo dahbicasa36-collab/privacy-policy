@@ -2,151 +2,199 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>🎥 فرصة عمل مع The Untamed</title>
+  <title> The Untamed | مؤتمر مراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Arabic Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-   body{
-  margin:0;
-  font-family:"Cairo",sans-serif;
-  background:
-    linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)),
-    url("hero.jpg") center/cover fixed;
-  color:#222;
-}
+    *{margin:0;padding:0;box-sizing:border-box}
 
+    body{
+      font-family:"Cairo",sans-serif;
+      background:#f4f4f4;
+      color:#1f1f1f;
+      line-height:1.9;
+    }
 
-    /* LOGO اللاصق */
-    .floating-logo{
-      position:absolute;
-      top:35px;
-      left:50%;
-      transform:translateX(-50%);
+    /* ===== HEADER ===== */
+    header{
       background:#ffffff;
-      padding:14px 34px;
-      border-radius:45px;
-      box-shadow:0 15px 40px rgba(0,0,0,.18);
-      z-index:10;
-    }
-
-    .floating-logo img{
-      max-width:190px;
-    }
-
-    /* الكارد */
-    .card{
-      max-width:900px;
-      margin:140px auto 50px;
-      background:#ffffff;
-      border-radius:22px;
-      padding:50px 45px;
-      box-shadow:0 20px 50px rgba(0,0,0,.08);
-      text-align:right;
-    }
-
-    h1{
+      padding:16px;
       text-align:center;
-      font-size:32px;
-      margin-bottom:12px;
-      font-weight:700;
+      box-shadow:0 2px 8px rgba(0,0,0,.08);
     }
 
-    .subtitle{
-      text-align:center;
+    header h1{
+      font-size:22px;
+      margin-bottom:4px;
+      color:#2c3e50;
+    }
+
+    header p{
+      font-size:14px;
       color:#555;
-      margin-bottom:35px;
-      font-size:17px;
+    }
+
+    /* ===== NAV ===== */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px 16px;
+      background:#2c3e50;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    nav a:hover{opacity:.85}
+
+    /* ===== HERO ===== */
+    .hero{
+      background:url("hero.jpg") center/cover no-repeat;
+      padding:60px 16px;
+      text-align:center;
+      color:#fff;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.45);
+    }
+
+    .hero-content{
+      position:relative;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .hero h2{
+      font-size:24px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:16px;
+    }
+
+    /* ===== CONTENT ===== */
+    .content{
+      max-width:900px;
+      margin:40px auto;
+      padding:0 16px;
+    }
+
+    .box{
+      background:#fff;
+      padding:24px;
+      border-radius:16px;
+      margin-bottom:24px;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+    }
+
+    h3{
+      margin-bottom:10px;
+      color:#2c3e50;
     }
 
     ul{
-      line-height:2.2;
-      font-size:17px;
       padding-right:20px;
     }
 
-    video{
-      width:100%;
-      border-radius:18px;
-      margin:35px 0;
-    }
-
-    .buttons{
+    /* ===== CTA ===== */
+    .cta{
       text-align:center;
-      margin-top:30px;
+      margin:40px 0;
     }
 
-    .btn{
-      background:#a1694f;
+    .cta a{
+      background:#25D366;
       color:#fff;
-      padding:15px 34px;
-      border-radius:35px;
+      padding:14px 32px;
+      border-radius:30px;
       text-decoration:none;
-      margin:10px;
-      display:inline-block;
       font-weight:700;
+      font-size:16px;
+      display:inline-block;
       transition:.3s;
     }
 
-    .btn:hover{
-      opacity:.85;
+    .cta a:hover{
+      background:#128C7E;
     }
 
+    /* ===== FOOTER ===== */
     footer{
+      background:#2c3e50;
+      color:#fff;
       text-align:center;
-      font-size:14px;
-      color:#777;
-      margin-bottom:35px;
+      padding:16px;
+      font-size:13px;
     }
 
-    @media(max-width:768px){
-      .card{
-        margin:120px 15px 40px;
-        padding:35px 25px;
-      }
-      .floating-logo img{
-        max-width:150px;
-      }
+    @media(max-width:600px){
+      header h1{font-size:18px}
+      .hero h2{font-size:20px}
     }
   </style>
 </head>
 
 <body>
 
-  <!-- LOGO اللاصق -->
-  <div class="floating-logo">
-    <img src="cal.png" alt="CASA The Untamed">
+<header>
+  <h1> The Untamed 🏆</h1>
+  <p>مؤتمر مراكش – فريق The Untamed</p>
+</header>
+
+<nav>
+  <a href="index.html">⬅ الصفحة الرئيسية</a>
+  <a href="https://wa.link/4emaaz">📩 واتساب</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>مرحبا بكم في مؤتمر </h2>
+    <p>احتفال بالنجاح، العمل الجماعي، وبناء المستقبل</p>
   </div>
+</section>
 
-  <!-- المحتوى -->
-  <div class="card">
+<section class="content">
 
-    <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
-    <p class="subtitle">
-      انضم إلى فريق The Untamed وابدأ مشروعك الخاص من هاتفك
+  <div class="box">
+    <h3>عن المؤتمر</h3>
+    <p>
+      يُنظم مؤتمر <strong> The Untamed</strong> بمدينة مراكش، ويجمع نخبة
+      من أعضاء الفريق للاحتفال بالإنجازات ومشاركة قصص النجاح.
     </p>
-
-    <ul>
-      <li>🛒 متجر إلكتروني جاهز بالكامل</li>
-      <li>🎓 تدريبات مجانية ومرافقة خطوة بخطوة</li>
-      <li>📦 الشركة تتكفل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر)</li>
-      <li>💰 أرباح تبدأ من 15% وتزيد حسب النتائج</li>
-      <li>📱 خدم غير بهاتفك ومن أي مكان</li>
-      <li>🌱 ما تحتاج حتى خبرة… غير الطموح</li>
-    </ul>
-
-    <video src="video03.mp4" controls></video>
-
-    <div class="buttons">
-      <a href="https://wa.link/4emaaz" class="btn">📱 تواصل عبر واتساب</a>
-      <a href="index.html" class="btn">⬅️ الصفحة الرئيسية</a>
-    </div>
-
   </div>
 
-  <footer>
-    © The Untamed 2025
-  </footer>
+  <div class="box">
+    <h3>برنامج الفعالية</h3>
+    <ul>
+      <li>📅 التاريخ: ديسمبر 2025</li>
+      <li>📍 المكان: مدينة مراكش</li>
+      <li>🎤 المتحدثون: فريق The Untamed</li>
+    </ul>
+  </div>
+
+</section>
+
+<div class="cta">
+  <a href="https://wa.link/4emaaz">📩 تواصل معنا عبر واتساب</a>
+</div>
+
+<footer>
+  © 2025 CASV The Untamed – جميع الحقوق محفوظة
+</footer>
 
 </body>
 </html>
