@@ -21,6 +21,17 @@ body{
   padding:40px 20px;
 }
 
+/* ===== اللوغو ===== */
+.logo{
+  text-align:center;
+  margin-bottom:30px;
+}
+.logo img{
+  max-width:180px; /* حجم اللوغو */
+  border-radius:20px;
+}
+
+/* ===== البطاقة ===== */
 .card{
   max-width:1100px;
   margin:0 auto 40px;
@@ -46,16 +57,12 @@ body{
   line-height:1.9;
 }
 
-.card ul{
-  list-style:none;
-}
-
+.card ul{list-style:none}
 .card li{
   font-size:17px;
   margin-bottom:12px;
   color:#333;
 }
-
 .card li::before{
   content:"✔ ";
   color:#25D366;
@@ -68,45 +75,35 @@ body{
   object-fit:cover;
 }
 
-/* الفيديو */
+/* ===== الفيديو ===== */
 .video-box{
   text-align:center;
 }
-
 video{
   width:100%;
-  max-width:900px;
+  max-width:600px; /* تصغير القياس */
   border-radius:20px;
   box-shadow:0 20px 40px rgba(0,0,0,.6);
   margin-bottom:30px;
 }
 
-/* أزرار */
+/* ===== الأزرار ===== */
 .buttons{
   display:flex;
   gap:15px;
   justify-content:center;
   flex-wrap:wrap;
 }
-
 .btn{
   padding:14px 30px;
   border-radius:40px;
   font-weight:700;
   text-decoration:none;
 }
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-home{background:#fff;color:#000}
 
-.btn-whatsapp{
-  background:#25D366;
-  color:#fff;
-}
-
-.btn-home{
-  background:#fff;
-  color:#000;
-}
-
-/* موبايل */
+/* ===== موبايل ===== */
 @media(max-width:900px){
   .card{
     grid-template-columns:1fr;
@@ -120,17 +117,19 @@ video{
 
 <div class="overlay">
 
+  <!-- ===== اللوغو ===== -->
+  <div class="logo">
+    <img src="logo.png" alt="شعار The Untamed">
+  </div>
+
   <!-- ===== النص + الصورة ===== -->
   <div class="card">
-
     <div>
       <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
-
       <p>
         انضم إلى فريق <strong>The Untamed</strong> وابدأ مشروعك الخاص من هاتفك.
         مؤتمر مراكش كان لحظة قوية لتكريم فريق العمل ومشاركة قصص نجاح حقيقية.
       </p>
-
       <ul>
         <li>متجر إلكتروني جاهز بالكامل</li>
         <li>تدريب مجاني ومرافقة خطوة بخطوة</li>
@@ -140,7 +139,6 @@ video{
         <li>لا تحتاج خبرة سابقة، غير الطموح</li>
       </ul>
     </div>
-
     <img src="card.jpg" alt="The Untamed Conference">
   </div>
 
@@ -152,12 +150,8 @@ video{
     </video>
 
     <div class="buttons">
-      <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
-        📲 تواصل عبر واتساب
-      </a>
-      <a href="index.html" class="btn btn-home">
-        ⬅ الرجوع إلى الصفحة الرئيسية
-      </a>
+      <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">📲 تواصل عبر واتساب</a>
+      <a href="index.html" class="btn btn-home">⬅ الرجوع إلى الصفحة الرئيسية</a>
     </div>
   </div>
 
