@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>🎥 The Untamed | فيديو تعريفي</title>
+  <title>🎥 مؤتمر The Untamed في مراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- خط عربي -->
@@ -17,18 +17,48 @@
 
     body{
       font-family:"Cairo", sans-serif;
-      background:#000;
+      background: url("hero.jpg") no-repeat center center fixed;
+      background-size: cover;
       color:#fff;
       text-align:center;
     }
 
-    .container{
+    /* طبقة تعتيم باش النص يكون واضح */
+    .overlay{
+      background: rgba(0,0,0,0.65);
       min-height:100vh;
+      padding:40px 20px;
       display:flex;
-      flex-direction:column;
       justify-content:center;
       align-items:center;
-      padding:20px;
+    }
+
+    .container{
+      max-width:1000px;
+      width:100%;
+    }
+
+    /* الشعار */
+    .logo{
+      margin-bottom:20px;
+    }
+
+    .logo img{
+      max-width:160px;
+      filter: drop-shadow(0 6px 20px rgba(0,0,0,0.7));
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:15px;
+      letter-spacing:1px;
+    }
+
+    .subtitle{
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:35px;
+      color:#f1f1f1;
     }
 
     video{
@@ -39,24 +69,11 @@
       margin-bottom:30px;
     }
 
-    h1{
-      font-size:34px;
-      margin-bottom:10px;
-      letter-spacing:1px;
-    }
-
-    h2{
-      font-size:18px;
-      font-weight:400;
-      color:#f1f1f1;
-      margin-bottom:25px;
-    }
-
     p{
       font-size:18px;
       line-height:1.8;
       max-width:850px;
-      margin-bottom:30px;
+      margin:0 auto 30px;
       color:#f1f1f1;
     }
 
@@ -98,34 +115,44 @@
 
 <body>
 
-  <div class="container">
+  <div class="overlay">
+    <div class="container">
 
-    <video controls playsinline>
-      <source src="video02.mp4" type="video/mp4">
-      متصفحك لا يدعم تشغيل الفيديو
-    </video>
+      <!-- الشعار -->
+      <div class="logo">
+        <img src="logo.png" alt="The Untamed Logo">
+      </div>
 
-    <h1>✨ The Untamed ✨</h1>
+      <!-- العنوان -->
+      <h1>✨ مؤتمر The Untamed في مراكش ✨</h1>
 
-    <h2>
-      فرصة عمل حقيقية في التجارة الإلكترونية من هاتفك
-    </h2>
+      <p class="subtitle">
+        كلمة مؤثرة وتكريم فريق العمل خلال مؤتمر The Untamed بمدينة مراكش
+      </p>
 
-    <p>
-      كلمة مؤثرة خلال مؤتمر بمراكش، تتويج فريق العمل بمناصبهم الجديدة.
-      إذا كنت باغي تخدم من دارك وتبني مستقبلك، فأنت في المكان الصحيح.
-    </p>
+      <!-- الفيديو -->
+      <video controls playsinline>
+        <source src="video02.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو
+      </video>
 
-    <div class="buttons">
-      <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
-        📲 تواصل عبر واتساب
-      </a>
+      <p>
+        إذا كنت باغي تخدم من دارك وتبني مستقبلك في التجارة الإلكترونية،
+        فأنت في المكان الصحيح مع فريق The Untamed.
+      </p>
 
-      <a href="index.html" class="btn btn-home">
-        ⬅ الرجوع إلى الصفحة الرئيسية
-      </a>
+      <!-- الأزرار -->
+      <div class="buttons">
+        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
+          📲 تواصل عبر واتساب
+        </a>
+
+        <a href="index.html" class="btn btn-home">
+          ⬅ الرجوع إلى الصفحة الرئيسية
+        </a>
+      </div>
+
     </div>
-
   </div>
 
 </body>
