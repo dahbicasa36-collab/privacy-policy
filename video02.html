@@ -9,39 +9,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+/* ===== Reset ===== */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+/* ===== Body + Background ===== */
 body{
   font-family:"Cairo", sans-serif;
   min-height:100vh;
   background:url("hero.jpg") no-repeat center center fixed;
   background-size:cover;
+  position:relative;
+  overflow-x:hidden;
 }
 
-/* ===== Overlay يخفي الصورة ===== */
-.overlay{
-  min-height:100vh;
-  background:rgba(0,0,0,0.45);
-  padding:160px 20px 60px;
-  display:flex;
-  justify-content:center;
+/* ===== Background Overlay (اللي كان مختفي) ===== */
+.background-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45); /* ← قوة التعتيم */
+  z-index:1;
 }
 
-/* ===== لوغو Glass ===== */
+/* ===== Watermark (خفيف) ===== */
+.watermark{
+  position:fixed;
+  inset:0;
+  background-image:url("watermark.png"); /* اختياري */
+  background-repeat:repeat;
+  opacity:0.05;
+  z-index:2;
+  pointer-events:none;
+}
+
+/* ===== Logo Glass ===== */
 .logo-badge{
   position:fixed;
   top:20px;
   left:50%;
   transform:translateX(-50%);
-  z-index:1000;
+  z-index:5;
 
   padding:14px 36px;
   border-radius:999px;
-
   background:rgba(255,255,255,0.35);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
@@ -57,7 +70,16 @@ body{
   display:block;
 }
 
-/* ===== المحتوى ===== */
+/* ===== Content ===== */
+.content{
+  position:relative;
+  z-index:4;
+  min-height:100vh;
+  padding:160px 20px 60px;
+  display:flex;
+  justify-content:center;
+}
+
 .container{
   max-width:1000px;
   width:100%;
@@ -66,7 +88,7 @@ body{
 }
 
 h1{
-  font-size:34px;
+  font-size:36px;
   margin-bottom:25px;
 }
 
@@ -78,10 +100,10 @@ p{
   color:#f2f2f2;
 }
 
-/* ===== الفيديو ===== */
+/* ===== Video ===== */
 video{
   width:100%;
-  max-width:620px;
+  max-width:640px;
   border-radius:18px;
   box-shadow:0 20px 45px rgba(0,0,0,0.6);
   background:#000;
@@ -90,7 +112,7 @@ video{
   display:block;
 }
 
-/* ===== الأزرار ===== */
+/* ===== Buttons ===== */
 .buttons{
   display:flex;
   gap:15px;
@@ -126,7 +148,7 @@ video{
   background:rgba(255,255,255,0.25);
 }
 
-/* ===== الهاتف ===== */
+/* ===== Responsive ===== */
 @media(max-width:600px){
   h1{font-size:26px;}
   p{font-size:16px;}
@@ -137,21 +159,28 @@ video{
 
 <body>
 
-<!-- لوغو -->
+<!-- Overlay -->
+<div class="background-overlay"></div>
+
+<!-- Watermark (اختياري، يمكن تحذفه) -->
+<!-- <div class="watermark"></div> -->
+
+<!-- Logo -->
 <div class="logo-badge">
   <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
        alt="CASV The Untamed">
 </div>
 
-<!-- Overlay -->
-<div class="overlay">
+<!-- Content -->
+<div class="content">
   <div class="container">
 
     <h1>مؤتمر The Untamed بمراكش</h1>
 
     <p>
       كلمة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش مع تتويج فريق العمل
-      بمناصبهم الجديدة. فرصة حقيقية لكل من يريد العمل من المنزل وبناء مستقبل مهني.
+      بمناصبهم الجديدة. فرصة حقيقية لكل من يريد العمل من المنزل
+      وبناء مستقبل مهني في التجارة الإلكترونية.
     </p>
 
     <video controls playsinline>
