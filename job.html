@@ -4,184 +4,99 @@
   <meta charset="UTF-8">
   <title>✨ فرصة عمل | The Untamed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- خط -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background-color: #f4f4f4;
+      color: #1f1f1f;
     }
-
-    body{
-      font-family:"Cairo", sans-serif;
-      min-height:100vh;
-      background:url("https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg") 
-                 no-repeat center center fixed; /* صورة الخلفية */
-      background-size:cover;
-      position:relative;
-      color:#1f1f1f;
+    h1, h2 {
+      color: #111;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
-
-    /* ===== Overlay خفيف ===== */
-    .background-overlay{
-      position:fixed;
-      inset:0;
-      background:rgba(255,255,255,0.75);
-      z-index:1;
+    p, li {
+      color: #2b2b2b;
+      font-size: 16px;
+      line-height: 1.9;
     }
-
-    /* ===== لوغو بارز (Glass) ===== */
-    .logo-badge{
-      position:fixed;
-      top:25px;
-      left:50%;
-      transform:translateX(-50%);
-      z-index:5;
-
-      padding:14px 36px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.45);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-
-      border:1px solid rgba(255,255,255,0.7);
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.5);
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
     }
-
-    .logo-badge img{
-      height:38px;
-      display:block;
+    .section {
+      background: #ffffff;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
-
-    /* ===== المحتوى ===== */
-    .content{
-      position:relative;
-      z-index:3;
-      padding:160px 20px 60px;
+    .buttons {
+      text-align: center;
+      margin-top: 30px;
     }
-
-    .container{
-      max-width:1100px;
-      margin:auto;
+    .btn {
+      background: rgba(0,0,0,0.05);
+      color: #111;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+      margin: 8px;
+      display: inline-block;
     }
-
-    h1, h2{
-      color:#111;
-      font-weight:700;
-      margin-bottom:12px;
-    }
-
-    p, li{
-      color:#2b2b2b;
-      font-size:16px;
-      line-height:1.9;
-    }
-
-    .section{
-      background:#ffffff;
-      padding:24px;
-      margin-bottom:24px;
-      border-radius:16px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .buttons{
-      text-align:center;
-      margin-top:30px;
-    }
-
-    .btn{
-      background:rgba(0,0,0,0.05);
-      color:#111;
-      padding:12px 26px;
-      border-radius:30px;
-      text-decoration:none;
-      transition:0.3s;
-      margin:8px;
-      display:inline-block;
-      font-weight:700;
-    }
-
-    .btn:hover{
-      background:#a1694f;
-      color:#fff;
-    }
-
-    @media(max-width:600px){
-      .logo-badge img{height:30px;}
-      h1{font-size:22px;}
+    .btn:hover {
+      background: #a1694f;
+      color: #fff;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Overlay -->
-  <div class="background-overlay"></div>
+  <div class="logo">
+    <div class="section">
+      <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
+      <p>هل تبحث عن مستقبل مهني واعد في عالم التجارة الرقمية؟  
+      انضم إلى فريق <strong>The Untamed</strong> وكن جزءاً من رحلة النمو والابتكار في السوق المغربي والدولي.</p>
+    </div>
 
-  <!-- لوغو -->
-  <div class="logo-badge">
-    <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
-         alt="CASV The Untamed">
-  </div>
+    <div class="section">
+      <h2>ما نقدمه لك:</h2>
+      <ul>
+        <li>🛒 تدريب عملي في إدارة المتاجر الإلكترونية.</li>
+        <li>🌍 خبرة في التسويق الرقمي والتوسع العالمي.</li>
+        <li>💡 بيئة عمل إبداعية تشجع على الأفكار الجديدة.</li>
+        <li>📝 فرص للتطور المهني وبناء مسار ناجح في التجارة الإلكترونية.</li>
+        <li>📦 الشركة تتكفّل بالتغليف والتوزيع (المغرب + أوروبا + البرازيل + النيجر).</li>
+        <li>🎓 تدريبات مجانية ومرافقة خطوة بخطوة.</li>
+        <li>📱 خدم غير بهاتفك ومن أي مكان.</li>
+        <li>💰 أرباح تبدأ من 15% وتزيد حسب النتائج.</li>
+        <li>🌱 ما تحتاج حتى خبرة… غير الطموح.</li>
+      </ul>
+    </div>
 
-  <!-- المحتوى -->
-  <div class="content">
-    <div class="container">
+    <div class="section">
+      <h2>من نبحث عنه:</h2>
+      <ul>
+        <li>شغف بالتجارة الإلكترونية والتسويق الرقمي.</li>
+        <li>روح المبادرة والقدرة على التعلم السريع.</li>
+        <li>اهتمام بالتفاصيل والالتزام بالإحترافية.</li>
+      </ul>
+    </div>
 
-      <div class="section">
-        <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
-        <p>
-          هل تبحث عن مستقبل مهني واعد في عالم التجارة الرقمية؟
-          انضم إلى فريق <strong>The Untamed</strong> وكن جزءاً من رحلة النمو
-          والابتكار في السوق المغربي والدولي.
-        </p>
-      </div>
+    <div class="section">
+      <h2>لماذا The Untamed؟</h2>
+      <p>لأننا نؤمن أن التجارة الإلكترونية ليست مجرد بيع وشراء، بل هي أسلوب حياة يفتح أبواب النجاح والحرية المالية.</p>
+    </div>
 
-      <div class="section">
-        <h2>ما نقدمه لك:</h2>
-        <ul>
-          <li>🛒 تدريب عملي في إدارة المتاجر الإلكترونية.</li>
-          <li>🌍 خبرة في التسويق الرقمي والتوسع العالمي.</li>
-          <li>💡 بيئة عمل إبداعية تشجع على الأفكار الجديدة.</li>
-          <li>📝 فرص للتطور المهني وبناء مسار ناجح.</li>
-          <li>📦 الشركة تتكفّل بالتغليف والتوزيع.</li>
-          <li>🎓 تدريبات مجانية ومرافقة خطوة بخطوة.</li>
-          <li>📱 خدم غير بهاتفك ومن أي مكان.</li>
-          <li>💰 أرباح تبدأ من 15%.</li>
-          <li>🌱 ما تحتاج حتى خبرة… غير الطموح.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>من نبحث عنه:</h2>
-        <ul>
-          <li>شغف بالتجارة الإلكترونية.</li>
-          <li>روح المبادرة والتعلم السريع.</li>
-          <li>الالتزام والاحترافية.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>لماذا The Untamed؟</h2>
-        <p>
-          لأننا نؤمن أن التجارة الإلكترونية ليست مجرد بيع وشراء،
-          بل أسلوب حياة يفتح أبواب النجاح والحرية المالية.
-        </p>
-      </div>
-
-      <div class="buttons">
-        <a href="index.html" class="btn">⬅️ الرجوع إلى الصفحة الرئيسية</a>
-        <a href="https://wa.link/4emaaz" class="btn">📩 التواصل عبر واتساب</a>
-      </div>
-
+    <div class="buttons">
+      <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="btn">⬅️ الرجوع إلى الصفحة الرئيسية</a>
+      <a href="https://wa.link/4emaaz" class="btn">📩 التواصل عبر واتساب</a>
     </div>
   </div>
 
 </body>
-</html>
+</html>    اضافة صورة لخلفية ثم لكو بارز 
