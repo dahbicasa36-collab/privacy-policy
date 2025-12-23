@@ -1,145 +1,207 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>🔒 سياسة الخصوصية | The Untamed (Sweden)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background: url("hero.jpg") no-repeat center center fixed; /* صورة الخلفية */
-      background-size: cover;
-      color: #1f1f1f;
-    }
-    .overlay {
-      background: rgba(255,255,255,0.92); /* طبقة شفافة فوق الخلفية */
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #111;
-      font-weight: 700;
-      margin-bottom: 12px;
-      text-align: center;
-    }
-    p, li {
-      color: #2b2b2b;
-      font-size: 16px;
-      line-height: 1.9;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section {
-      background: #ffffff;
-      padding: 24px;
-      margin-bottom: 24px;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-width: 180px;
-      border: 3px solid #fff;
-      border-radius: 50%;
-      box-shadow: 0 0 20px #333; /* الشعار بارز */
-    }
-    .buttons {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .btn {
-      background: rgba(0,0,0,0.05);
-      color: #111;
-      padding: 12px 26px;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s;
-      margin: 8px;
-      display: inline-block;
-      font-weight: 700;
-    }
-    .btn:hover {
-      background: #a1694f;
-      color: #fff;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>The Untamed | فرصة عمل في التجارة الإلكترونية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:"Cairo",sans-serif;
+  background:#f4f4f4;
+  color:#333;
+  line-height:1.8;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:#fff;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+header img{
+  max-width:200px;
+}
+
+/* ===== MENU BUTTON ===== */
+.menu-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#a1694f;
+  color:#fff;
+  border:none;
+  font-size:26px;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  z-index:1000;
+}
+
+/* ===== MENU ===== */
+.menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:280px;
+  height:100%;
+  background:#fff;
+  padding:90px 20px;
+  transition:0.3s;
+  box-shadow:-4px 0 20px rgba(0,0,0,0.2);
+  overflow-y:auto;
+}
+
+.menu.active{right:0}
+
+.menu a{
+  display:block;
+  margin-bottom:12px;
+  padding:12px;
+  background:rgba(0,0,0,0.05);
+  text-decoration:none;
+  color:#333;
+  border-radius:20px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url("https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg")
+    center/cover no-repeat;
+  padding:80px 20px;
+}
+
+.box{
+  background:#fff;
+  max-width:900px;
+  margin:auto;
+  padding:35px;
+  border-radius:20px;
+  text-align:center;
+}
+
+/* ===== CONTENT ===== */
+h1{
+  color:#a1694f;
+  margin-bottom:15px;
+}
+
+p{margin-bottom:15px}
+
+ul{
+  text-align:right;
+  margin:20px auto;
+  max-width:650px;
+}
+
+ul li{margin-bottom:8px}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  margin:15px auto;
+  padding:14px 30px;
+  background:#a1694f;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
+}
+
+/* ===== VIDEO ===== */
+video{
+  width:100%;
+  max-width:650px;
+  margin-top:25px;
+  border-radius:15px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="overlay">
-    <div class="container">
-      <!-- شعار الشركة -->
-      <div class="logo">
-        <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="شعار Casa The Untamed">
-      </div>
+<!-- زر المينو -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-      <div class="section">
-        <h1>🔒 سياسة الخصوصية لشركة The Untamed (Sweden)</h1>
-        <p><strong>آخر تحديث:</strong> 18 ديسمبر 2024</p>
-      </div>
+<!-- MENU ☰ -->
+<div class="menu" id="menu">
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/index.html">الصفحة الرئيسية</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/home.html">فرصة العمل</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/about.html">التعريف بالشركة</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb">المتجر الإلكتروني</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/">سياسة الخصوصية</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/terms.html">شروط الخدمة</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/legal-about.html">التعريف القانوني</a>
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/data-deletion.html">سياسة حذف البيانات</a>
+  <a href="https://wa.link/4emaaz">تواصل عبر واتساب</a>
+</div>
 
-      <div class="section">
-        <h2>1. المقدمة</h2>
-        <p>نحن في The Untamed نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية وفقاً لـ GDPR والقوانين السويدية.</p>
-      </div>
+<header>
+  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="The Untamed">
+</header>
 
-      <div class="section">
-        <h2>2. البيانات التي نجمعها</h2>
-        <ul>
-          <li>بيانات الهوية: الاسم، اسم المستخدم.</li>
-          <li>بيانات التواصل: البريد الإلكتروني، رقم الهاتف.</li>
-          <li>البيانات التقنية: عنوان IP، نوع الجهاز، ملفات تعريف الارتباط.</li>
-          <li>بيانات الاستخدام: كيفية استخدام الموقع ومدة التفاعل.</li>
-        </ul>
-      </div>
+<section class="hero">
+  <div class="box">
 
-      <div class="section">
-        <h2>3. كيفية استخدام البيانات</h2>
-        <ul>
-          <li>إنشاء وإدارة الحساب.</li>
-          <li>تقديم الدعم الفني.</li>
-          <li>إرسال التحديثات أو العروض التسويقية (بناءً على موافقتك).</li>
-          <li>الامتثال للالتزامات القانونية السويدية.</li>
-        </ul>
-      </div>
+    <h1>فرصة عمل في التجارة الإلكترونية مع The Untamed</h1>
 
-      <div class="section">
-        <h2>4. حقوقك القانونية</h2>
-        <ul>
-          <li>حق الوصول.</li>
-          <li>حق التصحيح.</li>
-          <li>حق الحذف (الحق في النسيان).</li>
-          <li>حق الاعتراض على التسويق.</li>
-        </ul>
-      </div>
+    <p>
+      كتبحث على فرصة عمل واضحة فمجال التجارة الإلكترونية؟<br>
+      باغي تخدم من الدار أو من أي بلاصة بلا قيود؟<br>
+      الفرصة عندك دابا مع شركة The Untamed 🌍✨
+    </p>
 
-      <div class="section">
-        <h2>5. تخزين البيانات وأمنها</h2>
-        <p>نحتفظ بالبيانات فقط للفترة اللازمة ونطبق تقنيات حماية مثل التشفير SSL.</p>
-      </div>
+    <ul>
+      <li>🛒 عمل رسمي فمجال التجارة الإلكترونية</li>
+      <li>🏬 متجر إلكتروني جاهز بالكامل</li>
+      <li>📦 التغليف والشحن (المغرب + أوروبا)</li>
+      <li>🎓 تدريب مجاني + مرافقة خطوة بخطوة</li>
+      <li>💰 أرباح تبدأ من 15%</li>
+      <li>📱 الخدمة غير بالهاتف</li>
+      <li>🌱 بدون خبرة</li>
+    </ul>
 
-      <div class="section">
-        <h2>6. التواصل معنا</h2>
-        <p>للاستفسارات حول الخصوصية:</p>
-        <ul>
-          <li>البريد الإلكتروني: privacy@theuntamed.se</li>
-          <li>العنوان: [أدخل عنوان المكتب في السويد هنا]</li>
-        </ul>
-      </div>
+    <p>
+      لمن هذا العمل؟<br>
+      للناس اللي باغين دخل إضافي أو رئيسي بطريقة قانونية وواضحة.
+    </p>
 
-      <div class="buttons">
-        <a href="https://dahbicasa36-collab.github.io/privacy-policy/" class="btn">⬅️ الرجوع إلى الصفحة الرئيسية</a>
-        <a href="https://theuntamed.com/?referral=wFpNEb" class="btn">🛒 منتجات الشركة</a>
-      </div>
-    </div>
+    <a href="https://wa.link/4emaaz" class="btn">تواصل معنا على واتساب</a>
+
+    <video controls>
+      <source src="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4" type="video/mp4">
+    </video>
+
   </div>
+</section>
+
+<footer>
+© 2025 The Untamed – جميع الحقوق محفوظة
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
