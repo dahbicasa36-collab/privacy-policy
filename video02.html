@@ -1,176 +1,180 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>🎥 مؤتمر The Untamed في مراكش</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>🎥 مؤتمر The Untamed في مراكش</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- خط عربي -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<!-- خط -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body{
-      font-family:"Cairo", sans-serif;
-      min-height:100vh;
-      background:url("hero.jpg") no-repeat center center fixed;
-      background-size:cover;
-    }
+body{
+  font-family:"Cairo", sans-serif;
+  min-height:100vh;
+  background:url("hero.jpg") no-repeat center center fixed;
+  background-size:cover;
+}
 
-    /* ===== Overlay الشفاف الذي يخفي الصورة ===== */
-    .overlay{
-      position:relative;
-      min-height:100vh;
-      background:rgba(255,255,255,0.85); /* ← هنا الطبقة الشفافة */
-      padding:140px 20px 60px;
-      display:flex;
-      justify-content:center;
-      align-items:flex-start;
-    }
+/* ===== Overlay يخفي الصورة ===== */
+.overlay{
+  min-height:100vh;
+  background:rgba(0,0,0,0.45);
+  padding:160px 20px 60px;
+  display:flex;
+  justify-content:center;
+}
 
-    /* ===== الشعار ===== */
-    .logo{
-      position:fixed;
-      top:20px;
-      left:50%;
-      transform:translateX(-50%);
-      z-index:1000;
-      background:#fff;
-      padding:15px;
-      border-radius:50%;
-      max-width:140px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.25);
-    }
+/* ===== لوغو Glass ===== */
+.logo-badge{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
 
-    .container{
-      max-width:1000px;
-      width:100%;
-      text-align:center;
-      color:#222;
-    }
+  padding:14px 36px;
+  border-radius:999px;
 
-    h1{
-      font-size:34px;
-      margin-bottom:25px;
-    }
+  background:rgba(255,255,255,0.35);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
 
-    p{
-      font-size:18px;
-      line-height:1.9;
-      max-width:850px;
-      margin:0 auto 30px;
-      color:#444;
-    }
+  border:1px solid rgba(255,255,255,0.6);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
 
-    /* ===== الفيديو ===== */
-    video{
-      width:100%;
-      max-width:620px;
-      border-radius:18px;
-      box-shadow:0 20px 45px rgba(0,0,0,0.35);
-      background:#fff;
-      padding:6px;
-      margin:0 auto 35px;
-      display:block;
-    }
+.logo-badge img{
+  height:36px;
+  display:block;
+}
 
-    /* ===== الأزرار ===== */
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:15px;
-      justify-content:center;
-      margin-top:20px;
-    }
+/* ===== المحتوى ===== */
+.container{
+  max-width:1000px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+}
 
-    .btn{
-      text-decoration:none;
-      padding:14px 32px;
-      border-radius:40px;
-      font-weight:700;
-      font-size:16px;
-      transition:0.3s;
-      display:inline-block;
-    }
+h1{
+  font-size:34px;
+  margin-bottom:25px;
+}
 
-    .btn-whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
+p{
+  font-size:18px;
+  line-height:1.9;
+  max-width:850px;
+  margin:0 auto 30px;
+  color:#f2f2f2;
+}
 
-    .btn-whatsapp:hover{
-      background:#1ebe5d;
-    }
+/* ===== الفيديو ===== */
+video{
+  width:100%;
+  max-width:620px;
+  border-radius:18px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.6);
+  background:#000;
+  padding:6px;
+  margin:0 auto 35px;
+  display:block;
+}
 
-    .btn-home{
-      background:#222;
-      color:#fff;
-    }
+/* ===== الأزرار ===== */
+.buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
-    .btn-home:hover{
-      background:#000;
-    }
+.btn{
+  text-decoration:none;
+  padding:14px 34px;
+  border-radius:40px;
+  font-weight:700;
+  font-size:16px;
+  transition:0.3s;
+}
 
-    /* ===== تجاوب الهاتف ===== */
-    @media (max-width:600px){
-      h1{
-        font-size:26px;
-      }
-      p{
-        font-size:16px;
-      }
-    }
-  </style>
+.btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+.btn-whatsapp:hover{
+  background:#1ebe5d;
+}
+
+.btn-home{
+  background:rgba(255,255,255,0.15);
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.4);
+}
+
+.btn-home:hover{
+  background:rgba(255,255,255,0.25);
+}
+
+/* ===== الهاتف ===== */
+@media(max-width:600px){
+  h1{font-size:26px;}
+  p{font-size:16px;}
+  .logo-badge img{height:30px;}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- الشعار -->
-  <img
-    src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
-    alt="The Untamed Logo"
-    class="logo"
-  >
+<!-- لوغو -->
+<div class="logo-badge">
+  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
+       alt="CASV The Untamed">
+</div>
 
-  <!-- Overlay -->
-  <div class="overlay">
-    <div class="container">
+<!-- Overlay -->
+<div class="overlay">
+  <div class="container">
 
-      <h1>مؤتمر The Untamed بمراكش</h1>
+    <h1>مؤتمر The Untamed بمراكش</h1>
 
-      <p>
-        كلمة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش مع تتويج فريق العمل
-        بمناصبهم الجديدة. هذا الحدث موجّه لكل من يبحث عن فرصة عمل حقيقية
-        وبناء مستقبل مهني من المنزل.
-      </p>
+    <p>
+      كلمة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش مع تتويج فريق العمل
+      بمناصبهم الجديدة. فرصة حقيقية لكل من يريد العمل من المنزل وبناء مستقبل مهني.
+    </p>
 
-      <video controls playsinline>
-        <source src="video02.mp4" type="video/mp4">
-        متصفحك لا يدعم تشغيل الفيديو
-      </video>
+    <video controls playsinline>
+      <source src="video02.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو
+    </video>
 
-      <p>
-        إذا كنت باغي تخدم من دارك وتبني مستقبلك في التجارة الإلكترونية،
-        فأنت في المكان الصحيح مع فريق <strong>The Untamed</strong>.
-      </p>
+    <p>
+      إذا كنت باغي تخدم من دارك وتدخل عالم التجارة الإلكترونية،
+      فريق <strong>The Untamed</strong> فاتح ليك الباب.
+    </p>
 
-      <div class="buttons">
-        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
-          📲 تواصل عبر واتساب
-        </a>
-
-        <a href="index.html" class="btn btn-home">
-          ⬅ الرجوع إلى الصفحة الرئيسية
-        </a>
-      </div>
-
+    <div class="buttons">
+      <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
+        📲 تواصل عبر واتساب
+      </a>
+      <a href="index.html" class="btn btn-home">
+        ⬅ الرجوع إلى الصفحة الرئيسية
+      </a>
     </div>
+
   </div>
+</div>
 
 </body>
 </html>
