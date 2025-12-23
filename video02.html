@@ -27,7 +27,7 @@
     .overlay{
       background:rgba(0,0,0,0.65);
       min-height:100vh;
-      padding:50px 20px;
+      padding:120px 20px 50px; /* ترك مساحة للشعار الثابت */
       display:flex;
       justify-content:center;
       align-items:center;
@@ -40,10 +40,27 @@
 
     /* LOGO */
     .logo{
-      max-width:220px;
-      margin:0 auto 30px;
+      max-width:140px;
       display:block;
-      filter:drop-shadow(0 6px 20px rgba(0,0,0,0.7));
+      filter:drop-shadow(0 10px 25px rgba(0,0,0,0.8));
+      animation:pulse 2.5s infinite;
+
+      position:fixed;      /* يبقى ثابت */
+      top:20px;            /* مسافة من الأعلى */
+      left:50%;            /* وسط الصفحة */
+      transform:translateX(-50%);
+      z-index:1000;
+
+      background:rgba(255,255,255,0.85); /* خلفية شفافة بيضاء */
+      padding:15px;
+      border-radius:50%;   /* دائري */
+    }
+
+    /* حركة ناعمة للشعار */
+    @keyframes pulse {
+      0% { transform:translateX(-50%) scale(1); }
+      50% { transform:translateX(-50%) scale(1.08); }
+      100% { transform:translateX(-50%) scale(1); }
     }
 
     h1{
@@ -110,15 +127,15 @@
 
 <body>
 
+  <!-- LOGO ثابت -->
+  <img
+    src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
+    alt="The Untamed Logo"
+    class="logo"
+  >
+
   <div class="overlay">
     <div class="container">
-
-      <!-- LOGO -->
-      <img
-        src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
-        alt="The Untamed Logo"
-        class="logo"
-      >
 
       <!-- العنوان -->
       <h1>مؤتمر The Untamed بمراكش</h1>
