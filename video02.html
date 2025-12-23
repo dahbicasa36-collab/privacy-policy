@@ -1,57 +1,143 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فيديو | The Untamed</title>
+  <meta charset="UTF-8">
+  <title>مؤتمر The Untamed – مراكش</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  background:#000;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-video{
-  width:100%;
-  max-width:900px;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.buttons{
-  margin-top:20px;
-  display:flex;
-  gap:15px;
-}
+    body {
+      font-family: "Cairo", sans-serif;
+      background: url("hero.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 15px;
+    }
 
-a{
-  background:rgba(255,255,255,0.15);
-  color:#fff;
-  padding:12px 26px;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:15px;
-}
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
 
-a:hover{
-  background:#a1694f;
-}
-</style>
+    .card {
+      background: #ffffff;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 18px;
+      padding: 40px 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 220px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      line-height: 2;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
+
+    .btn-home {
+      background: #2c3e50;
+      color: #fff;
+    }
+
+    .btn-home:hover {
+      background: #1f2e3a;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<video controls autoplay>
-  <source src="vidio02.mp4" type="video/mp4">
-</video>
+  <div class="card">
 
-<div class="buttons">
-  <a href="https://wa.link/4emaaz">📩 واتساب</a>
-  <a href="index.html">⬅️ رجوع</a>
-</div>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="CASV The Untamed">
+    </div>
+
+    <!-- TITLE -->
+    <h1>مؤتمر The Untamed – مراكش</h1>
+
+    <!-- TEXT -->
+    <p>
+      الكاتبة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش،  
+      مع تتويج فريق العمل بمناصبهم الجديدة.  
+      أنتم هنا في المكان المناسب،  
+      لكل واحد وواحدة بحالنا باغيين يخدمو من دارهم  
+      ويبْنيو مستقبلهم بثبات وثقة.
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <a class="btn btn-whatsapp" href="https://wa.link/4emaaz">📩 تواصل عبر واتساب</a>
+      <a class="btn btn-home" href="https://dahbicasa36-collab.github.io/privacy-policy/index.html">⬅ الصفحة الرئيسية</a>
+    </div>
+
+  </div>
 
 </body>
 </html>
