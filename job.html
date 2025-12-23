@@ -1,216 +1,260 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>The Untamed | فرصة عمل في التجارة الإلكترونية</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>The Untamed | فرصة عمل في التجارة الإلكترونية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- خط عربي -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body{
-      font-family:"Cairo", sans-serif;
-      background:#f4f4f4;
-      color:#333;
-      line-height:1.9;
-    }
+body{
+  font-family:"Cairo",sans-serif;
+  background:#f4f4f4;
+  color:#333;
+  line-height:1.8;
+}
 
-    /* ===== HEADER ===== */
-    header{
-      background:#ffffff;
-      padding:20px;
-      text-align:center;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
+/* ===== HEADER ===== */
+header{
+  background:#fff;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-    header img{
-      max-width:160px;
-    }
+header img{max-width:150px}
 
-    /* ===== NAV ===== */
-    nav{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:10px;
-      padding:15px;
-      background:#ffffff;
-    }
+/* ===== HAMBURGER BUTTON ===== */
+.menu-toggle{
+  position:fixed;
+  top:18px;
+  right:18px;
+  background:#a1694f;
+  color:#fff;
+  border:none;
+  font-size:26px;
+  padding:8px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  z-index:1001;
+}
 
-    nav a{
-      text-decoration:none;
-      padding:10px 18px;
-      background:rgba(0,0,0,0.05);
-      color:#333;
-      border-radius:25px;
-      font-size:14px;
-      transition:0.3s;
-    }
+/* ===== MOBILE MENU ===== */
+.mobile-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:280px;
+  height:100%;
+  background:#fff;
+  box-shadow:-4px 0 25px rgba(0,0,0,0.2);
+  padding:30px 20px;
+  transition:0.3s;
+  z-index:1000;
+}
 
-    nav a:hover{
-      background:#a1694f;
-      color:#fff;
-    }
+.mobile-menu.active{right:0}
 
-    /* ===== HERO ===== */
-    .hero{
-      background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg")
-        center/cover no-repeat;
-      padding:80px 20px;
-    }
+.mobile-menu a{
+  display:block;
+  margin-bottom:14px;
+  padding:12px 18px;
+  border-radius:25px;
+  text-decoration:none;
+  background:rgba(0,0,0,0.05);
+  color:#333;
+  font-weight:600;
+}
 
-    .hero-box{
-      background:#ffffff;
-      max-width:1000px;
-      margin:auto;
-      padding:45px 30px;
-      border-radius:25px;
-      box-shadow:0 15px 40px rgba(0,0,0,0.15);
-      text-align:center;
-    }
+.mobile-menu a.primary{
+  background:#a1694f;
+  color:#fff;
+  text-align:center;
+}
 
-    .hero-box h1{
-      color:#a1694f;
-      font-size:32px;
-      margin-bottom:20px;
-    }
+/* ===== HERO ===== */
+.hero{
+  background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url("https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg")
+    center/cover no-repeat;
+  padding:90px 20px;
+}
 
-    .hero-box p{
-      font-size:18px;
-      margin-bottom:20px;
-    }
+.hero-box{
+  background:#fff;
+  max-width:1050px;
+  margin:auto;
+  padding:50px 35px;
+  border-radius:30px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.18);
+  text-align:center;
+}
 
-    /* ===== FEATURES ===== */
-    .features{
-      text-align:right;
-      max-width:750px;
-      margin:25px auto;
-    }
+h1{
+  color:#a1694f;
+  font-size:34px;
+  margin-bottom:20px;
+}
 
-    .features li{
-      margin-bottom:10px;
-      font-size:16px;
-    }
+.subtitle{
+  font-size:18px;
+  color:#444;
+  margin-bottom:30px;
+}
 
-    /* ===== BUTTONS ===== */
-    .buttons{
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      flex-wrap:wrap;
-      margin-top:25px;
-    }
+/* ===== CTA ===== */
+.cta{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
 
-    .btn{
-      padding:14px 28px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:700;
-      background:rgba(0,0,0,0.05);
-      color:#333;
-      transition:0.3s;
-    }
+.btn{
+  padding:15px 34px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  background:#a1694f;
+  color:#fff;
+}
 
-    .btn:hover{
-      background:#a1694f;
-      color:#fff;
-    }
+.btn.secondary{
+  background:rgba(0,0,0,0.05);
+  color:#333;
+}
 
-    /* ===== VIDEO ===== */
-    .video-box{
-      margin-top:35px;
-      display:flex;
-      justify-content:center;
-    }
+/* ===== SECTIONS ===== */
+.section{
+  margin-top:45px;
+  text-align:right;
+}
 
-    .video-box video{
-      width:100%;
-      max-width:720px;
-      border-radius:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.25);
-    }
+.section h2{
+  color:#a1694f;
+  font-size:24px;
+  margin-bottom:15px;
+  text-align:center;
+}
 
-    /* ===== FOOTER ===== */
-    footer{
-      text-align:center;
-      padding:25px;
-      font-size:14px;
-      color:#777;
-    }
+.section ul li{
+  margin-bottom:10px;
+  font-size:16px;
+}
 
-    @media(max-width:600px){
-      .hero-box h1{
-        font-size:24px;
-      }
-      .hero-box p{
-        font-size:16px;
-      }
-    }
-  </style>
+/* ===== TABLE ===== */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th,td{
+  border:1px solid #ddd;
+  padding:14px;
+  text-align:center;
+}
+
+th{
+  background:#a1694f;
+  color:#fff;
+}
+
+/* ===== VIDEO ===== */
+.video-box{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+}
+
+.video-box video{
+  width:100%;
+  max-width:720px;
+  border-radius:20px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.25);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  color:#777;
+}
+
+@media(max-width:600px){
+  h1{font-size:26px}
+  .subtitle{font-size:16px}
+}
+</style>
 </head>
 
 <body>
+
+<!-- ☰ زر القائمة -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<!-- MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">فرصة العمل</a>
+  <a href="#about">تعريف بالشركة</a>
+  <a href="#privacy">السياسة الخصوصية</a>
+  <a href="#terms">شروط الخدمة</a>
+  <a href="#products">المنتجات</a>
+  <a href="#delete">سياسة حذف البيانات</a>
+  <a href="https://wa.link/4emaaz" class="primary">قدّم الآن</a>
+</div>
 
 <header>
   <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="The Untamed Logo">
 </header>
 
-<nav>
-  <a href="#">فرصة العمل</a>
-  <a href="#">تعريف بالشركة</a>
-  <a href="#">السياسة الخصوصية</a>
-  <a href="#">شروط الخدمة</a>
-  <a href="#">المنتجات</a>
-  <a href="#">سياسة حذف البيانات</a>
-  <a href="#">اتصل بنا</a>
-</nav>
-
-<section class="hero">
+<section class="hero" id="work">
   <div class="hero-box">
 
-    <h1>🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed</h1>
-
-    <p>
-      كتبحث على فرصة عمل واضحة فمجال التجارة الإلكترونية؟  
-      باغي تخدم من الدار أو من أي بلاصة بلا قيود؟  
-      الفرصة عندك دابا مع <strong>The Untamed</strong> 🌍✨
+    <h1>فرصة عمل حقيقية في التجارة الإلكترونية</h1>
+    <p class="subtitle">
+      انضم إلى The Untamed وابدأ مسارك المهني  
+      من هاتفك وبدون خبرة مسبقة.
     </p>
 
-    <ul class="features">
-      <li>🛒 عمل رسمي فمجال التجارة الإلكترونية</li>
-      <li>🏬 متجر إلكتروني جاهز بالكامل</li>
-      <li>📦 الشركة كتتكفّل بالتغليف والشحن (المغرب + أوروبا)</li>
-      <li>🎓 تدريب مجاني + مرافقة خطوة بخطوة</li>
-      <li>💰 أرباح تبدأ من 15% وتزيد حسب النتائج</li>
-      <li>📱 خدم غير بهاتفك ومن أي مكان</li>
-      <li>🌱 ما تحتاج حتى خبرة… غير الطموح</li>
-    </ul>
-
-    <p>
-      ✨ بدا رحلتك دابا مع The Untamed واكتشف عالم التجارة الإلكترونية!
-    </p>
-
-    <div class="buttons">
-      <a href="https://wa.link/4emaaz" class="btn">📩 تواصل معنا على واتساب</a>
-      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.mp4" class="btn">
-        ▶ مشاهدة فيديو تعريفي
+    <div class="cta">
+      <a href="https://wa.link/4emaaz" class="btn">قدّم الآن</a>
+      <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.mp4" class="btn secondary">
+        مشاهدة الفيديو
       </a>
     </div>
 
-    <!-- 🎬 Video 03 -->
-    <div class="video-box">
+    <div class="section">
+      <h2>ماذا نقدّم لك؟</h2>
+      <ul>
+        <li>متجر إلكتروني جاهز بالكامل</li>
+        <li>تدريب عملي خطوة بخطوة</li>
+        <li>التغليف والتوصيل على حساب الشركة</li>
+        <li>أرباح تبدأ من 15%</li>
+        <li>العمل من أي مكان</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>تفاصيل التدريب</h2>
+      <table>
+        <tr><th>العنصر</th><th>التفاصيل</th></tr>
+        <tr><td>المهارات</td><td>غير مطلوبة</td></tr>
+        <tr><td>مدة التدريب</td><td>7 – 14 يوم</td></tr>
+        <tr><td>الدعم</td><td>مرافقة مباشرة</td></tr>
+        <tr><td>النتائج</td><td>دخل إضافي أو أساسي</td></tr>
+      </table>
+    </div>
+
+    <div class="video-box" id="video">
       <video controls poster="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg">
         <source src="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4" type="video/mp4">
-        المتصفح ديالك ما كيدعمش تشغيل الفيديو.
       </video>
     </div>
 
@@ -218,8 +262,14 @@
 </section>
 
 <footer>
-  © 2025 The Untamed – جميع الحقوق محفوظة
+© 2025 The Untamed – جميع الحقوق محفوظة
 </footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
