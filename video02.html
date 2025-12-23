@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>🎥 مؤتمر The Untamed في مراكش</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- خط عربي -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -17,41 +19,43 @@
       font-family:"Cairo", sans-serif;
       background:url("hero.jpg") no-repeat center center fixed;
       background-size:cover;
-      color:#000;
+      color:#fff;
       text-align:center;
     }
 
-    /* Hero Overlay */
-    .hero{
-      background:rgba(0,0,0,0.55); /* طبقة شفافة فوق الصورة */
+    /* Overlay */
+    .overlay{
+      background:rgba(0,0,0,0.65);
       min-height:100vh;
+      padding:120px 20px 50px; /* ترك مساحة للشعار الثابت */
       display:flex;
       justify-content:center;
       align-items:center;
-      padding:60px 20px;
     }
 
-    /* الصندوق الأبيض */
     .container{
-      max-width:1100px;
+      max-width:1000px;
       width:100%;
-      background:#ffffff;
-      border-radius:28px;
-      padding:40px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.15);
     }
 
-    /* الشعار */
-    .floating-logo{
+    /* شعار ثابت بدون حركة */
+    .logo{
       max-width:140px;
-      margin:0 auto 25px;
       display:block;
+      position:fixed;
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:1000;
+      background:rgba(255,255,255,0.85);
+      padding:15px;
+      border-radius:50%;
+      box-shadow:0 10px 25px rgba(0,0,0,0.8);
     }
 
     h1{
       font-size:34px;
       margin-bottom:20px;
-      color:#000;
     }
 
     p{
@@ -59,20 +63,22 @@
       line-height:1.9;
       max-width:850px;
       margin:0 auto 30px;
-      color:#333;
+      color:#f1f1f1;
     }
 
+    /* الفيديو */
     video{
       width:100%;
       max-width:600px;
       border-radius:16px;
-      box-shadow:0 20px 40px rgba(0,0,0,0.2);
+      box-shadow:0 20px 40px rgba(0,0,0,0.6);
       background:#fff;
       padding:6px;
       margin:0 auto 35px;
       display:block;
     }
 
+    /* الأزرار */
     .buttons{
       display:flex;
       flex-wrap:wrap;
@@ -99,24 +105,27 @@
     }
 
     .btn-home{
-      background:#000;
-      color:#fff;
+      background:#ffffff;
+      color:#000;
     }
 
     .btn-home:hover{
-      background:#333;
+      background:#e6e6e6;
     }
   </style>
 </head>
+
 <body>
 
-  <section class="hero">
-    <div class="container">
+  <!-- شعار ثابت بدون حركة -->
+  <img
+    src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
+    alt="The Untamed Logo"
+    class="logo"
+  >
 
-      <!-- شعار -->
-      <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
-           alt="The Untamed Logo"
-           class="floating-logo">
+  <div class="overlay">
+    <div class="container">
 
       <h1>مؤتمر The Untamed بمراكش</h1>
 
@@ -137,12 +146,17 @@
       </p>
 
       <div class="buttons">
-        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">📲 تواصل عبر واتساب</a>
-        <a href="index.html" class="btn btn-home">⬅ الرجوع إلى الصفحة الرئيسية</a>
+        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
+          📲 تواصل عبر واتساب
+        </a>
+
+        <a href="index.html" class="btn btn-home">
+          ⬅ الرجوع إلى الصفحة الرئيسية
+        </a>
       </div>
 
     </div>
-  </section>
+  </div>
 
 </body>
 </html>
