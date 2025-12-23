@@ -1,264 +1,57 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>The Untamed | الصفحة الرئيسية</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فيديو | The Untamed</title>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  background:#000;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
+video{
+  width:100%;
+  max-width:900px;
+}
 
-    body{
-      font-family:"Cairo",sans-serif;
-      color:#fff;
-      background:url('hero.jpg') center/cover fixed no-repeat;
-      position:relative;
-    }
+.buttons{
+  margin-top:20px;
+  display:flex;
+  gap:15px;
+}
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.5);
-      z-index:-1;
-    }
+a{
+  background:rgba(255,255,255,0.15);
+  color:#fff;
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:15px;
+}
 
-    /* ===== HEADER ===== */
-    header{
-      background:rgba(255,255,255,.95);
-      height:64px;
-      display:flex;
-      align-items:center;
-      padding:0 20px;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,.1);
-    }
-
-    .header-left{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .menu-btn{
-      font-size:28px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      color:#111;
-    }
-
-    .logo img{
-      height:38px;
-      max-width:160px;
-      object-fit:contain;
-      cursor:pointer;
-      transition:.2s;
-    }
-
-    .logo img:hover{opacity:.85}
-
-    /* ===== SIDE MENU ===== */
-    .side-menu{
-      position:fixed;
-      top:0;
-      right:-100%;
-      width:260px;
-      height:100%;
-      background:#fff;
-      box-shadow:-5px 0 20px rgba(0,0,0,.25);
-      padding:20px;
-      transition:.3s;
-      z-index:2000;
-    }
-
-    .side-menu.active{right:0}
-
-    .close-btn{
-      font-size:22px;
-      border:none;
-      background:none;
-      margin-bottom:20px;
-      cursor:pointer;
-    }
-
-    .side-menu a{
-      display:block;
-      padding:12px;
-      margin-bottom:10px;
-      background:#f3f3f3;
-      border-radius:20px;
-      text-decoration:none;
-      color:#111;
-      text-align:center;
-      font-size:15px;
-      transition:.3s;
-    }
-
-    .side-menu a:hover{
-      background:#a1694f;
-      color:#fff;
-    }
-
-    /* ===== CONTENT ===== */
-    .container{
-      max-width:600px;
-      margin:40px auto;
-      padding:0 14px;
-    }
-
-    .wa-card{
-      background:rgba(31,44,51,.95);
-      border-radius:18px;
-      overflow:hidden;
-      margin-bottom:30px;
-      box-shadow:0 10px 25px rgba(0,0,0,.25);
-    }
-
-    .wa-card img{
-      width:100%;
-      aspect-ratio:16/9;
-      object-fit:cover;
-      border-bottom:4px solid #25D366;
-    }
-
-    .wa-body{padding:18px}
-
-    .wa-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:10px;
-    }
-
-    .wa-text{
-      font-size:16px;
-      line-height:1.9;
-      color:#e4e6eb;
-    }
-
-    .wa-actions{
-      display:flex;
-      gap:8px;
-      margin-top:18px;
-      flex-wrap:wrap;
-    }
-
-    .wa-btn{
-      flex:1;
-      text-align:center;
-      padding:10px;
-      border-radius:25px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:15px;
-      transition:.3s;
-    }
-
-    .wa-btn.video{
-      background:#fff;
-      color:#000;
-    }
-
-    .wa-btn.video:hover{
-      background:#a1694f;
-      color:#fff;
-    }
-
-    .wa-btn.whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
-
-    .wa-btn.whatsapp:hover{
-      background:#128C7E;
-    }
-
-    @media(max-width:480px){
-      .wa-title{font-size:20px}
-      .wa-text{font-size:14px}
-      .wa-actions{flex-direction:column}
-      .wa-card img{aspect-ratio:4/3}
-    }
-  </style>
+a:hover{
+  background:#a1694f;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-left">
-    <button class="menu-btn" onclick="openMenu()">☰</button>
-    <a href="index.html" class="logo">
-      <img src="cal.png" alt="CASV The Untamed Logo">
-    </a>
-  </div>
-</header>
+<video controls autoplay>
+  <source src="vidio02.mp4" type="video/mp4">
+</video>
 
-<!-- SIDE MENU -->
-<div class="side-menu" id="menu">
-  <button class="close-btn" onclick="closeMenu()">✕</button>
-  <a href="career.html">فرصة العمل</a>
-  <a href="about.html">تعريف بالشركة</a>
-  <a href="privacy-policy.html">سياسة الخصوصية</a>
-  <a href="terms.html">شروط الخدمة</a>
-  <a href="data-deletion.html">سياسة حذف البيانات</a>
-  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
-  <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا</a>
+<div class="buttons">
+  <a href="https://wa.link/4emaaz">📩 واتساب</a>
+  <a href="index.html">⬅️ رجوع</a>
 </div>
-
-<div class="container">
-
-  <!-- VIDEO 03 -->
-  <div class="wa-card">
-    <img src="video03-cover.jpg" alt="">
-    <div class="wa-body">
-      <div class="wa-title">🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed</div>
-      <div class="wa-text">
-        📱 متجر إلكتروني جاهز بالكامل<br>
-        🎓 تدريبات مجانية + مرافقة خطوة بخطوة<br>
-        📦 الشركة تتكفّل بالتغليف والتوزيع<br>
-        💰 أرباح تبدأ من 15%<br>
-        🌍 خدم غير بهاتفك ومن أي مكان<br>
-        👉 بدا رحلتك دابا
-      </div>
-      <div class="wa-actions">
-        <a class="wa-btn video" href="video03.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- VIDEO 02 -->
-  <div class="wa-card">
-    <img src="video02-cover.jpg" alt="">
-    <div class="wa-body">
-      <div class="wa-title">🏆 مؤتمر مراكش – فريق The Untamed</div>
-      <div class="wa-text">
-        تتويج فريق العمل<br>
-        قصص نجاح ملهمة<br>
-        فرصة لكل شخص طموح
-      </div>
-      <div class="wa-actions">
-        <a class="wa-btn video" href="video02.mp4" target="_blank">▶ مشاهدة الفيديو</a>
-        <a class="wa-btn whatsapp" href="https://wa.link/4emaaz">📩 واتساب</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script>
-function openMenu(){
-  document.getElementById("menu").classList.add("active");
-}
-function closeMenu(){
-  document.getElementById("menu").classList.remove("active");
-}
-</script>
 
 </body>
 </html>
