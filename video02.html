@@ -17,17 +17,17 @@
 
     body{
       font-family:"Cairo", sans-serif;
-      background: url("hero.jpg") no-repeat center center fixed;
-      background-size: cover;
+      background:url("hero.jpg") no-repeat center center fixed;
+      background-size:cover;
       color:#fff;
       text-align:center;
     }
 
-    /* طبقة تعتيم */
+    /* Overlay */
     .overlay{
-      background: rgba(0,0,0,0.65);
+      background:rgba(0,0,0,0.65);
       min-height:100vh;
-      padding:40px 20px;
+      padding:50px 20px;
       display:flex;
       justify-content:center;
       align-items:center;
@@ -38,49 +38,40 @@
       width:100%;
     }
 
-    /* الشعار */
+    /* LOGO */
     .logo{
-      margin-bottom:25px;
-    }
-
-    .logo img{
-      max-width:220px; /* لوغو بارز */
-      filter: drop-shadow(0 6px 20px rgba(0,0,0,0.7));
+      max-width:220px;
+      margin:0 auto 30px;
+      display:block;
+      filter:drop-shadow(0 6px 20px rgba(0,0,0,0.7));
     }
 
     h1{
       font-size:34px;
-      margin-bottom:15px;
-      letter-spacing:1px;
-    }
-
-    .subtitle{
-      font-size:18px;
-      line-height:1.8;
-      margin-bottom:35px;
-      color:#f1f1f1;
-    }
-
-    /* الفيديو */
-    video{
-      width:100%;
-      max-width:600px; /* تصغير الفيديو */
-      border-radius:16px;
-      box-shadow:0 20px 40px rgba(0,0,0,0.6);
-      margin-bottom:30px;
-      background:#fff; /* إطار أبيض خفيف */
-      padding:6px;
+      margin-bottom:20px;
     }
 
     p{
       font-size:18px;
-      line-height:1.8;
+      line-height:1.9;
       max-width:850px;
       margin:0 auto 30px;
       color:#f1f1f1;
     }
 
-    /* الأزرار */
+    /* VIDEO */
+    video{
+      width:100%;
+      max-width:600px;
+      border-radius:16px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.6);
+      background:#fff;
+      padding:6px;
+      margin:0 auto 35px;
+      display:block;
+    }
+
+    /* BUTTONS */
     .buttons{
       display:flex;
       flex-wrap:wrap;
@@ -90,7 +81,7 @@
 
     .btn{
       text-decoration:none;
-      padding:14px 28px;
+      padding:14px 30px;
       border-radius:40px;
       font-weight:700;
       font-size:16px;
@@ -119,27 +110,25 @@
 
 <body>
 
-  <<div class="overlay">
-  <div class="container">
+  <div class="overlay">
+    <div class="container">
 
-    <!-- LOGO -->
-    <img
-      src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
-      alt="The Untamed Logo"
-      class="logo"
-    >
+      <!-- LOGO -->
+      <img
+        src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
+        alt="The Untamed Logo"
+        class="logo"
+      >
 
-    <!-- المحتوى -->
-    <h1>مؤتمر The Untamed بمراكش</h1>
-    <p>
-      كلمة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش مع تتويج فريق العمل
-      بمناصبهم الجديدة. أنتم هنا في المكان المناسب لكل من يريد العمل من
-      المنزل وبناء مستقبله.
-    </p>
+      <!-- العنوان -->
+      <h1>مؤتمر The Untamed بمراكش</h1>
 
-  </div>
-</div>
-
+      <!-- الوصف -->
+      <p>
+        كلمة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش مع تتويج فريق العمل
+        بمناصبهم الجديدة. أنتم هنا في المكان المناسب لكل من يريد العمل من
+        المنزل وبناء مستقبله.
+      </p>
 
       <!-- الفيديو -->
       <video controls playsinline>
@@ -149,7 +138,7 @@
 
       <p>
         إذا كنت باغي تخدم من دارك وتبني مستقبلك في التجارة الإلكترونية،
-        فأنت في المكان الصحيح مع فريق The Untamed.
+        فأنت في المكان الصحيح مع فريق <strong>The Untamed</strong>.
       </p>
 
       <!-- الأزرار -->
