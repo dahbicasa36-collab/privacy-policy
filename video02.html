@@ -17,45 +17,46 @@
 
     body{
       font-family:"Cairo", sans-serif;
+      min-height:100vh;
       background:url("hero.jpg") no-repeat center center fixed;
       background-size:cover;
-      color:#fff;
-      text-align:center;
     }
 
-    /* Overlay */
+    /* ===== Overlay الشفاف الذي يخفي الصورة ===== */
     .overlay{
-      background:rgba(0,0,0,0.65);
+      position:relative;
       min-height:100vh;
-      padding:120px 20px 50px; /* ترك مساحة للشعار الثابت */
+      background:rgba(255,255,255,0.85); /* ← هنا الطبقة الشفافة */
+      padding:140px 20px 60px;
       display:flex;
       justify-content:center;
-      align-items:center;
+      align-items:flex-start;
     }
 
-    .container{
-      max-width:1000px;
-      width:100%;
-    }
-
-    /* شعار ثابت بدون حركة */
+    /* ===== الشعار ===== */
     .logo{
-      max-width:140px;
-      display:block;
       position:fixed;
       top:20px;
       left:50%;
       transform:translateX(-50%);
       z-index:1000;
-      background:rgba(255,255,255,0.85);
+      background:#fff;
       padding:15px;
       border-radius:50%;
-      box-shadow:0 10px 25px rgba(0,0,0,0.8);
+      max-width:140px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .container{
+      max-width:1000px;
+      width:100%;
+      text-align:center;
+      color:#222;
     }
 
     h1{
       font-size:34px;
-      margin-bottom:20px;
+      margin-bottom:25px;
     }
 
     p{
@@ -63,36 +64,38 @@
       line-height:1.9;
       max-width:850px;
       margin:0 auto 30px;
-      color:#f1f1f1;
+      color:#444;
     }
 
-    /* الفيديو */
+    /* ===== الفيديو ===== */
     video{
       width:100%;
-      max-width:600px;
-      border-radius:16px;
-      box-shadow:0 20px 40px rgba(0,0,0,0.6);
+      max-width:620px;
+      border-radius:18px;
+      box-shadow:0 20px 45px rgba(0,0,0,0.35);
       background:#fff;
       padding:6px;
       margin:0 auto 35px;
       display:block;
     }
 
-    /* الأزرار */
+    /* ===== الأزرار ===== */
     .buttons{
       display:flex;
       flex-wrap:wrap;
       gap:15px;
       justify-content:center;
+      margin-top:20px;
     }
 
     .btn{
       text-decoration:none;
-      padding:14px 30px;
+      padding:14px 32px;
       border-radius:40px;
       font-weight:700;
       font-size:16px;
       transition:0.3s;
+      display:inline-block;
     }
 
     .btn-whatsapp{
@@ -105,25 +108,36 @@
     }
 
     .btn-home{
-      background:#ffffff;
-      color:#000;
+      background:#222;
+      color:#fff;
     }
 
     .btn-home:hover{
-      background:#e6e6e6;
+      background:#000;
+    }
+
+    /* ===== تجاوب الهاتف ===== */
+    @media (max-width:600px){
+      h1{
+        font-size:26px;
+      }
+      p{
+        font-size:16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- شعار ثابت بدون حركة -->
+  <!-- الشعار -->
   <img
     src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
     alt="The Untamed Logo"
     class="logo"
   >
 
+  <!-- Overlay -->
   <div class="overlay">
     <div class="container">
 
@@ -131,8 +145,8 @@
 
       <p>
         كلمة البرلمانية عزيزة بوحريدة في مؤتمر بمراكش مع تتويج فريق العمل
-        بمناصبهم الجديدة. أنتم هنا في المكان المناسب لكل من يريد العمل من
-        المنزل وبناء مستقبله.
+        بمناصبهم الجديدة. هذا الحدث موجّه لكل من يبحث عن فرصة عمل حقيقية
+        وبناء مستقبل مهني من المنزل.
       </p>
 
       <video controls playsinline>
