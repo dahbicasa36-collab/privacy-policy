@@ -1,159 +1,167 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>🎥 مؤتمر The Untamed في مراكش</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>مؤتمر The Untamed في مراكش</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- خط عربي -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body{
-      font-family:"Cairo", sans-serif;
-      background: url("hero.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color:#fff;
-      text-align:center;
-    }
+body{
+  font-family:"Cairo",sans-serif;
+  background:url("hero.jpg") center/cover fixed;
+}
 
-    /* طبقة تعتيم باش النص يكون واضح */
-    .overlay{
-      background: rgba(0,0,0,0.65);
-      min-height:100vh;
-      padding:40px 20px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
+.overlay{
+  background:rgba(0,0,0,0.55);
+  min-height:100vh;
+  padding:40px 20px;
+}
 
-    .container{
-      max-width:1000px;
-      width:100%;
-    }
+.card{
+  max-width:1100px;
+  margin:0 auto 40px;
+  background:#fff;
+  border-radius:28px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
 
-    /* الشعار */
-    .logo{
-      margin-bottom:20px;
-    }
+.card h1{
+  font-size:30px;
+  margin-bottom:15px;
+  color:#111;
+}
 
-    .logo img{
-      max-width:160px;
-      filter: drop-shadow(0 6px 20px rgba(0,0,0,0.7));
-    }
+.card p{
+  font-size:18px;
+  color:#444;
+  margin-bottom:20px;
+  line-height:1.9;
+}
 
-    h1{
-      font-size:34px;
-      margin-bottom:15px;
-      letter-spacing:1px;
-    }
+.card ul{
+  list-style:none;
+}
 
-    .subtitle{
-      font-size:18px;
-      line-height:1.8;
-      margin-bottom:35px;
-      color:#f1f1f1;
-    }
+.card li{
+  font-size:17px;
+  margin-bottom:12px;
+  color:#333;
+}
 
-    video{
-      width:100%;
-      max-width:900px;
-      border-radius:16px;
-      box-shadow:0 20px 40px rgba(0,0,0,0.6);
-      margin-bottom:30px;
-    }
+.card li::before{
+  content:"✔ ";
+  color:#25D366;
+  font-weight:bold;
+}
 
-    p{
-      font-size:18px;
-      line-height:1.8;
-      max-width:850px;
-      margin:0 auto 30px;
-      color:#f1f1f1;
-    }
+.card img{
+  width:100%;
+  border-radius:20px;
+  object-fit:cover;
+}
 
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:15px;
-      justify-content:center;
-    }
+/* الفيديو */
+.video-box{
+  text-align:center;
+}
 
-    .btn{
-      text-decoration:none;
-      padding:14px 28px;
-      border-radius:40px;
-      font-weight:700;
-      font-size:16px;
-      transition:0.3s;
-    }
+video{
+  width:100%;
+  max-width:900px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+  margin-bottom:30px;
+}
 
-    .btn-whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
+/* أزرار */
+.buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
-    .btn-whatsapp:hover{
-      background:#1ebe5d;
-    }
+.btn{
+  padding:14px 30px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+}
 
-    .btn-home{
-      background:#ffffff;
-      color:#000;
-    }
+.btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+}
 
-    .btn-home:hover{
-      background:#e6e6e6;
-    }
-  </style>
+.btn-home{
+  background:#fff;
+  color:#000;
+}
+
+/* موبايل */
+@media(max-width:900px){
+  .card{
+    grid-template-columns:1fr;
+    padding:25px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="overlay">
-    <div class="container">
+<div class="overlay">
 
-      <!-- الشعار -->
-      <div class="logo">
-        <img src="logo.png" alt="The Untamed Logo">
-      </div>
+  <!-- ===== النص + الصورة ===== -->
+  <div class="card">
 
-      <!-- العنوان -->
-      <h1>✨ مؤتمر The Untamed في مراكش ✨</h1>
-
-      <p class="subtitle">
-        كلمة مؤثرة وتكريم فريق العمل خلال مؤتمر The Untamed بمدينة مراكش
-      </p>
-
-      <!-- الفيديو -->
-      <video controls playsinline>
-        <source src="video02.mp4" type="video/mp4">
-        متصفحك لا يدعم تشغيل الفيديو
-      </video>
+    <div>
+      <h1>✨ فرصة عمل في التجارة الإلكترونية مع The Untamed ✨</h1>
 
       <p>
-        إذا كنت باغي تخدم من دارك وتبني مستقبلك في التجارة الإلكترونية،
-        فأنت في المكان الصحيح مع فريق The Untamed.
+        انضم إلى فريق <strong>The Untamed</strong> وابدأ مشروعك الخاص من هاتفك.
+        مؤتمر مراكش كان لحظة قوية لتكريم فريق العمل ومشاركة قصص نجاح حقيقية.
       </p>
 
-      <!-- الأزرار -->
-      <div class="buttons">
-        <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
-          📲 تواصل عبر واتساب
-        </a>
+      <ul>
+        <li>متجر إلكتروني جاهز بالكامل</li>
+        <li>تدريب مجاني ومرافقة خطوة بخطوة</li>
+        <li>الشركة تتكفل بالتغليف والتوزيع</li>
+        <li>أرباح تبدأ من 15% وتزيد حسب النتائج</li>
+        <li>العمل من الهاتف ومن أي مكان</li>
+        <li>لا تحتاج خبرة سابقة، غير الطموح</li>
+      </ul>
+    </div>
 
-        <a href="index.html" class="btn btn-home">
-          ⬅ الرجوع إلى الصفحة الرئيسية
-        </a>
-      </div>
+    <img src="card.jpg" alt="The Untamed Conference">
+  </div>
 
+  <!-- ===== الفيديو ===== -->
+  <div class="video-box">
+    <video controls playsinline>
+      <source src="video02.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو
+    </video>
+
+    <div class="buttons">
+      <a href="https://wa.link/4emaaz" class="btn btn-whatsapp">
+        📲 تواصل عبر واتساب
+      </a>
+      <a href="index.html" class="btn btn-home">
+        ⬅ الرجوع إلى الصفحة الرئيسية
+      </a>
     </div>
   </div>
+
+</div>
 
 </body>
 </html>
