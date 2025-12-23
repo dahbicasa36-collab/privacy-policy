@@ -18,28 +18,33 @@ body{
 }
 
 /* ===== HEADER ===== */
-header{
-  background:#fff;
-  padding:18px;
+.site-header{
+  background:#ffffff;
+  padding:30px 20px;
   text-align:center;
+  position:relative;
+  z-index:900;
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-header img{max-width:150px}
+.site-logo{
+  max-width:220px;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+}
 
 /* ===== HAMBURGER BUTTON ===== */
 .menu-toggle{
   position:fixed;
-  top:18px;
-  right:18px;
+  top:22px;
+  right:22px;
   background:#a1694f;
   color:#fff;
   border:none;
   font-size:26px;
-  padding:8px 14px;
-  border-radius:10px;
+  padding:10px 15px;
+  border-radius:12px;
   cursor:pointer;
-  z-index:1001;
+  z-index:1100;
 }
 
 /* ===== MOBILE MENU ===== */
@@ -49,9 +54,9 @@ header img{max-width:150px}
   right:-100%;
   width:280px;
   height:100%;
-  background:#fff;
+  background:#ffffff;
+  padding:90px 20px;
   box-shadow:-4px 0 25px rgba(0,0,0,0.2);
-  padding:30px 20px;
   transition:0.3s;
   z-index:1000;
 }
@@ -67,12 +72,12 @@ header img{max-width:150px}
   background:rgba(0,0,0,0.05);
   color:#333;
   font-weight:600;
+  text-align:center;
 }
 
 .mobile-menu a.primary{
   background:#a1694f;
   color:#fff;
-  text-align:center;
 }
 
 /* ===== HERO ===== */
@@ -85,25 +90,24 @@ header img{max-width:150px}
 }
 
 .hero-box{
-  background:#fff;
+  background:#ffffff;
   max-width:1050px;
   margin:auto;
-  padding:50px 35px;
-  border-radius:30px;
+  padding:55px 35px;
+  border-radius:32px;
   box-shadow:0 20px 45px rgba(0,0,0,0.18);
   text-align:center;
 }
 
-h1{
+.hero-box h1{
   color:#a1694f;
   font-size:34px;
   margin-bottom:20px;
 }
 
-.subtitle{
+.hero-box p{
   font-size:18px;
-  color:#444;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 /* ===== CTA ===== */
@@ -129,7 +133,7 @@ h1{
   color:#333;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== CONTENT ===== */
 .section{
   margin-top:45px;
   text-align:right;
@@ -187,21 +191,23 @@ footer{
   color:#777;
 }
 
+/* ===== RESPONSIVE ===== */
 @media(max-width:600px){
-  h1{font-size:26px}
-  .subtitle{font-size:16px}
+  .hero-box h1{font-size:26px}
+  .hero-box p{font-size:16px}
+  .site-logo{max-width:180px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ☰ زر القائمة -->
+<!-- ☰ زر المينو -->
 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
 <!-- MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#work">فرصة العمل</a>
+  <a href="#job">فرصة العمل</a>
   <a href="#about">تعريف بالشركة</a>
   <a href="#privacy">السياسة الخصوصية</a>
   <a href="#terms">شروط الخدمة</a>
@@ -210,17 +216,20 @@ footer{
   <a href="https://wa.link/4emaaz" class="primary">قدّم الآن</a>
 </div>
 
-<header>
-  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="The Untamed Logo">
+<header class="site-header">
+  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png"
+       alt="CAS7 The Untamed" class="site-logo">
 </header>
 
-<section class="hero" id="work">
+<section class="hero" id="job">
   <div class="hero-box">
 
     <h1>فرصة عمل حقيقية في التجارة الإلكترونية</h1>
-    <p class="subtitle">
-      انضم إلى The Untamed وابدأ مسارك المهني  
-      من هاتفك وبدون خبرة مسبقة.
+
+    <p>
+      كتبحث على فرصة عمل واضحة؟  
+      باغي تخدم من الدار أو من أي بلاصة؟  
+      الفرصة دابا مع <strong>The Untamed</strong>.
     </p>
 
     <div class="cta">
@@ -231,13 +240,15 @@ footer{
     </div>
 
     <div class="section">
-      <h2>ماذا نقدّم لك؟</h2>
+      <h2>شنو نقدّمو ليك؟</h2>
       <ul>
-        <li>متجر إلكتروني جاهز بالكامل</li>
-        <li>تدريب عملي خطوة بخطوة</li>
-        <li>التغليف والتوصيل على حساب الشركة</li>
-        <li>أرباح تبدأ من 15%</li>
-        <li>العمل من أي مكان</li>
+        <li>🛒 عمل رسمي فمجال التجارة الإلكترونية</li>
+        <li>🏬 متجر إلكتروني جاهز بالكامل</li>
+        <li>📦 التغليف والتوصيل على حساب الشركة</li>
+        <li>🎓 تدريب مجاني ومرافقة</li>
+        <li>💰 أرباح تبدأ من 15%</li>
+        <li>📱 الخدمة غير بالهاتف</li>
+        <li>🌱 بدون خبرة مسبقة</li>
       </ul>
     </div>
 
@@ -252,7 +263,7 @@ footer{
       </table>
     </div>
 
-    <div class="video-box" id="video">
+    <div class="video-box">
       <video controls poster="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg">
         <source src="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4" type="video/mp4">
       </video>
