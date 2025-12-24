@@ -9,13 +9,14 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 /* زر الرجوع */
 .back-btn{
   text-decoration:none;
-  font-size:22px;      /* كبير */
+  font-size:26px;      /* أكبر */
   font-weight:700;     /* بارز */
   color:#a1694f;
-  opacity:0.85;        /* شفاف شوية */
+  opacity:0.9;         /* شفاف قليلاً */
   transition:0.3s;
 }
 
@@ -37,17 +38,28 @@ body{
   padding:15px 20px;
 }
 
-.back-btn{
-  text-decoration:none;
-  font-size:15px;
-  color:#a1694f;
-  font-weight:700;
+/* ===== شعار بارز وشفاف ===== */
+.header-logo {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: rgba(255,255,255,0.3); /* خلفية شفافة */
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25); /* بروز */
+}
+
+.header-logo img {
+  width: 160px;
+  opacity: 0.95;
 }
 
 /* ===== CONTENT BOX ===== */
 .content{
   max-width:1000px;
-  margin:20px auto 60px;
+  margin:120px auto 60px; /* ترك مساحة للشعار */
   background:#ffffff;
   padding:40px;
   border-radius:20px;
@@ -97,6 +109,12 @@ video{
  <a href="index.html" class="back-btn">الرجوع</a>
 </div>
 
+<!-- شعار الشركة -->
+<div class="header-logo">
+  <a href="https://dahbicasa36-collab.github.io/privacy-policy/index.html">
+    <img src="https://dahbicasa36-collab.github.io/privacy-policy/logo.png" alt="CASV The Untamed">
+  </a>
+</div>
 
 <!-- المحتوى -->
 <div class="content">
