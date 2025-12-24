@@ -16,110 +16,50 @@ body{
   line-height:1.9;
 }
 
-/* ===== TOP BAR ===== */
-.top-bar{
-  display:flex;
-  align-items:center;
-  padding:20px;
-}
-
-.back-btn{
-  text-decoration:none;
-  font-size:26px;
-  font-weight:700;
-  color:#a1694f;
-  opacity:0.9;
-  transition:0.3s;
-}
+.top-bar{display:flex;align-items:center;padding:20px;}
+.back-btn{text-decoration:none;font-size:26px;font-weight:700;color:#a1694f;opacity:0.9;transition:0.3s;}
 .back-btn:hover{opacity:1;}
 
-/* ===== LOGO ثابت ===== */
 .header-logo{
-  position:fixed;
-  top:10px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:9999;
-  background:rgba(255,255,255,0.3);
-  padding:12px 30px;
-  border-radius:50px;
+  position:fixed;top:10px;left:50%;transform:translateX(-50%);
+  z-index:9999;background:rgba(255,255,255,0.3);
+  padding:12px 30px;border-radius:50px;
   box-shadow:0 0 20px rgba(0,0,0,0.25);
 }
-.header-logo img{
-  height:60px;
-  width:auto;
-  opacity:0.95;
-}
+.header-logo img{height:60px;width:auto;opacity:0.95;}
 
-/* ===== CONTENT BOX ===== */
 .content{
-  max-width:1000px;
-  margin:100px auto 60px;
-  background:#ffffff;
-  padding:40px;
-  border-radius:20px;
+  max-width:1000px;margin:100px auto 60px;
+  background:#ffffff;padding:40px;border-radius:20px;
 }
 
-/* ===== TITLES ===== */
-h1, h2{
-  color:#a1694f;
-  text-align:center;
-}
-h1{margin-bottom:25px;}
-h2{margin-top:35px;margin-bottom:15px;}
+h1,h2{color:#a1694f;text-align:center;}
+h1{margin-bottom:25px;}h2{margin-top:35px;margin-bottom:15px;}
 
-/* ===== فواصل بصرية ===== */
-hr{
-  border:none;
-  border-top:2px solid #eee;
-  margin:40px 0;
-}
+hr{border:none;border-top:2px solid #eee;margin:40px 0;}
 
-/* ===== بطاقات تعريفية ===== */
 .info-card{
-  background:#f9f9f9;
-  border:1px solid #ddd;
-  border-radius:12px;
-  padding:20px;
-  margin-bottom:30px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  background:#f9f9f9;border:1px solid #ddd;border-radius:12px;
+  padding:20px;margin-bottom:30px;box-shadow:0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* ===== شبكة الفيديوهات ===== */
 .video-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
 }
-.video-box video{
-  width:100%;
-  border-radius:18px;
-  background:#000;
-}
+.video-box video{width:100%;border-radius:18px;background:#000;}
 
-/* ===== زر واتساب ===== */
 .whatsapp-btn{
-  display:inline-block;
-  background:#25D366;
-  color:#fff;
-  font-weight:bold;
-  padding:12px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:18px;
+  display:inline-block;background:#25D366;color:#fff;font-weight:bold;
+  padding:12px 25px;border-radius:30px;text-decoration:none;font-size:18px;
   transition:0.3s;
 }
-.whatsapp-btn:hover{
-  background:#1ebe5d;
-}
+.whatsapp-btn:hover{background:#1ebe5d;}
 
-/* ===== تحسين الموبايل ===== */
-@media (max-width: 600px) {
+@media (max-width:600px){
   body{font-size:16px;}
   .content{padding:20px;margin:120px 10px 40px;}
   .header-logo img{height:50px;}
-  h1{font-size:22px;}
-  h2{font-size:18px;}
+  h1{font-size:22px;}h2{font-size:18px;}
   .back-btn{font-size:22px;}
   .video-grid{grid-template-columns:1fr;} /* فيديو واحد في الصف على الموبايل */
 }
@@ -128,19 +68,16 @@ hr{
 
 <body>
 
-<!-- زر الرجوع -->
 <div class="top-bar">
   <a href="index.html" class="back-btn">الرجوع</a>
 </div>
 
-<!-- شعار ثابت داخل Oval Badge -->
 <div class="header-logo">
   <a href="index.html">
     <img src="cal.png" alt="شعار CASV The Untamed">
   </a>
 </div>
 
-<!-- المحتوى -->
 <div class="content">
 
   <h1>🚀 فرصة عمل في التجارة الإلكترونية مع The Untamed!</h1>
@@ -159,7 +96,6 @@ hr{
 
   <hr>
 
-  <!-- عنوان تحفيزي قبل الفيديوهات -->
   <div class="info-card" style="text-align:center;">
     <h2>🎥 شاهد لحظات النجاح مع The Untamed</h2>
     <p>مقاطع حقيقية من تدريباتنا وفرص العمل التي نفتحها أمام الجميع.</p>
@@ -171,7 +107,7 @@ hr{
   <!-- فيديو 14 في الأعلى -->
   <div class="video-box" style="margin-bottom:30px;">
     <video controls playsinline>
-      <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video14.mp4" type="video/mp4">
+      <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video%2014.mp4" type="video/mp4">
       المتصفح لا يدعم تشغيل الفيديو
     </video>
   </div>
@@ -187,7 +123,7 @@ hr{
 
     <div class="video-box">
       <video controls playsinline>
-        <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video13.mp4" type="video/mp4">
+        <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video%2013.mp4" type="video/mp4">
         المتصفح لا يدعم تشغيل الفيديو
       </video>
     </div>
@@ -195,7 +131,6 @@ hr{
 
   <hr>
 
-  <!-- زر واتساب أسفل الفيديوهات -->
   <div class="info-card" style="text-align:center;">
     <p>📲 للتواصل المباشر والانضمام إلى فريق The Untamed:</p>
     <a href="https://wa.link/4emaaz" class="whatsapp-btn" target="_blank">تواصل عبر واتساب</a>
