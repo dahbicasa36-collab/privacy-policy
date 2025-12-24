@@ -68,10 +68,6 @@ h1, h2{
 h1{margin-bottom:25px;}
 h2{margin-top:35px;margin-bottom:15px;}
 
-/* ===== LIST ===== */
-ul{margin-right:20px;}
-ul li{margin-bottom:10px;}
-
 /* ===== فواصل بصرية ===== */
 hr{
   border:none;
@@ -105,6 +101,18 @@ hr{
   background:#1ebe5d;
 }
 
+/* ===== شبكة الفيديوهات ===== */
+.video-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.video-box video{
+  width:100%;
+  border-radius:18px;
+  background:#000;
+}
+
 /* ===== تحسين الموبايل ===== */
 @media (max-width: 600px) {
   body{font-size:16px;}
@@ -113,6 +121,7 @@ hr{
   h1{font-size:22px;}
   h2{font-size:18px;}
   .back-btn{font-size:22px;}
+  .video-grid{grid-template-columns:1fr;} /* فيديو واحد في الصف على الموبايل */
 }
 </style>
 </head>
@@ -148,42 +157,45 @@ hr{
 
   <hr>
 
-  <!-- زر واتساب -->
-  <div class="info-card" style="text-align:center;">
-    <a href="https://wa.link/4emaaz" class="whatsapp-btn" target="_blank">📲 تواصل عبر واتساب</a>
+  <!-- الفيديوهات -->
+  <h2>🎬 فيديوهات حفل التتويج بمراكش</h2>
+
+  <div class="video-grid">
+    <div class="video-box">
+      <video controls playsinline>
+        <source src="https://dahbicasa36-collab.github.io/privacy-policy/vedio04.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+    </div>
+
+    <div class="video-box">
+      <video controls playsinline>
+        <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video%2011.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+    </div>
+
+    <div class="video-box">
+      <video controls playsinline>
+        <source src="https://dahbicasa36-collab.github.io/privacy-policy/video02.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+    </div>
+
+    <div class="video-box">
+      <video controls playsinline>
+        <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video%2010.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+    </div>
   </div>
 
   <hr>
 
-  <!-- الفيديوهات -->
-  <h2>🎬 فيديوهات حفل التتويج بمراكش</h2>
-
-  <div class="video-box">
-    <video controls playsinline>
-      <source src="https://dahbicasa36-collab.github.io/privacy-policy/vedio04.mp4" type="video/mp4">
-      المتصفح لا يدعم تشغيل الفيديو
-    </video>
-  </div>
-
-  <div class="video-box">
-    <video controls playsinline>
-      <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video%2011.mp4" type="video/mp4">
-      المتصفح لا يدعم تشغيل الفيديو
-    </video>
-  </div>
-
-  <div class="video-box">
-    <video controls playsinline>
-      <source src="https://dahbicasa36-collab.github.io/privacy-policy/video02.mp4" type="video/mp4">
-      المتصفح لا يدعم تشغيل الفيديو
-    </video>
-  </div>
-
-  <div class="video-box">
-    <video controls playsinline>
-      <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video%2010.mp4" type="video/mp4">
-      المتصفح لا يدعم تشغيل الفيديو
-    </video>
+  <!-- زر واتساب أسفل الفيديوهات -->
+  <div class="info-card" style="text-align:center;">
+    <p>📩 لا تفوت الفرصة! أرسل طلبك اليوم وابدأ رحلتك مع <strong>The Untamed</strong>.</p>
+    <a href="https://wa.link/4emaaz" class="whatsapp-btn" target="_blank">📲 تواصل عبر واتساب</a>
   </div>
 
 </div>
