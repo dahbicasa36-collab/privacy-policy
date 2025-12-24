@@ -44,10 +44,42 @@ body{
   font-weight:700;
 }
 
+/* ===== HEADER LOGO ===== */
+.header-logo {
+  position: fixed;          /* ثابت في أعلى الصفحة */
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;            /* بارز فوق كل العناصر */
+  background: rgba(255,255,255,0.2); /* خلفية شفافة */
+  padding: 15px;
+  border-radius: 50%;       /* دائرة حول الشعار */
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* بروز */
+}
+
+.header-logo img {
+  width: 100px;
+  animation: pulse 2s infinite, spin 12s linear infinite;
+  opacity: 0.9;             /* شفافية طفيفة للشعار */
+}
+
+/* أنيميشن نبض */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* أنيميشن دوران */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 /* ===== CONTENT BOX ===== */
 .content{
   max-width:1000px;
-  margin:20px auto 60px;
+  margin:100px auto 60px; /* ترك مسافة تحت الشعار */
   background:#ffffff;
   padding:40px;
   border-radius:20px;
@@ -97,6 +129,10 @@ video{
  <a href="index.html" class="back-btn">الرجوع</a>
 </div>
 
+<!-- شعار الشركة -->
+<div class="header-logo">
+  <img src="logo.png" alt="شعار The Untamed">
+</div>
 
 <!-- المحتوى -->
 <div class="content">
