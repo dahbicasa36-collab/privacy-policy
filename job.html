@@ -12,7 +12,7 @@
 
 body{
   font-family:"Cairo",sans-serif;
-  background:#f4f4f4; /* ❗ ثابت لا يتغير */
+  background:#f4f4f4; /* ثابت */
   color:#333;
 }
 
@@ -50,22 +50,52 @@ body{
   font-weight:600;
 }
 
-/* LOGO */
+/* LOGO (شفاف) */
 .header-logo{
-  background:#ffffff;
-  padding:12px 30px;
-  border-radius:999px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.25);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background:transparent;
+  padding:0;
 }
 
 .header-logo img{
   height:38px;
 }
 
-/* ===== MAIN SECTION ===== */
+/* ===== SIDE MENU ===== */
+.side-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:260px;
+  height:100%;
+  background:#ffffff;
+  padding:90px 20px;
+  transition:0.3s;
+  box-shadow:-4px 0 20px rgba(0,0,0,0.2);
+  z-index:999;
+}
+
+.side-menu.active{
+  right:0;
+}
+
+.side-menu a{
+  display:block;
+  margin-bottom:12px;
+  padding:12px;
+  background:rgba(0,0,0,0.05);
+  text-decoration:none;
+  color:#333;
+  border-radius:20px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.side-menu a:hover{
+  background:#a1694f;
+  color:#fff;
+}
+
+/* ===== MAIN CONTENT ===== */
 .main-section{
   max-width:900px;
   margin:60px auto;
@@ -97,10 +127,22 @@ body{
   </div>
 
   <div class="header-logo">
-    <img src="cal.png" alt="CAS7 The Untamed">
+    <img src="cal.png" alt="The Untamed Logo">
   </div>
 
 </header>
+
+<!-- MENU -->
+<nav class="side-menu" id="sideMenu">
+  <a href="index.html">الصفحة الرئيسية</a>
+  <a href="career.html">فرصة العمل</a>
+  <a href="job.html">شرح كيفية العمل مع الشركة</a>
+  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
+  <a href="privacy-policy.html">سياسة الخصوصية</a>
+  <a href="terms.html">شروط الخدمة</a>
+  <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="video02.html">الفيديو التعريفي</a>
+</nav>
 
 <!-- CONTENT -->
 <section class="main-section">
@@ -110,6 +152,12 @@ body{
     وتوفير فرص عمل رقمية بطريقة واضحة وقانونية.
   </p>
 </section>
+
+<script>
+document.querySelector('.menu-toggle').onclick = function(){
+  document.getElementById('sideMenu').classList.toggle('active');
+};
+</script>
 
 </body>
 </html>
