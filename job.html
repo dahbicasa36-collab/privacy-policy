@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>The Untamed | فرصة عمل في التجارة الإلكترونية</title>
+<title>الصفحة الرئيسية – The Untamed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
@@ -14,194 +14,90 @@ body{
   font-family:"Cairo",sans-serif;
   background:#f4f4f4;
   color:#333;
-  line-height:1.8;
 }
 
 /* ===== HEADER ===== */
 header{
-  background:#fff;
-  padding:25px;
+  background:#ffffff;
+  padding:30px 20px;
   text-align:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 header img{
   max-width:200px;
 }
 
-/* ===== MENU BUTTON ===== */
-.menu-btn{
-  position:fixed;
-  top:20px;
-  right:20px;
-  background:#a1694f;
-  color:#fff;
-  border:none;
-  font-size:26px;
-  padding:8px 14px;
-  border-radius:8px;
-  cursor:pointer;
-  z-index:1000;
+/* ===== NAV ===== */
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  padding:20px;
+  background:#ffffff;
 }
 
-/* ===== MENU ===== */
-.menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:270px;
-  height:100%;
-  background:#fff;
-  padding:80px 20px;
-  transition:0.3s;
-  box-shadow:-4px 0 20px rgba(0,0,0,0.2);
-  overflow-y:auto;
-}
-
-.menu.active{right:0}
-
-.menu a{
-  display:block;
-  margin-bottom:12px;
-  padding:12px;
-  background:rgba(0,0,0,0.05);
+nav a{
   text-decoration:none;
+  padding:12px 20px;
+  background:rgba(0,0,0,0.05);
   color:#333;
-  border-radius:20px;
-  text-align:center;
+  border-radius:25px;
+  transition:0.3s;
   font-size:14px;
 }
 
-/* ===== HERO ===== */
-.hero{
-  background:
-    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-    url("https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/hero.jpg")
-    center/cover no-repeat;
-  padding:80px 20px;
+nav a:hover{
+  background:#a1694f;
+  color:#fff;
 }
 
-.box{
-  background:#fff;
-  max-width:900px;
-  margin:auto;
-  padding:35px;
+/* ===== SECTION ===== */
+.section{
+  background:#ffffff;
+  max-width:1000px;
+  margin:40px auto;
+  padding:40px;
   border-radius:20px;
   text-align:center;
 }
 
-/* ===== CONTENT ===== */
-h1{
+.section h1{
   color:#a1694f;
   margin-bottom:15px;
 }
 
-p{margin-bottom:15px}
-
-ul{
-  text-align:right;
-  margin:20px auto;
-  max-width:650px;
-}
-
-ul li{margin-bottom:8px}
-
-/* ===== BUTTON ===== */
-.btn{
-  display:inline-block;
-  margin:15px auto;
-  padding:14px 30px;
-  background:#a1694f;
-  color:#fff;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:700;
-}
-
-/* ===== VIDEO ===== */
-video{
-  width:100%;
-  max-width:650px;
-  margin-top:25px;
-  border-radius:15px;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  color:#777;
+.section p{
+  font-size:18px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- زر المينو -->
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-<!-- المينو -->
-<div class="menu" id="menu">
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/index.html">الصفحة الرئيسية</a>
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/">سياسة الخصوصية</a>
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/terms.html">شروط الخدمة</a>
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/legal-about.html">التعريف القانوني</a>
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/data-deletion.html">سياسة حذف البيانات</a>
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/video02.mp4">Video 02</a>
-  <a href="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4">Video 03</a>
-  <a href="https://theuntamed.com/?referral=wFpNEb">المتجر الإلكتروني</a>
-  <a href="https://wa.link/4emaaz">تواصل عبر واتساب</a>
-</div>
-
 <header>
-  <img src="https://raw.githubusercontent.com/dahbicasa36-collab/privacy-policy/main/cal.png" alt="The Untamed">
+  <img src="cal.png" alt="The Untamed Logo">
 </header>
 
-<section class="hero">
-  <div class="box">
+<nav>
+  <a href="index.html">الصفحة الرئيسية</a>
+  <a href="career.html">فرصة العمل</a>
+  <a href="career.html">شرح كيفية العمل مع الشركة</a>
+  <a href="products.html">المنتجات</a>
+  <a href="contact.html">اتصل بنا</a>
+  <a href="privacy-policy.html">سياسة الخصوصية</a>
+  <a href="data-deletion.html">سياسة حذف البيانات</a>
+  <a href="video02.html">الفيديو التعريفي</a>
+</nav>
 
-    <h1>فرصة عمل في التجارة الإلكترونية مع The Untamed</h1>
-
-    <p>
-      كتبحث على فرصة عمل واضحة فمجال التجارة الإلكترونية؟<br>
-      باغي تخدم من الدار أو من أي بلاصة بلا قيود؟<br>
-      الفرصة عندك دابا مع شركة The Untamed 🌍✨
-    </p>
-
-    <ul>
-      <li>🛒 عمل رسمي فمجال التجارة الإلكترونية</li>
-      <li>🏬 متجر إلكتروني جاهز بالكامل</li>
-      <li>📦 التغليف والشحن (المغرب + أوروبا)</li>
-      <li>🎓 تدريب مجاني + مرافقة خطوة بخطوة</li>
-      <li>💰 أرباح تبدأ من 15%</li>
-      <li>📱 الخدمة غير بالهاتف</li>
-      <li>🌱 بدون خبرة</li>
-    </ul>
-
-    <p>
-      لمن هذا العمل؟<br>
-      للناس اللي باغين دخل إضافي أو رئيسي بطريقة قانونية وواضحة.
-    </p>
-
-    <a href="https://wa.link/4emaaz" class="btn">تواصل معنا على واتساب</a>
-
-    <video controls>
-      <source src="https://dahbicasa36-collab.github.io/privacy-policy/video03.mp4" type="video/mp4">
-    </video>
-
-  </div>
+<section class="section">
+  <h1>مرحبا بك في The Untamed</h1>
+  <p>
+    منصة متخصصة في التجارة الإلكترونية  
+    وتوفير فرص عمل رقمية بطريقة واضحة وقانونية.
+  </p>
 </section>
-
-<footer>
-© 2025 The Untamed
-</footer>
-
-<script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
