@@ -1,162 +1,88 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>الصفحة الرئيسية – The Untamed</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:"Cairo",sans-serif;
-  background:#f4f4f4; /* ثابت */
-  color:#333;
-}
-
-/* ===== HEADER ===== */
-.top-header{
-  background:#f7f2ec;
-  height:80px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
-
-.left-actions{
-  position:absolute;
-  right:20px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.menu-toggle{
-  background:none;
-  border:none;
-  font-size:26px;
-  cursor:pointer;
-  color:#3b2a0a;
-}
-
-.contact-text{
-  text-decoration:none;
-  font-size:14px;
-  color:#3b2a0a;
-  font-weight:600;
-}
-
-/* LOGO */
-.header-logo{
-  background:transparent;
-}
-
-.header-logo img{
-  height:38px;
-}
-
-/* ===== SIDE MENU ===== */
-.side-menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:260px;
-  height:100%;
-  background:#ffffff;
-  padding:90px 20px;
-  transition:0.3s;
-  box-shadow:-4px 0 20px rgba(0,0,0,0.2);
-  z-index:999;
-}
-
-.side-menu.active{
-  right:0;
-}
-
-.side-menu a{
-  display:block;
-  margin-bottom:12px;
-  padding:12px;
-  background:rgba(0,0,0,0.05);
-  text-decoration:none;
-  color:#333;
-  border-radius:20px;
-  text-align:center;
-  transition:0.3s;
-}
-
-.side-menu a:hover{
-  background:#a1694f;
-  color:#fff;
-}
-
-/* ===== CONTENT ===== */
-.main-section{
-  max-width:900px;
-  margin:60px auto;
-  background:#ffffff;
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
-}
-
-.main-section h1{
-  color:#a1694f;
-  margin-bottom:15px;
-}
-
-.main-section p{
-  font-size:18px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية – The Untamed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #a1694f;
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+    ul li a {
+      text-decoration: none;
+      color: #a1694f;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    ul li a:hover {
+      color: #7c4a36;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background: #1DA851;
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header class="top-header">
-
-  <div class="left-actions">
-    <button class="menu-toggle">☰</button>
-    <a href="https://wa.link/4emaaz" class="contact-text">اتصل بنا</a>
+  <div class="container">
+    <h1>الصفحة الرئيسية – The Untamed</h1>
+    <ul>
+      <li><a href="about.html">تعريف بالشركة – The Untamed</a></li>
+      <li><a href="conference.html">مؤتمر The Untamed بمراكش</a></li>
+      <li><a href="tv.html">📺 The Untamed على شاشة 2M – إعلان رسمي</a></li>
+      <li><a href="privacy-policy.html">🔒 سياسة الخصوصية – The Untamed (Sweden)</a></li>
+      <li><a href="data-deletion.html">سياسة حذف البيانات – The Untamed (Sweden)</a></li>
+      <li><a href="career.html">فرصة عمل – The Untamed</a></li>
+      <li><a href="terms.html">📜 شروط الخدمة – The Untamed (Sweden)</a></li>
+      <li><a href="motivation.html">🚀 تشجيع على عمل – The Untamed</a></li>
+      <li><a href="opportunity.html">شرح كيفية العمل مع الشركة</a></li>
+    </ul>
+    <div class="cta">
+      <p>🛒 رابط المتجر:</p>
+      <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">زيارة المتجر</a>
+    </div>
+    <div class="cta" style="margin-top:20px;">
+      <p>📲 اتصل بعملائنا عبر واتساب:</p>
+      <a href="https://wa.link/4emaaz" target="_blank">التواصل عبر واتساب</a>
+    </div>
   </div>
-
-  <div class="header-logo">
-    <img src="cal.png" alt="The Untamed Logo">
-  </div>
-
-</header>
-
-<!-- MENU -->
-<nav class="side-menu" id="sideMenu">
-  <a href="index.html">الصفحة الرئيسية</a>
-  <a href="about.html">تعريف بالشركة</a>
-  <a href="career.html">فرصة العمل</a>
-  <a href="job.html">شرح كيفية العمل</a>
-  <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">المنتجات</a>
-  <a href="privacy-policy.html">سياسة الخصوصية</a>
-  <a href="terms.html">شروط الخدمة</a>
-  <a href="data-deletion.html">سياسة حذف البيانات</a>
-  <a href="video02.html">الفيديو التعريفي</a>
-</nav>
-
-<!-- CONTENT -->
-<section class="main-section">
-  <h1>مرحبا بكم في The Untamed</h1>
-  <p>
-    شركة متخصصة في التجارة الإلكترونية  
-    ومنتجات العناية المستوحاة من الطبيعة الشمالية.
-  </p>
-</section>
-
-<script>
-document.querySelector('.menu-toggle').onclick = function(){
-  document.getElementById('sideMenu').classList.toggle('active');
-};
-</script>
-
 </body>
 </html>
