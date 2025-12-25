@@ -7,68 +7,116 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
  <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background: url("hero.jpg") no-repeat center center fixed; /* صورة الخلفية */
-      background-size: cover;
-      color: #1f1f1f;
-    }
-    .overlay {
-      background: rgba(255,255,255,0.85); /* طبقة شفافة فوق الخلفية */
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #111;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    p, li {
-      color: #2b2b2b;
-      font-size: 16px;
-      line-height: 1.9;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section {
-      background: #ffffff;
-      padding: 24px;
-      margin-bottom: 24px;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .logo img {
-      max-width: 180px;
-      border: 3px solid #fff;
-      border-radius: 50%;
-      box-shadow: 0 0 12px #333;
-    }
-    .buttons {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .btn {
-      background: rgba(0,0,0,0.05);
-      color: #111;
-      padding: 12px 26px;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s;
-      margin: 8px;
-      display: inline-block;
-    }
-    .btn:hover {
-      background: #a1694f;
-      color: #fff;
-    }
-  </style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:"Cairo",sans-serif;
+  background:#f4f4f4;
+  color:#333;
+  line-height:1.9;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar{
+  display:flex;
+  align-items:center;
+  padding:20px;
+}
+
+.back-btn{
+  text-decoration:none;
+  font-size:26px;
+  font-weight:700;
+  color:#a1694f;
+  opacity:0.9;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  opacity:1;
+}
+
+/* ===== LOGO ثابت ===== */
+.header-logo{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+  background:rgba(255,255,255,0.3);
+  padding:12px 30px;
+  border-radius:50px;
+  box-shadow:0 0 20px rgba(0,0,0,0.25);
+}
+
+.header-logo img{
+  height:60px;
+  width:auto;
+  opacity:0.95;
+}
+
+/* ===== CONTENT BOX ===== */
+.content{
+  max-width:1000px;
+  margin:100px auto 60px;
+  background:#ffffff;
+  padding:40px;
+  border-radius:20px;
+}
+
+/* ===== TITLES ===== */
+h1, h2{
+  color:#a1694f;
+  text-align:center;
+}
+
+h1{margin-bottom:25px;}
+h2{margin-top:35px;margin-bottom:15px;}
+
+/* ===== LIST ===== */
+ul{margin-right:20px;}
+ul li{margin-bottom:10px;}
+
+/* ===== VIDEO ===== */
+.video-box{
+  margin-top:40px;
+  text-align:center;
+}
+
+video{
+  width:100%;
+  max-width:800px;
+  border-radius:18px;
+  background:#000;
+}
+
+/* ===== فواصل بصرية ===== */
+hr{
+  border:none;
+  border-top:2px solid #eee;
+  margin:40px 0;
+}
+
+/* ===== بطاقات تعريفية ===== */
+.info-card{
+  background:#f9f9f9;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:30px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ===== تحسين الموبايل ===== */
+@media (max-width: 600px) {
+  body{font-size:16px;}
+  .content{padding:20px;margin:120px 10px 40px;}
+  .header-logo img{height:50px;}
+  h1{font-size:22px;}
+  h2{font-size:18px;}
+  .back-btn{font-size:22px;}
+}
+</style>
 </head>
 
 <body>
