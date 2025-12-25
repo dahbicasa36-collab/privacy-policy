@@ -8,10 +8,14 @@
 body{
   min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    linear-gradient(
+      rgba(244,244,244,0.92),
+      rgba(244,244,244,0.92)
+    ),
     url("hero.jpg") center/cover no-repeat;
-  color:#fff;
+  color:#333;
 }
+
 
 .page{
   max-width:420px;
