@@ -1,191 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>The Untamed — إعلان الصفحة الرئيسية</title>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية – The Untamed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0f172a;          /* خلفية داكنة أنيقة */
-      --fg:#ffffff;          /* نص أبيض */
-      --muted:#cbd5e1;       /* نص ثانوي */
-      --brand:#22c55e;       /* لون رئيسي (أخضر) */
-      --brand-dark:#16a34a;  /* لون رئيسي داكن */
-      --accent:#38bdf8;      /* لون تمييز */
-      --card:#111827cc;      /* خلفية بطاقة شبه شفافة */
-      --shadow: 0 12px 30px rgba(0,0,0,.35);
-      --radius:16px;
-      --gap:22px;
-      --maxw:980px;
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      background:
-        radial-gradient(1000px 500px at 10% 20%, #0b1a2f 0%, transparent 55%),
-        radial-gradient(800px 400px at 90% 10%, #0a223a 0%, transparent 60%),
-        linear-gradient(180deg, #0b1220 0%, var(--bg) 100%);
-      color:var(--fg);
+    .container {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .header{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:20px 20px 0;
-      display:flex;
-      align-items:center;
-      gap:14px;
+    h1 {
+      text-align: center;
+      color: #a1694f;
+      margin-bottom: 40px;
     }
-    .brand-mark{
-      width:44px;height:44px;border-radius:12px;
-      background: conic-gradient(from 220deg, var(--brand), var(--accent), var(--brand));
-      box-shadow: var(--shadow);
-      flex-shrink:0;
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px 0;
+      text-align: center;
     }
-    .brand{
-      display:flex;flex-direction:column;gap:2px;
+    .card a {
+      text-decoration: none;
+      color: #a1694f;
+      font-weight: bold;
+      font-size: 18px;
     }
-    .brand .name{font-weight:800;letter-spacing:.2px}
-    .brand .tag{color:var(--muted);font-size:.95rem}
-
-    .hero{
-      max-width:var(--maxw);
-      margin:22px auto;
-      padding:28px 20px 34px;
+    .cta {
+      text-align: center;
+      margin-top: 40px;
     }
-    .card{
-      background: var(--card);
-      backdrop-filter: blur(8px);
-      border:1px solid #ffffff14;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
+    .cta a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
-    .card .body{
-      padding:28px 26px;
-    }
-    .eyebrow{
-      display:inline-block;
-      color:#cffafe;
-      background:#0b5568;
-      border:1px solid #cffafe33;
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:.9rem;
-      margin-bottom:12px;
-    }
-    h1{
-      margin:8px 0 10px;
-      font-size:2rem;
-      line-height:1.25;
-    }
-    .lead{
-      color:var(--muted);
-      font-size:1.05rem;
-      margin:0 0 16px;
-    }
-    .list{
-      display:grid;
-      gap:10px;
-      margin:14px 0 18px;
-    }
-    .item{
-      display:flex;align-items:flex-start;gap:10px;
-      color:#e2e8f0;
-    }
-    .bullet{
-      width:26px;height:26px;border-radius:8px;
-      display:flex;align-items:center;justify-content:center;
-      background:#0b3a2a;border:1px solid #22c55e44;color:#86efac;font-weight:700;flex-shrink:0;
-    }
-    .cta-row{
-      display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;
-    }
-    .btn{
-      appearance:none;border:none;cursor:pointer;
-      padding:12px 18px;border-radius:12px;font-weight:700;
-      display:inline-flex;align-items:center;gap:10px;
-      transition:transform .1s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .btn.primary{
-      background:linear-gradient(135deg, var(--brand), var(--brand-dark));
-      color:#062b17; /* نص داكن لقراءة ممتازة على الأخضر */
-      box-shadow: 0 10px 24px rgba(34,197,94,.35);
-    }
-    .btn.primary:hover{transform:translateY(-1px)}
-    .btn.ghost{
-      background:transparent;color:#cbd5e1;border:1px solid #cbd5e133;
-    }
-    .note{
-      color:#94a3b8;font-size:.95rem;margin-top:12px;
-    }
-    .footer{
-      max-width:var(--maxw);margin:0 auto;padding:0 20px 30px;color:#94a3b8;font-size:.95rem;
-    }
-    @media (min-width:720px){
-      h1{font-size:2.4rem}
-      .card .body{padding:34px 32px}
-      .list{grid-template-columns:1fr 1fr}
+    .cta a:hover {
+      background: #1DA851;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>الصفحة الرئيسية – The Untamed</h1>
 
-  <!-- رأس الصفحة: الشعار + السطر التسويقي -->
-  <header class="header" aria-label="رأس الصفحة">
-    <div class="brand-mark" aria-hidden="true"></div>
-    <div class="brand">
-      <div class="name">CASV The Untamed</div>
-      <div class="tag">تجارة إلكترونية بلا حدود، من المغرب إلى العالم</div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/index.html">الصفحة الرئيسة</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/about.html">تعريف بالشركة</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/opportunity.html">المحاضرة تعريفة بالشركة</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/marrakech.html">مؤتمر the untamed  لتتويج اعضاء</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/news.html">الشركة على شاشة M2</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/legal-about.html">فرصة عمل في التجارة إلكترونيةمع the untamed</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/privacy-policy.html">سياسة الخدوصية</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/data-deletion.html">سياسة الحدف البيانات</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/terms.html">شروط الخدمة</a></div>
+    <div class="card"><a href="https://dahbicasa36-collab.github.io/privacy-policy/career.html">تجارة الكترونية بلا حدود</a></div>
+
+    <div class="cta">
+      <p>📲 اتصال بنا:</p>
+      <a href="https://wa.link/4emaaz" target="_blank">التواصل عبر واتساب</a>
     </div>
-  </header>
 
-  <!-- قسم الإعلان الرئيسي (Hero) -->
-  <main class="hero" aria-label="الإعلان الرئيسي">
-    <section class="card" role="region" aria-labelledby="hero-title">
-      <div class="body">
-        <span class="eyebrow">📢 الإعلان الاحترافي</span>
-        <h1 id="hero-title">The Untamed – تجارتك الإلكترونية تبدأ من هنا 🚀</h1>
-        <p class="lead">من المغرب إلى العالم، نفتح لك أبواب التجارة الرقمية باحترافية عالية.</p>
-
-        <div class="list" role="list">
-          <div class="item" role="listitem">
-            <span class="bullet">✓</span>
-            <div>متجر إلكتروني جاهز بالكامل</div>
-          </div>
-          <div class="item" role="listitem">
-            <span class="bullet">✓</span>
-            <div>تدريب مجاني ومرافقة خطوة بخطوة</div>
-          </div>
-          <div class="item" role="listitem">
-            <span class="bullet">🌍</span>
-            <div>تغليف وتوزيع دولي (المغرب + أوروبا + البرازيل + النيجر)</div>
-          </div>
-          <div class="item" role="listitem">
-            <span class="bullet">📈</span>
-            <div>أرباح تصاعدية تبدأ من 15% حسب النتائج</div>
-          </div>
-        </div>
-
-        <div class="cta-row">
-          <!-- استبدل رقم واتساب برقمك مع ترميز دولي -->
-          <a class="btn primary" href="https://wa.me/212XXXXXXXXX?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D9%81%D8%B1%D8%B5%D8%A9%20%D9%85%D8%B9%20The%20Untamed" target="_blank" rel="noopener" aria-label="تواصل على واتساب">
-            📩 تواصل معنا على واتساب
-          </a>
-          <a class="btn ghost" href="#details" aria-label="معرفة المزيد">
-            ℹ️ التفاصيل الكاملة
-          </a>
-        </div>
-
-        <p class="note">نجاحك الرقمي يبدأ معنا… الفرصة بين يديك!</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- قسم إضافي اختياري للتفاصيل -->
-  <section id="details" class="footer">
-    <strong>ملاحظات سريعة:</strong> تأكد من إدخال رقم واتساب بالصيغة الدولية (مثال المغرب: 212 متبوعًا بالرقم بدون 0).
-  </section>
-
+    <div class="cta" style="margin-top:20px;">
+      <p>🛍️ منتجات:</p>
+      <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">زيارة المتجر</a>
+    </div>
+  </div>
 </body>
 </html>
