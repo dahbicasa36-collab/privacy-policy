@@ -1,113 +1,74 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>تجارة الكترونية بلا حدود – The Untamed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: "Cairo", sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 30px;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #a1694f;
-      margin-bottom: 30px;
-      font-size: 32px;
-    }
-    h2 {
-      color: #a1694f;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 25px;
-    }
-    ul li {
-      margin: 10px 0;
-      font-size: 18px;
-      padding-right: 8px;
-    }
-    .video-box {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .video-box video {
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .cta {
-      text-align: center;
-      margin-top: 25px;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background: #128C7E;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>🚀 تجارة الكترونية بلا حدود – The Untamed</h1>
-    <p>
-      في <strong>The Untamed</strong> نفتح أمامكم أبواب التجارة الإلكترونية بلا حدود.  
-      هدفنا هو تمكين الشباب ورواد الأعمال من الانطلاق في عالم التجارة الرقمية،  
-      مع توفير الدعم الكامل، الأدوات الجاهزة، والشحن الدولي.
-    </p>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Cairo",sans-serif;
+}
 
-    <h2>✨ لماذا تختار The Untamed؟</h2>
-    <ul>
-      <li>📦 متجر إلكتروني جاهز بالكامل</li>
-      <li>💳 تكاليف تشغيلية منخفضة + عمولة منخفضة جدًا</li>
-      <li>🌍 شحن دولي (المغرب + أوروبا + البرازيل + الصين)</li>
-      <li>🤝 دعم مستمر وتدريب عملي</li>
-    </ul>
+body{
+  background:#f4f4f4;
+  color:#333;
+  line-height:1.9;
+}
 
-    <div class="video-box">
-      <video controls loop playsinline width="100%">
-        <source src="https://dahbicasa36-collab.github.io/privacy-policy/Video14.mp4" type="video/mp4">
-        المتصفح لا يدعم تشغيل الفيديو
-      </video>
-    </div>
+/* ===== TOP BAR ===== */
+.top-bar{
+  display:flex;
+  justify-content:flex-end;
+  padding:20px 30px;
+}
 
-    <div class="cta">
-      <p>📲 للتواصل معنا مباشرة:</p>
-      <a href="https://wa.link/4emaaz" target="_blank">اتصل بنا عبر واتساب</a>
-    </div>
+.back-btn{
+  text-decoration:none;
+  font-size:22px;
+  font-weight:700;
+  color:#a1694f;
+}
 
-    <div class="cta" style="margin-top:20px;">
-      <p>🛍️ اكتشف منتجاتنا:</p>
-      <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">زيارة المتجر</a>
-    </div>
-  </div>
-</body>
-</html>
+/* ===== LOGO ===== */
+.header-logo{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:999;
+  background:rgba(255,255,255,0.7);
+  padding:14px 36px;
+  border-radius:60px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+.header-logo img{
+  height:55px;
+}
+
+/* ===== CONTENT CARD ===== */
+.page{
+  max-width:900px;
+  margin:120px auto 60px;
+  background:#fff;
+  padding:40px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== TITLES ===== */
+h1,h2{
+  color:#a1694f;
+  text-align:center;
+}
+
+h1{margin-bottom:30px;}
+h2{margin:40px 0 20px;}
+
+hr{
+  border:none;
+  border-top:2px solid #eee;
+  margin:40px 0;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+  .page{padding:22px;margin:130px 12px 40px;}
+  .header-logo img{height:45px;}
+}
