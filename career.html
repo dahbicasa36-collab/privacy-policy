@@ -13,9 +13,32 @@
       margin: 0;
       padding: 0;
     }
+    .header {
+      background: #fff;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .logo {
+      height: 50px;
+    }
+    .back-button {
+      background: #a1694f;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background: #814d39;
+    }
     .container {
       max-width: 900px;
-      margin: 60px auto;
+      margin: 40px auto;
       padding: 30px;
       background: #fff;
       border-radius: 20px;
@@ -76,6 +99,12 @@
   </style>
 </head>
 <body>
+
+  <div class="header">
+    <a href="index.html" class="back-button">الرجوع</a>
+    <img src="https://dahbicasa36-collab.github.io/privacy-policy/logo.png" alt="The Untamed Logo" class="logo">
+  </div>
+
   <div class="container">
     <h1>🚀 تجارة الكترونية بلا حدود – The Untamed</h1>
     <p>
@@ -109,5 +138,6 @@
       <a href="https://theuntamed.com/?referral=wFpNEb" target="_blank">زيارة المتجر</a>
     </div>
   </div>
+
 </body>
 </html>
