@@ -6,118 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:"Cairo",sans-serif;
-  background:#f4f4f4;
-  color:#333;
-  line-height:1.9;
-}
-
-/* ===== TOP BAR ===== */
-.top-bar{
-  display:flex;
-  align-items:center;
-  padding:20px;
-}
-
-.back-btn{
-  text-decoration:none;
-  font-size:26px;
-  font-weight:700;
-  color:#a1694f;
-  opacity:0.9;
-  transition:0.3s;
-}
-
-.back-btn:hover{
-  opacity:1;
-}
-
-/* ===== LOGO ثابت ===== */
-.header-logo{
-  position:fixed;
-  top:10px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:9999;
-  background:rgba(255,255,255,0.3);
-  padding:12px 30px;
-  border-radius:50px;
-  box-shadow:0 0 20px rgba(0,0,0,0.25);
-}
-
-.header-logo img{
-  height:60px;
-  width:auto;
-  opacity:0.95;
-}
-
-/* ===== CONTENT BOX ===== */
-.content{
-  max-width:1000px;
-  margin:100px auto 60px;
-  background:#ffffff;
-  padding:40px;
-  border-radius:20px;
-}
-
-/* ===== TITLES ===== */
-h1, h2{
-  color:#a1694f;
-  text-align:center;
-}
-
-h1{margin-bottom:25px;}
-h2{margin-top:35px;margin-bottom:15px;}
-
-/* ===== LIST ===== */
-ul{margin-right:20px;}
-ul li{margin-bottom:10px;}
-
-/* ===== VIDEO ===== */
-.video-box{
-  margin-top:40px;
-  text-align:center;
-}
-
-video{
-  width:100%;
-  max-width:800px;
-  border-radius:18px;
-  background:#000;
-}
-
-/* ===== فواصل بصرية ===== */
-hr{
-  border:none;
-  border-top:2px solid #eee;
-  margin:40px 0;
-}
-
-/* ===== بطاقات تعريفية ===== */
-.info-card{
-  background:#f9f9f9;
-  border:1px solid #ddd;
-  border-radius:12px;
-  padding:20px;
-  margin-bottom:30px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-}
-
-/* ===== تحسين الموبايل ===== */
-@media (max-width: 600px) {
-  body{font-size:16px;}
-  .content{padding:20px;margin:120px 10px 40px;}
-  .header-logo img{height:50px;}
-  h1{font-size:22px;}
-  h2{font-size:18px;}
-  .back-btn{font-size:22px;}
-}
-</style>
-
-    </head>
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #a1694f;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    h2 {
+      color: #a1694f;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 25px;
+    }
+    ul li {
+      margin: 10px 0;
+      font-size: 18px;
+      padding-right: 8px;
+    }
+    .video-box {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .video-box video {
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .cta {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .cta a:hover {
+      background: #128C7E;
+    }
+  </style>
+</head>
 <body>
   <div class="container">
     <h1>🚀 تجارة الكترونية بلا حدود – The Untamed</h1>
